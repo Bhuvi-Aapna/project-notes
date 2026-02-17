@@ -1,0 +1,98 @@
+API Architecture Document — TeamTamApi
+1. Purpose
+Describe how requests flow through the system, responsibilities of each layer, and operational/security considerations for TeamTamApi (.NET 6).
+2. High-level summary
+•	ASP.NET Core (.NET 6) Web API using the minimal host pattern (Program.cs).
+•	Attribute-routed controllers (versioned routes under api/v1/).
+•	Thin controllers that validate requests and delegate to the service layer (e.g., AdminDashboardController → IDailyReportService).
+•	MongoDB as primary datastore; many repository implementations under TeamTamApi.DataAccess.Repositories.
+•	JWT Bearer authentication with role-based authorization using RoleConstant.
+•	Additional per-request middleware: organization context and auth validation.
+•	Extensive DI registration in Program.cs for services, repositories, cache providers and integrations.
+3. Components and responsibilities
+•	Client
+•	Web / mobile / integration clients call REST endpoints.
+•	Ingress / Load Balancer
+•	TLS termination, routing to API instances.
+•	Routing & Endpoint metadata
+•	__UseRouting__ sets up endpoint metadata used by subsequent middleware.
+•	Authentication
+•	JWT Bearer configured in Program.cs. Signing key from AppSettingsConfig (Azure Key Vault used for secret management).
+•	Authorization
+•	Role-based [Authorize(Roles = ...)] on controllers/actions (coarse-grained).
+•	Middleware
+•	OrganizationDbMiddleware — populates organization context (runs after authentication so User is available).
+•	AuthValidationMiddleware — additional API-key / permission validations.
+•	AppSettingConfigMiddleware — loads/validates application settings per request.
+•	Controllers
+•	Marked [ApiController] and route-prefixed (e.g., api/v1/AdminDashboard).
+•	Validate incoming DTOs and User organization membership via extension helpers (e.g., User.ValidateOrganizationId(...)) before calling services.
+•	Service layer
+•	Business logic; interfaces under TeamTamApi.Service.Interfaces and implementations under TeamTamApi.Service.Services.
+•	Responsible for transaction semantics, cross-service orchestration, caching invocation, and input validation (beyond controller checks).
+•	Repository/data access
+•	MongoDB repositories and data mapping logic under TeamTamApi.DataAccess.
+•	BSON serializers registered for Guid, DateTime, DateTimeOffset.
+•	Caching
+•	IMemoryCache plus domain cache providers (e.g., IUserCacheProvider, IRoleCacheProvider) for hot data.
+•	External integrations
+•	Azure Key Vault (secrets), Azure Service Bus, payment gateways (PayU, Razorpay), cloud storage (AWS/Azure), PDF generation (DinkToPdf), SignalR, etc.
+•	Observability
+•	Serilog configured to write to Console and MongoDB collection log. UseSerilogRequestLogging() enabled.
+•	API docs
+•	Swagger/OpenAPI with two docs: internal (routes under api/v1/) and public (api/integration/v1/).
+•	Security definitions for X-Api-Key and Bearer JWT.
+4. Request / response flow (typical)
+1.	Client sends HTTPS request to Load Balancer / Ingress.
+2.	Request hits API instance; TLS handled at ingress.
+3.	ASP.NET Core pipeline: __UseRouting__ -> __UseAuthentication__ -> __UseAuthorization__.
+4.	After auth, custom middlewares run: OrganizationDbMiddleware, AuthValidationMiddleware, AppSettingConfigMiddleware.
+5.	Controller selected and executed (model binding + validation handled by [ApiController]).
+6.	Controller authorizes that User belongs to requested organization (via User.ValidateOrganizationId*).
+7.	Controller calls service layer interface (injected via DI).
+8.	Service coordinates domain processing, may call repositories, cache providers, or external services.
+9.	Repository accesses MongoDB; services may update caches.
+10.	Service returns DTO → controller returns HTTP response (serialized JSON).
+5. Middleware ordering (important)
+The pipeline in Program.cs enforces this order:
+•	UseRouting
+•	UseAuthentication
+•	UseAuthorization
+•	OrganizationDbMiddleware (needs authenticated User)
+•	AuthValidationMiddleware
+•	AppSettingConfigMiddleware
+•	MapControllers
+•	UseSerilogRequestLogging
+Correct ordering is required so that middleware that relies on HttpContext.User runs after authentication.
+6. Dependency injection and lifetimes
+•	Most services and repositories are registered as Scoped in Program.cs.
+•	Singletons for shared clients/resources:
+•	IConverter (DinkToPdf) as singleton.
+•	ServiceBusClient as singleton.
+•	IWebhookSignatureService as singleton.
+•	Use IHttpClientFactory (already called with AddHttpClient()) for external HTTP callers.
+7. Security considerations
+•	JWT configuration currently sets ValidateIssuer = false and ValidateAudience = false — consider enabling issuer/audience checks when tokens are issued under known authority.
+•	Secrets are sourced from Azure Key Vault (good).
+•	Swagger protected by configuration; ensure Swagger UI not exposed in unintended environments.
+•	Validate and rate-limit API key usage for integration endpoints.
+•	Ensure controllers use User.ValidateOrganizationId* consistently to prevent horizontal privilege escalation.
+8. Observability & ops
+•	Serilog logs to MongoDB for errors, console for all.
+•	Consider adding structured correlation IDs and logging middleware to trace requests end-to-end.
+•	Health checks not present in Program.cs—add AddHealthChecks() and endpoints for orchestrators.
+9. Scalability & deployment
+•	App is horizontally scalable behind LB; keep DI-registered singletons thread-safe.
+•	Use Azure Service Bus for async/background work; process with worker services if needed.
+•	External integrations should have retry/backoff (use Polly with IHttpClientFactory).
+10. Extensibility & recommended improvements
+•	Add a global exception-handling middleware (consistent error shape).
+•	Add OpenTelemetry or Application Insights for traces and metrics.
+•	Centralize role and permission checks: augment role-based attributes with a fine-grained permission service (already present: IApiPermissionService).
+•	Add API versioning package if multiple vX routes evolve beyond attribute versioning.
+•	Harden JWT validation (issuer/audience) and rotate signing keys using Key Vault/Credential rotation patterns.
+11. Operational runbook (quick)
+•	Config/Secrets: stored in Azure Key Vault; Program.cs populates AppSettingsConfig.
+•	Logs: Serilog -> MongoDB log collection (errors) and console (all).
+•	CORS: resolved at startup by ICorsConfigurationService reading allowed origins from DB.
+•	Restart: stateless API, safe to scale/restart; ensure background queues processed by Workers.

@@ -1,0 +1,6 @@
+ "AzureDetails": {
+   "AzureKeyVaultURI": "https://meramonitorkeyvault.vault.azure.net/",
+   "ClientId": "2fee1556-bce8-42e5-8c02-a8eba3a0fab8",
+   "TenantId": "96875b81-ae26-4741-b919-67a6739aa8bc",
+   "ClientSecret": "vGb8Q~jiiR.nMFIpN7rI-WcvgmZmxTyTL1CRSchp"
+ },

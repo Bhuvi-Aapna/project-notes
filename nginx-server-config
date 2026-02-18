@@ -1,0 +1,164 @@
+worker_processes auto;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    access_log   logs/access.log;
+    error_log    logs/error.log;
+
+    sendfile        on;
+    tcp_nopush      on;
+    keepalive_timeout 65;
+
+	# Map allowed origins
+	map $http_origin $cors_origin{
+		default "";
+		"https://app.meramonitor.com" "https://app.meramonitor.com";
+		"https://dev.meramonitor.com" "https://dev.meramonitor.com";
+		"https://qa.meramonitor.com" "https://qa.meramonitor.com";
+		"https://client.actionview.ai" "https://client.actionview.ai";
+		"https://tracker.vryno.com" "https://tracker.vryno.com";
+		"https://app.mymeramonitor.com" "https://app.mymeramonitor.com";
+	}
+
+        upstream mediasoup_backend {
+    ip_hash;
+    server 127.0.0.1:3000;
+    server 127.0.0.1:3001;
+}
+
+
+    server {
+        listen 8080;
+        server_name stream.meramonitor.com;
+		
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+
+        # Ultra-low-latency HLS
+        location /live/live_streaming/ {
+            alias /usr/local/nginx/media/live/;
+
+            types {
+                application/vnd.apple.mpegurl m3u8;
+                video/mp2t ts;
+            }
+
+            # Disable caching for live streaming
+            add_header Cache-Control no-cache always;
+            add_header Pragma no-cache always;
+
+			# Full CORS support (applies to all requests)
+			add_header 'Access-Control-Allow-Origin' $cors_origin always;
+			add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS, HEAD' always;
+			add_header 'Access-Control-Allow-Headers' 'Authorization, Origin, Content-Type, Accept, Range' always;
+			add_header 'Access-Control-Max-Age' 1728000 always;
+
+			# Referrer protection
+			valid_referers none blocked server_names *.meramonitor.com localhost *.mymeramonitor.com client.actionview.ai tracker.vryno.com app.meramonitor.com dev.meramonitor.com qa.meramonitor.com app.mymeramonitor.com;
+			if ($invalid_referer) {
+				return 403;
+			}
+
+			# Preflight (OPTIONS) handling
+			if ($request_method = 'OPTIONS') {
+				add_header 'Content-Type' 'text/plain; charset=UTF-8' always;
+				return 204;
+			}
+        }
+
+        location /socket.io/ {
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+            proxy_set_header Host $host;
+            proxy_pass http://mediasoup_backend;
+        }
+
+        location / {
+            proxy_pass http://localhost:3001;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+            proxy_set_header Host $host;
+        }
+        # Default location
+        location / {
+            try_files $uri $uri/ =404;
+        }
+
+        # Error pages
+        error_page 404 /404.html;
+        location = /404.html {
+            root /usr/share/nginx/html;
+        }
+
+        error_page 500 502 503 504 /50x.html;
+        location = /50x.html {
+            root /usr/share/nginx/html;
+        }
+    }
+}
+
+rtmp {
+    server {
+        listen 1935;
+        chunk_size 4096;
+
+        allow publish all;
+        allow play all;
+
+        ####################################################
+        # Ultra-low-latency HLS Only
+        ####################################################
+        application live_streaming {
+            live on;
+            hls on;
+            hls_path /usr/local/nginx/media/live/streaming_only;
+            hls_fragment 2s;
+            hls_playlist_length 6s;
+            hls_continuous on;
+            hls_cleanup on;
+        }
+
+        ####################################################
+        # Recording Only with temp folder
+        ####################################################
+        application live_recording {
+            live on;
+
+            # FLV temp folder
+            record all;
+            record_path /usr/local/nginx/media/live/live_recordings;
+            record_unique off;
+            exec_record_done /usr/bin/ffmpeg -y -i "$path" -c copy "/usr/local/nginx/media/live/live_recordings_processed_mp4/${basename}.mp4";
+        }
+
+        ####################################################
+        # HLS + Recording with temp folder
+        ####################################################
+        application live_both {
+            live on;
+
+            # HLS
+            hls on;
+            hls_path /usr/local/nginx/media/live/recording_streaming;
+            hls_fragment 6s;
+            hls_playlist_length 18s;
+            hls_continuous on;
+            hls_cleanup on;
+
+            # FLV temp folder
+            record all;
+            record_path /usr/local/nginx/media/live/live_recordings;
+            record_unique off;
+			exec_record_done /usr/bin/ffmpeg -y -i "$path" -c copy "/usr/local/nginx/media/live/live_recordings_processed_mp4/${basename}.mp4";
+            
+        }
+    }
+}

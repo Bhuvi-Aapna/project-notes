@@ -42,3 +42,6 @@ ReGeneratePaymentProformaInvoiceToAdminAndAccountantTemplate
 appsetting
 "Days_Before_Subscription": "5",
 
+  "OrganizationPayLaterPaymentsCollection": "OrganizationPayLaterPayments",
+  "PaymentProformaInvoiceMapperCollection": "PaymentProformaInvoiceMapper"
+

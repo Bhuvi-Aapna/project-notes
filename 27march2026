@@ -38,3 +38,7 @@ sales@meramonitor.com
 Email Template
 PaymentProformaInvoiceToAdminAndAccountantTemplate
 ReGeneratePaymentProformaInvoiceToAdminAndAccountantTemplate
+
+appsetting
+"Days_Before_Subscription": "5",
+

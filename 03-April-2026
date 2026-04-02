@@ -1,0 +1,26 @@
+--03-April-2026
+
+
+						  
+db["BillingPlans"].update({},
+                          {$set : {"InvoiceType":"Proforma"}},
+                          {upsert:false,
+                          multi:true})
+						  
+db["Organization"].update({},
+                          {$set : {"IsPayLaterEnabled":false}},
+                          {upsert:false,
+                          multi:true})
+						  
+db["Organization"].update({},
+                          {$set : {"CreditPeriodDays":45}},
+                          {upsert:false,
+                          multi:true})
+						  
+db["Organization"].update({},
+                          {$set : {"InvoiceType":"Proforma"}},
+                          {upsert:false,
+                          multi:true})
+
+EmailTemplate change					  
+{TemplateName:'PaymentInvoice'}

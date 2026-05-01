@@ -1,0 +1,45 @@
+--30-04-2026
+appsetting
+"MinIOConfiguration": {
+  "Endpoint": "http://20.219.150.219:9000",
+  "AccessKey": "JZJPQZH1PYTMAR9VV3AT",
+  "SecretKey": "6GRgCEqrs+wfg43GFRuvoaSJbsHZDPGgt6feZzlM",
+  "UseSSL": "false",
+  "BucketName": "screenshots"
+}
+
+
+db["Payment"].update({},
+                          {$set : {"IsAdditionalUserLicence": false}},
+                          {upsert:false,
+                          multi:true})
+
+						  
+db["BillingPlans"].update({},
+                          {$set : {"Period":0}},
+                          {upsert:false,
+                          multi:true})
+						  
+
+db["PlanTypes"].update({},
+                          {$set : {"Period":1}},
+                          {upsert:false,
+                          multi:true})
+						  
+ db.PlanTypes.updateMany({}, { $unset:{ "PlanMonth" : "" } })	
+
+EmailTemplate: PaymentInvoice
+
+db["OrganizationTaxAndDiscount"].update({},
+                          {$set : {"DiscountStartDate": null}},
+                          {upsert:false,
+                          multi:true})
+						  
+db["OrganizationTaxAndDiscount"].update({},
+                          {$set : {"DiscountEndDate": null}},
+                          {upsert:false,
+                          multi:true})
+						  
+appsetting:						  
+"UserAuditLogCollection": "UserAuditLog",
+"OrganizationTaxAndDiscountAuditLogCollection": "OrganizationTaxAndDiscountAuditLog",

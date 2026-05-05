@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+   <xsl:template match="/">
+      <html lang="en">
+         <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Tax Invoice - Aapna Infotheek</title>
+            <link rel="stylesheet"
+               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+            <style>
+        :root {
+            --primary-blue: #002d62;
+            --light-blue-border: #b8cde4;
+            --accent-green: #6fb327;
+            --light-green-bg: #e6f2ea;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: var(--text-color);
+            font-size: 11px;
+        }
+
+         .logo {
+         border-radius: 10px;
+         margin-bottom: 1px;
+         margin-top:1px;
+         margin-left: 10px;
+         width: 50%;
+            height: 50%;
+                           
+         }
+        .invoice-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* --- Print Button --- */
+        .print-btn {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            background: var(--primary-blue);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .print-btn:hover { background: #001b3d; }
+
+        @media print {
+            body { background: #fff; padding: 0; }
+            .invoice-container { box-shadow: none; padding: 0; max-width: 100%; }
+            .print-btn { display: none; }
+        }
+
+        /* --- Header Section --- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .company-info { width: 45%; }
+        
+        .logo-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .company-name h2 {
+            margin: 0;
+            font-size: 12px;
+            color: var(--primary-blue);
+        }
+        .company-name span {
+            color: var(--accent-green);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .company-details p { margin: 3px 0; }
+        .company-details strong { font-weight: bold; display: inline-block; width: 50px;}
+        .contact-info { margin-top: 10px; }
+        .contact-info p { margin: 4px 0; }
+        .contact-info i { color: var(--primary-blue); margin-right: 5px; }
+
+        .invoice-title-section { width: 50%; text-align: right; }
+        .invoice-title-section h1 {
+            color: var(--primary-blue);
+            font-size: 36px;
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+        }
+
+        .invoice-details-box {
+            border: 1px solid var(--light-blue-border);
+            border-radius: 4px;
+            overflow: hidden;
+            text-align: left;
+        }
+        .invoice-details-box .box-header {
+            background: var(--primary-blue);
+            color: #fff;
+            padding: 8px 15px;
+            font-weight: bold;
+        }
+        .invoice-details-grid {
+            display: grid;
+            grid-template-columns: 110px 10px auto;
+            row-gap: 8px;
+            padding: 15px;
+        }
+
+        /* --- Common Box Styles --- */
+        .section-box {
+            border: 1px solid var(--light-blue-border);
+            border-radius: 6px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .box-title {
+            background: var(--primary-blue);
+            color: #fff;
+            padding: 8px 15px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            border-radius: 4px 4px 0 0;
+        }
+        .box-title i { margin-right: 8px; }
+
+        /* --- Bill To Section --- */
+        .bill-to-content {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .bill-to-left h3 { margin: 0 0 5px 0; font-size: 14px; }
+        .bill-to-left p { margin: 3px 0; }
+        
+        .bill-to-right { width: 40%; display: flex; flex-direction: column; justify-content: center;}
+        .input-line {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 15px;
+        }
+        .input-line span { margin-right: 10px; }
+        .input-line div { border-bottom: 1px solid #999; flex-grow: 1; height: 18px;}
+
+        /* --- Table Section --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid var(--light-blue-border);
+            padding: 10px;
+            text-align: center;    font-size: small;
+        }
+        th { background: #f4f7fb; color: #333; font-weight: bold;font-size:small}
+        .text-left { text-align: left; }
+
+        /* --- Lower Sections Layout --- */
+        .lower-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+			margin-bottom: 5px;
+            align-items: stretch;
+        }
+
+        /* --- Payment Information (Themed) --- */
+        .payment-info-box {
+            width: 48%;
+            margin-bottom: 0;
+        }
+        .payment-content {
+            padding: 15px;
+            line-height: 1.6;
+        }
+        .payment-content p { margin: 4px 0; }
+        .payment-content strong { color: var(--text-color); }
+        .payment-content a { color: var(--primary-blue); font-weight: bold; text-decoration: none; }
+        .payment-content a:hover { text-decoration: underline; }
+        .underline { border-bottom: 1px solid var(--text-color); }
+
+        /* --- Pricing Summary --- */
+        .pricing-summary { width: 48%; margin-bottom: 0; }
+        .pricing-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            border-bottom: 1px solid var(--light-blue-border);
+        }
+        .pricing-row:last-child { border-bottom: none; }
+        .discount-text { color: #d9534f; }
+        
+        .total-row {
+            background: var(--light-green-bg);
+            font-size: 16px;
+            font-weight: bold;
+            padding: 15px;
+            border-top: 1px solid var(--light-blue-border);
+        }
+
+        /* --- Amount in Words --- */
+        .amount-words {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .amount-words i {
+            background: var(--primary-blue);
+            color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        /* --- Notes and Terms (Themed) --- */
+        .notes-terms-content {
+            padding: 15px;
+            line-height: 1.6;
+        }
+        .notes-terms-content ol { margin: 0; padding-left: 20px;}
+        .notes-terms-content li { margin-bottom: 8px; }
+        .notes-terms-content li:last-child { margin-bottom: 0; }
+
+        /* --- Footer Bar --- */
+        .footer-bar {
+            background: #e8f0fc;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+		.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+    padding-top: 10px;
+}
+
+.border-space {
+    margin-top: 20px;
+}
+    </style>
+         </head>
+         <body>
+
+            <div class="invoice-container">
+               <!-- JS Print Button -->
+               <button class="print-btn" onclick="printInvoice()"><i
+                     class="fas fa-print"></i> Print Invoice</button>
+
+               <!-- Header -->
+               <div class="header">
+                  <div class="company-info">
+                     <div class="logo-row">
+                        <!-- Logo representation -->
+                        <div>
+                           <img class="logo"
+                              src="https://meramonitor.com/wp-content/uploads/download/MeraMonitorRelease/images/aapna-logo.png"
+                              alt="logo" />
+                        </div>
+
+                     </div>
+                     <div class="company-details">
+                        <div class="company-name">
+                           <h2>Aapna Infotheek Pvt. Ltd.</h2>
+                        </div>
+                        <p>57 Charak Sadan, Vikas Puri</p>
+                        <p>New Delhi - 110018, India</p>
+                        <br />
+                        <p><strong>GSTIN:</strong> 07AAGCA7514E1ZX</p>
+                        <p><strong>CIN:</strong> U72300DL2007PTC171709</p>
+                        <p><strong>MSME:</strong> UDYAM-DL-11-0061929</p>
+                     </div>
+                     <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> Email: accounts@meramonitor.com</p>
+                        <p><i class="fas fa-globe"></i> Website: www.meramonitor.com</p>
+                     </div>
+                  </div>
+
+                  <div class="invoice-title-section">
+                     <h1>
+                        <span id="InoviceTittle">
+                           <xsl:value-of select="PaymentInvoice/InoviceTittle" />
+                        </span>
+                     </h1>
+                     <div class="invoice-details-box">
+                        <div class="box-header">Invoice Details</div>
+                        <div class="invoice-details-grid">
+                           <span>Invoice Number</span>
+                           <span>:</span>
+                           <span>
+                              <xsl:value-of select="PaymentInvoice/InoviceNo" />
+                           </span>
+                           <span>Invoice Date</span>
+                           <span>:</span>
+                           <span id="inv-date">
+                              <xsl:value-of select="PaymentInvoice/InoviceDate" />
+                           </span>
+                           <span>Billing Period</span>
+                           <span>:</span>
+                           <span><xsl:value-of select="PaymentInvoice/issueDate" /> to <xsl:value-of
+                                 select="PaymentInvoice/dueDate" /></span>
+                           <span style="grid-column: 1 / span 3; height: 10px;"></span>
+                           <span>Currency</span>
+                           <span>:</span>
+                           <span>
+                              <xsl:value-of select="PaymentInvoice/PaymentCurrency" />
+                           </span>
+                           <span>Payment Terms</span>
+                           <span>:</span>
+                           <span>Advance Payment</span>
+                           <span>Place of Supply</span>
+                           <span>:</span>
+                           <span>
+                              <xsl:value-of select="PaymentInvoice/OrganizationState" />
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Bill To Section -->
+               <div
+                  class="section-box">
+                  <div class="box-title"
+                     style="margin: -1px 0 0 -1px; width: fit-content; border-radius: 4px 4px 0 0;">
+                     <i class="fas fa-user"></i> Bill To (Customer Details) </div>
+                  <div class="bill-to-content">
+                     <div class="bill-to-left">
+                        <h3>
+                           <span id="OrganisationName">
+                              <xsl:value-of select="PaymentInvoice/OrganisationName" />
+                           </span>
+                        </h3>
+                        <p>#addressField</p>
+                        <br />
+                        <p>
+                           <span id="OrganisationGSTIN">
+                              <xsl:value-of select="PaymentInvoice/OrganisationGSTIN" />
+                           </span>
+                        </p>
+                     </div>
+                     <div class="bill-to-right">
+                        <div class="input-line">
+                           <span>Email:</span>
+                           <div>
+                              <xsl:value-of select="PaymentInvoice/OrganisationEmail" />
+                           </div>
+                        </div>
+                        <div class="input-line">
+                           <span>Phone:</span>
+                           <div>
+                              <xsl:value-of select="PaymentInvoice/OrganisationPhone" />
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Subscription Details Table -->
+               <div
+                  class="section-box" style="border-bottom: none;">
+                  <div class="box-title"
+                     style="margin: -1px 0 0 -1px; width: fit-content; border-radius: 4px 4px 0 0;">
+                     <i class="fas fa-list-alt"></i> Subscription Details </div>
+                  <table>
+                     <tr>
+                        <th width="8%">Sl. No</th>
+                        <th width="35%">Description</th>
+                        <th width="15%">Plan</th>
+                        <th width="12%">HSN/SAC</th>
+                        <th width="10%">Users</th>
+                        <th width="10%">Rate (₹)</th>
+                        <th width="10%">Amount (₹)</th>
+                     </tr>
+                     <tr>
+                        <td>1</td>
+                        <td class="text-left">Mera Monitor Workforce<br />Productivity Platform
+                           #partnerinfo</td>
+                        <td><xsl:value-of select="PaymentInvoice/BillingPlanType" /> Subscription</td>
+                        <td id="Hsn_Sac">
+                           <xsl:value-of select="PaymentInvoice/Hsn_Sac" />
+                        </td>
+                        <td>
+                           <xsl:value-of select="PaymentInvoice/numberOfEmployee" />
+                        </td>
+                        <td>
+                           <xsl:value-of select="PaymentInvoice/rateOfBillingPlan" />
+                        </td>
+                        <td>
+                           <xsl:value-of select="PaymentInvoice/subTotal" />
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+
+               <!-- Lower Section (Payment & Pricing) -->
+               <div
+                  class="lower-section">
+
+                  <!-- Payment Information (Now matching theme) -->
+                  <div class="payment-info-box section-box">
+                     <div class="box-title">
+                        <i class="fas fa-university"></i> Payment Information </div>
+                     <div class="payment-content">
+                        <p><strong>Bank Name:</strong> ICICI Bank</p>
+                        <p><strong>Account Name:</strong> Aapna Infotheek Private Limited</p>
+                        <p><strong>Account Number:</strong> 008705006101</p>
+                        <p><strong>IFSC Code:</strong> ICIC0000087</p>
+                        <p><strong>Branch:</strong> New Delhi</p>
+                        <br />
+                        <p>
+                           <strong>Online Payment:</strong>
+                        </p>
+                        <p>Pay <span class="underline">Securely</span> via <span class="underline">
+                           RazorPay</span> - <br /><a href="https://razorpay.me/@meramonitor"><i
+                                 class="fas fa-link" style="font-size: 10px; margin-right: 4px;"></i>
+                           razorpay.me/@meramonitor</a></p>
+                     </div>
+                  </div>
+
+                  <!-- Pricing Summary -->
+                  <div class="pricing-summary section-box">
+                     <div class="box-title">
+                        <i class="fas fa-calculator"></i> Pricing Summary </div>
+                     <div class="pricing-row">
+                        <span>Subtotal</span>
+                        <span>
+                           <xsl:value-of select="PaymentInvoice/subTotal" />
+                        </span>
+                     </div>
+                     <div class="pricing-row discount-text">
+                        #discountField
+                     </div>
+                     <div class="pricing-row">
+                        <span>Net Amount After Discount</span>
+                        <span>
+                           #netAmountAfterDiscount
+                        </span>
+                     </div>
+                     <div class="pricing-row">
+                        #cgstFields
+                     </div>
+                     <div class="pricing-row">
+                        #sgstFields
+                     </div>
+                     <div class="pricing-row">
+                        #igstFields
+                     </div>
+
+                     <div class="pricing-row total-row">
+                        <span>Total Payable Amount:</span>
+                        <span>
+                           <xsl:value-of select="PaymentInvoice/totalAmount" />
+                        </span>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Amount in Words -->
+               <div
+                  class="section-box">
+                  <div class="amount-words">
+                     <i class="fas fa-rupee-sign" style="font-size: 20px;"></i>
+                     <div>
+                        <h4 style="margin: 0 0 5px 0; color: var(--primary-blue);">Amount in Words</h4>
+                        <span>
+                           <xsl:value-of select="PaymentInvoice/amountInWords" />
+                        </span>
+                     </div>
+                  </div>
+               </div>
+
+
+               <!-- Footer Bar -->
+               <div
+                  class="footer-bar">
+                  <span>Company <strong>PAN: AAGCA7514E</strong></span>
+                  <span>#jurisdictionField</span>
+               </div>
+               <div
+                  class="footer border-space">
+                  <span>This is an auto-generated invoice and does not require a signature or stamp.</span>
+               </div>
+            </div>
+
+            <!-- JavaScript for Print Functionality -->
+            <script>
+        function printInvoice() {
+            window.print();
+        }
+    </script>
+         </body>
+      </html>
+   </xsl:template>
+</xsl:stylesheet>

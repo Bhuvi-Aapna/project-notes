@@ -1,0 +1,28 @@
+EmailTemplate: PaymentInvoice
+db.OrganizationTaxAndDiscount.updateMany(
+  {},
+  {
+    $rename: {
+      "DiscountPercentage": "AnnualDiscountPercentage"
+    }
+  }
+);
+
+db["OrganizationTaxAndDiscount"].update({},
+                          {$set : {"MonthlyDiscountPercentage": 0}},
+                          {upsert:false,
+                          multi:true})
+						  
+db.Partner.updateMany(
+  {},
+  {
+    $rename: {
+      "DiscountPercentage": "AnnualDiscountPercentage"
+    }
+  }
+);
+
+db["Partner"].update({},
+                          {$set : {"MonthlyDiscountPercentage": 0}},
+                          {upsert:false,
+                          multi:true})

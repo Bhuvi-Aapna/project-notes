@@ -1,0 +1,254 @@
+[
+  {
+    "totalPurchasedLicenses": 23,
+    "activeUsers": 24,
+    "isExceeded": true,
+    "message": "Organization - OnCredit (Private) Limited - BillingPlan Type - Quarterly - has 24 active users which exceeds the paid licenses of 23. last transaction date 21-04-2026"
+  },
+  {
+    "totalPurchasedLicenses": 3,
+    "activeUsers": 4,
+    "isExceeded": true,
+    "message": "Organization - HILKNIGHTLY INDIA PRIVATE LIMITED - BillingPlan Type - Annually - has 4 active users which exceeds the paid licenses of 3. last transaction date 04-06-2025"
+  },
+  {
+    "totalPurchasedLicenses": 8,
+    "activeUsers": 24,
+    "isExceeded": true,
+    "message": "Organization - VIRTUED ACADEMY INTERNATIONAL - BillingPlan Type - Annually - has 24 active users which exceeds the paid licenses of 8. last transaction date 16-06-2025"
+  },
+  {
+    "totalPurchasedLicenses": 18,
+    "activeUsers": 19,
+    "isExceeded": true,
+    "message": "Organization - TECHMASTERS INFOMATRIX PRIVATE LIMITED - BillingPlan Type - Quarterly - has 19 active users which exceeds the paid licenses of 18. last transaction date 30-03-2026"
+  },
+  {
+    "totalPurchasedLicenses": 100,
+    "activeUsers": 102,
+    "isExceeded": true,
+    "message": "Organization - RIMJHIM ISPAT LIMITED - BillingPlan Type - Annually - has 102 active users which exceeds the paid licenses of 100. last transaction date 07-08-2025"
+  },
+  {
+    "totalPurchasedLicenses": 15,
+    "activeUsers": 16,
+    "isExceeded": true,
+    "message": "Organization - BCon Consultancy OPC Pvt Ltd - BillingPlan Type - Annually - has 16 active users which exceeds the paid licenses of 15. last transaction date 10-07-2025"
+  },
+  {
+    "totalPurchasedLicenses": 2,
+    "activeUsers": 4,
+    "isExceeded": true,
+    "message": "Organization - Fyntera IT Services - BillingPlan Type - Annually - has 4 active users which exceeds the paid licenses of 2. last transaction date 18-07-2025"
+  },
+  {
+    "totalPurchasedLicenses": 50,
+    "activeUsers": 53,
+    "isExceeded": true,
+    "message": "Organization - Cartrend Auto Parts Private Limited - BillingPlan Type - Annually - has 53 active users which exceeds the paid licenses of 50. last transaction date 29-07-2025"
+  },
+  {
+    "totalPurchasedLicenses": 13,
+    "activeUsers": 18,
+    "isExceeded": true,
+    "message": "Organization - LOGIX GURU INDIA PRIVATE LIMITED - BillingPlan Type - Annually - has 18 active users which exceeds the paid licenses of 13. last transaction date 22-08-2025"
+  },
+  {
+    "totalPurchasedLicenses": 1,
+    "activeUsers": 8,
+    "isExceeded": true,
+    "message": "Organization - Demo Org - BillingPlan Type - Annually - has 8 active users which exceeds the paid licenses of 1. last transaction date 25-08-2025"
+  },
+  {
+    "totalPurchasedLicenses": 122,
+    "activeUsers": 130,
+    "isExceeded": true,
+    "message": "Organization - Triveni Global Software Services LLP - BillingPlan TypeMonthly - has 130 active users which exceeds the paid licenses of 122. last transaction date 21-05-2026"
+  },
+  {
+    "totalPurchasedLicenses": 2,
+    "activeUsers": 4,
+    "isExceeded": true,
+    "message": "Organization - Ignition Consulting - BillingPlan Type - Annually - has 4 active users which exceeds the paid licenses of 2. last transaction date 01-09-2025"
+  },
+  {
+    "totalPurchasedLicenses": 5,
+    "activeUsers": 6,
+    "isExceeded": true,
+    "message": "Organization - REMOTE COMPUTING TECHNOLOGIES - BillingPlan Type - Annually - has 6 active users which exceeds the paid licenses of 5. last transaction date 29-01-2026"
+  },
+  {
+    "totalPurchasedLicenses": 4,
+    "activeUsers": 5,
+    "isExceeded": true,
+    "message": "Organization - Malik and associates LLC - BillingPlan Type - Annually - has 5 active users which exceeds the paid licenses of 4. last transaction date 08-09-2025"
+  },
+  {
+    "totalPurchasedLicenses": 11,
+    "activeUsers": 52,
+    "isExceeded": true,
+    "message": "Organization - Aston Hill - BillingPlan TypeMonthly - has 52 active users which exceeds the paid licenses of 11. last transaction date 11-05-2026"
+  },
+  {
+    "totalPurchasedLicenses": 16,
+    "activeUsers": 17,
+    "isExceeded": true,
+    "message": "Organization - DEE DESIGNERS - BillingPlan TypeMonthly - has 17 active users which exceeds the paid licenses of 16. last transaction date 04-05-2026"
+  },
+  {
+    "totalPurchasedLicenses": 60,
+    "activeUsers": 62,
+    "isExceeded": true,
+    "message": "Organization - NRG FOODS PRIVATE LIMITED - BillingPlan Type - Annually - has 62 active users which exceeds the paid licenses of 60. last transaction date 24-02-2026"
+  },
+  {
+    "totalPurchasedLicenses": 12,
+    "activeUsers": 16,
+    "isExceeded": true,
+    "message": "Organization - Best Use Auto Parts - BillingPlan Type - Annually - has 16 active users which exceeds the paid licenses of 12. last transaction date 14-10-2025"
+  },
+  {
+    "totalPurchasedLicenses": 11,
+    "activeUsers": 12,
+    "isExceeded": true,
+    "message": "Organization - Seven Procure - BillingPlan Type - Annually - has 12 active users which exceeds the paid licenses of 11. last transaction date 16-10-2025"
+  },
+  {
+    "totalPurchasedLicenses": 34,
+    "activeUsers": 36,
+    "isExceeded": true,
+    "message": "Organization - Neyyar Technologies Private Limited - BillingPlan TypeMonthly - has 36 active users which exceeds the paid licenses of 34. last transaction date 14-05-2026"
+  },
+  {
+    "totalPurchasedLicenses": 9,
+    "activeUsers": 11,
+    "isExceeded": true,
+    "message": "Organization - The SafeTalk Aacdemy - BillingPlan TypeMonthly - has 11 active users which exceeds the paid licenses of 9. last transaction date 27-04-2026"
+  },
+  {
+    "totalPurchasedLicenses": 6,
+    "activeUsers": 7,
+    "isExceeded": true,
+    "message": "Organization - Plasico Computers - BillingPlan Type - Annually - has 7 active users which exceeds the paid licenses of 6. last transaction date 30-10-2025"
+  },
+  {
+    "totalPurchasedLicenses": 9,
+    "activeUsers": 31,
+    "isExceeded": true,
+    "message": "Organization - Matrix JEE Academy - BillingPlan Type - Annually - has 31 active users which exceeds the paid licenses of 9. last transaction date 04-11-2025"
+  },
+  {
+    "totalPurchasedLicenses": 10,
+    "activeUsers": 11,
+    "isExceeded": true,
+    "message": "Organization - CHASE HR CONSULTING - BillingPlan TypeNon-Standard - has 11 active users which exceeds the paid licenses of 10. last transaction date 07-11-2025"
+  },
+  {
+    "totalPurchasedLicenses": 12,
+    "activeUsers": 16,
+    "isExceeded": true,
+    "message": "Organization - DIGITAL MARKETING STUDIOGENIX LLP - BillingPlan Type - Annually - has 16 active users which exceeds the paid licenses of 12. last transaction date 20-11-2025"
+  },
+  {
+    "totalPurchasedLicenses": 6,
+    "activeUsers": 7,
+    "isExceeded": true,
+    "message": "Organization - HUBOEXPERTS - BillingPlan Type - Annually - has 7 active users which exceeds the paid licenses of 6. last transaction date 08-12-2025"
+  },
+  {
+    "totalPurchasedLicenses": 1,
+    "activeUsers": 3,
+    "isExceeded": true,
+    "message": "Organization - Adkindia LLC - BillingPlan Type - Annually - has 3 active users which exceeds the paid licenses of 1. last transaction date 19-12-2025"
+  },
+  {
+    "totalPurchasedLicenses": 6,
+    "activeUsers": 7,
+    "isExceeded": true,
+    "message": "Organization - AI EARTHING - BillingPlan Type - Annually - has 7 active users which exceeds the paid licenses of 6. last transaction date 30-12-2025"
+  },
+  {
+    "totalPurchasedLicenses": 21,
+    "activeUsers": 22,
+    "isExceeded": true,
+    "message": "Organization - Royal Signs and Awnings - BillingPlan TypeMonthly - has 22 active users which exceeds the paid licenses of 21. last transaction date 23-05-2026"
+  },
+  {
+    "totalPurchasedLicenses": 3,
+    "activeUsers": 18,
+    "isExceeded": true,
+    "message": "Organization - VA World Outsourcing - BillingPlan TypeSemi-Annually - has 18 active users which exceeds the paid licenses of 3. last transaction date 09-01-2026"
+  },
+  {
+    "totalPurchasedLicenses": 3,
+    "activeUsers": 4,
+    "isExceeded": true,
+    "message": "Organization - S MURARKA & ASSOCIATES - BillingPlan Type - Annually - has 4 active users which exceeds the paid licenses of 3. last transaction date 29-01-2026"
+  },
+  {
+    "totalPurchasedLicenses": 1,
+    "activeUsers": 2,
+    "isExceeded": true,
+    "message": "Organization - Enrich Innovations - BillingPlan Type - Annually - has 2 active users which exceeds the paid licenses of 1. last transaction date 02-02-2026"
+  },
+  {
+    "totalPurchasedLicenses": 10,
+    "activeUsers": 15,
+    "isExceeded": true,
+    "message": "Organization - CSE - BillingPlan Type - Annually - has 15 active users which exceeds the paid licenses of 10. last transaction date 12-02-2026"
+  },
+  {
+    "totalPurchasedLicenses": 10,
+    "activeUsers": 13,
+    "isExceeded": true,
+    "message": "Organization - Maclec Technical Project - BillingPlan Type - Annually - has 13 active users which exceeds the paid licenses of 10. last transaction date 12-02-2026"
+  },
+  {
+    "totalPurchasedLicenses": 5,
+    "activeUsers": 6,
+    "isExceeded": true,
+    "message": "Organization - Elevate Biz Hub - BillingPlan Type - Annually - has 6 active users which exceeds the paid licenses of 5. last transaction date 12-02-2026"
+  },
+  {
+    "totalPurchasedLicenses": 8,
+    "activeUsers": 10,
+    "isExceeded": true,
+    "message": "Organization - National Chemical Co. - BillingPlan Type - Annually - has 10 active users which exceeds the paid licenses of 8. last transaction date 13-02-2026"
+  },
+  {
+    "totalPurchasedLicenses": 2,
+    "activeUsers": 4,
+    "isExceeded": true,
+    "message": "Organization - Rova Engineering Solutions India Pvt Ltd - BillingPlan Type - Annually - has 4 active users which exceeds the paid licenses of 2. last transaction date 19-02-2026"
+  },
+  {
+    "totalPurchasedLicenses": 10,
+    "activeUsers": 11,
+    "isExceeded": true,
+    "message": "Organization - Eaztaxbiz - BillingPlan TypeNon-Standard - has 11 active users which exceeds the paid licenses of 10. last transaction date 23-02-2026"
+  },
+  {
+    "totalPurchasedLicenses": 10,
+    "activeUsers": 12,
+    "isExceeded": true,
+    "message": "Organization - SILVERTECH INNOVATIONS PRIVATE LIMITED - BillingPlan Type - Annually - has 12 active users which exceeds the paid licenses of 10. last transaction date 06-04-2026"
+  },
+  {
+    "totalPurchasedLicenses": 2,
+    "activeUsers": 5,
+    "isExceeded": true,
+    "message": "Organization - NETWAY INDIA PRIVATE LIMITED - BillingPlan Type - Annually - has 5 active users which exceeds the paid licenses of 2. last transaction date 08-04-2026"
+  },
+  {
+    "totalPurchasedLicenses": 30,
+    "activeUsers": 31,
+    "isExceeded": true,
+    "message": "Organization - HINDUSTAN CONCRETE SOLUTION INDIA PRIVATE LIMITED - BillingPlan Type - Quarterly - has 31 active users which exceeds the paid licenses of 30. last transaction date 17-04-2026"
+  },
+  {
+    "totalPurchasedLicenses": 35,
+    "activeUsers": 63,
+    "isExceeded": true,
+    "message": "Organization - TRANSIT ADVERTISING PRIVATE LIMITED - BillingPlan Type - Annually - has 63 active users which exceeds the paid licenses of 35. last transaction date 25-05-2026"
+  }
+]

@@ -1,0 +1,21 @@
+--29-05-2026
+db["Organization"].update({},
+                          {$set : {"IsGSTValid": false}},
+                          {upsert:false,
+                          multi:true})
+	
+EmailTemplate: PaymentInvoice
+
+"GstApi": {
+  "CacheHours": 24,
+  "RateLimitWindowSeconds": 60,
+  "RateLimitMaxRequests": 50,
+  "GSTINValidator": {
+    "BaseUrl": " https://sheet.gstincheck.co.in/check/",
+    "ApiKey": "5071f098b4023deb35d11d1ead485038",
+    "TimeoutSeconds": 10,
+    "RetryCount": 3,
+    "CircuitBreakerFailures": 5,
+    "CircuitBreakerDurationSeconds": 30
+  }
+}

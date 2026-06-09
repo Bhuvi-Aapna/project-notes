@@ -1,0 +1,73 @@
+Project analysis (current structure)
+•	Tech stack: .NET 8 Web API + MongoDB.
+•	Main API project: MMPortalIntegrationApi.
+•	Layers:
+•	Controllers (integration + external API endpoints)
+•	Services (business logic for Redmine, Vryno, PerfettoHR, Karyakeeper)
+•	DataAccess (Mongo repositories)
+•	Model / Dtos / Keys
+•	Supported portal types (factory-based): Redmine, Vryno, PerfettoHR, Karyakeeper.
+•	Auth patterns used:
+•	X-Api-Key header for internal integration endpoints.
+•	JWT Bearer token for external endpoints like AttendanceController.
+•	External dependency: Mera Monitor APIs from MeraMonitorApi.BaseUri and ExternalBaseUri.
+---
+Step-by-step prerequisites for portal integration project
+1.	Install runtime/tools
+•	.NET SDK 8
+•	MongoDB access (network + credentials)
+•	Valid HTTPS dev certificate for local run
+2.	Configure appsettings.json
+•	ConnectionStrings:PortalIntegrationConnectionString
+•	MongoDbName
+•	Collection keys:
+•	PortalIntegrationCollection
+•	ExternalOrganizationMapperCollection
+•	PortalOrgApiConfigCollection
+•	AuthClientsCollection
+•	others used by sync history/mappers
+•	IssuerSigningKey, EncryptionKey, EncryptionIV
+•	PortalIntegrationApiKey (required in X-Api-Key for many APIs)
+•	MeraMonitorApi:BaseUri and MeraMonitorApi:ExternalBaseUri
+3.	Seed master portal configuration data
+•	Add active records in PortalConfiguration collection for each portal (PortalName, PortalURL, MMApiKey, MMPortalId, etc.).
+•	Important: NewOrganizationSetup checks portal by PortalName; if not found, setup fails.
+4.	Run API
+•	Use https profile (launchSettings.json shows local ports).
+•	Swagger is available in development at:
+•	/internal-swagger-aapna-integration-portal
+5.	Register client credentials (per organization)
+•	Call: POST api/ClientManagement/RegisterClient
+•	Header: X-Api-Key = PortalIntegrationApiKey
+•	Body: organizationId
+•	Save client_id and client_secret.
+6.	Generate JWT access token
+•	Call: POST api/oauth/token
+•	Form fields:
+•	client_id
+•	client_secret
+•	redirect_uri = urn:ietf:wg:oauth:2.0:oob
+•	grant_type = client_credentials
+•	Use returned token for JWT-protected external APIs.
+7.	Setup organization integration
+•	Call: POST api/SyncPortalIntegration/NewOrganizationSetup
+•	Provide PortalIntegrationRequest:
+•	MmPortalId, PortalName, MmOrgId, AdminName, AdminPassword
+•	This creates:
+•	ExternalOrganizationMapper
+•	PortalOrgApiConfig with auth token details
+8.	For OAuth-based portals (e.g., Vryno), complete token flow
+•	POST .../GetFormAuthUrl
+•	POST .../GenerateAndSaveToken
+•	This stores access/refresh token in PortalOrgApiConfig.
+9.	Run sync operations
+•	Example endpoints:
+•	SyncPortalDataByOrganization
+•	SyncPortalDataByUser
+•	SyncUserTimeEntry
+•	SyncTimeEntriesToRedmine
+•	Include correct X-Api-Key in headers.
+10.	Validate security/ops before production
+•	Move secrets from appsettings.json to secure secret storage.
+•	Restrict Swagger and debug behavior in non-dev environment.
+•	Ensure Mongo logging sink connection and retention are production-safe.

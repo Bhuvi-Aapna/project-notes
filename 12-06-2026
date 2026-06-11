@@ -1,0 +1,30 @@
+-12-06-2026
+appsetting
+remove section StripeDetails , PayUDetails
+
+db["WhiteLabeling"].update({}, {$set : {"AccountsMail": "accounts@meramonitor.com"}},{upsert:false,multi:true})
+db["WhiteLabeling"].update({}, {$set : {"SupportMail": "support@meramonitor.com"}},{upsert:false,multi:true})
+
+						  
+EmailTemplate: 
+ body change
+ 
+PaymentSuccessful
+OrganizationInvoiceTemplate
+PaymentSuccessTemplate -- not in Use
+PaymentFailedTemplate
+PaymentInvoice
+PreSuspensionMail -- not in use
+SubscriptionCancelled
+PaymentInvoiceToAdminAndAccountantTemplate
+PaymentProformaInvoiceToAdminAndAccountantTemplate
+ReGeneratePaymentProformaInvoiceToAdminAndAccountantTemplate
+ReGenerateInvoiceToAdminAndAccountantTemplate
+
+subject change
+PaymentInvoiceToAdminAndAccountantTemplate , 
+ReGenerateInvoiceToAdminAndAccountantTemplate ,
+PaymentProformaInvoiceToAdminAndAccountantTemplate
+ReGeneratePaymentProformaInvoiceToAdminAndAccountantTemplate
+
+Azure Key Valut- Key Add - GSTAPIKey

@@ -3,3 +3,6 @@ SFTPd g6H-)=aT.YBl(1^3_E9e
 MinIOAccessKey JZJPQZH1PYTMAR9VV3AT
 MinIOSecretKey 6GRgCEqrs+wfg43GFRuvoaSJbsHZDPGgt6feZzlM
 ServiceBusConnectionString
+
+
+ Endpoint=sb://meramonitor.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=x76JQ7xrWNJ2mV9yUWT6H8g0+3DvAo2T7+ASbCaT0A0=",

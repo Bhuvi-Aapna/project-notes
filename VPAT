@@ -1,0 +1,363 @@
+
+•	Users cannot access data from other organizations
+•	Users cannot access other users' personal data
+•	Authorization checks are performed at the controller level before data access
+•	Consistent security pattern across all controllers
+# Security Configuration Guide for TeamTamApi
+
+## Overview
+This document outlines the security measures implemented and recommendations for the TeamTamApi application.
+
+## Security Issues Identified and Resolutions
+
+### 1. ? Security Headers
+**Status:** IMPLEMENTED  
+**Location:** `TeamTamApi/MMSecurity/SecurityHeadersMiddleware.cs`  
+**Configuration:** `Program.cs` - Line with `app.UseSecurityHeaders();`
+
+**Headers Configured:**
+- X-Frame-Options: DENY
+- X-Content-Type-Options: nosniff
+- X-XSS-Protection: 1; mode=block
+- Content-Security-Policy
+- Referrer-Policy: strict-origin-when-cross-origin
+- Permissions-Policy
+- Strict-Transport-Security (HSTS)
+
+### 2. ? Rate Limiting
+**Status:** IMPLEMENTED  
+**Location:** `TeamTamApi/MMSecurity/RateLimitingConfiguration.cs`  
+**Configuration:** `Program.cs`
+
+**Rate Limits Configured:**
+- General API: 100 requests per minute
+- Login endpoint: 5 attempts per minute, 20 per hour
+- Forgot password: 3 attempts per 15 minutes
+- Reset password: 5 attempts per hour
+- 2FA verification: 5 attempts per 5 minutes
+
+### 3. ?? **Hardcoded Azure Credentials** - CRITICAL ISSUE
+**Status:** NEEDS IMMEDIATE ACTION  
+**Location:** `TeamTamApi/appsettings.json`
+
+**Issues Found:**
+```json
+Line 194-197: AzureServiceBus ConnectionString with hardcoded key
+Line 197-202: Azure KeyVault credentials (ClientId, TenantId, ClientSecret)
+Line 176-182: SFTP credentials with hardcoded password
+Line 305-308: MinIO credentials with hardcoded AccessKey and SecretKey
+```
+
+**REQUIRED ACTION:**
+1. **Remove all hardcoded credentials from appsettings.json**
+2. **Move to Azure Key Vault or Environment Variables**
+3. **Use Managed Identity when possible**
+
+**Recommended Changes:**
+
+**For Azure Service Bus:**
+```json
+"AzureServiceBus": {
+    "ConnectionString": "", // Remove this, use Key Vault
+    "QueueName": "dev-user-processing"
+}
+```
+
+Add to Program.cs (after Key Vault is loaded):
+```csharp
+var serviceBusConnectionString = builder.Configuration["ServiceBusConnectionString"];
+builder.Services.AddSingleton(sp => new ServiceBusClient(serviceBusConnectionString));
+```
+
+**For SFTP:**
+```json
+"SFTPDetails": {
+    "Host": "sftp.meramonitor.com",
+    "Port": "22",
+    "UserName": "", // Move to Key Vault
+    "Password": "", // Move to Key Vault
+    "WhiteLabelFolder": "images/whitelabel/",
+    "WhiteLabelPath": "https://sftp.meramonitor.com/upload/",
+    "ProfileImageFolder": "images/dev/profile/"
+}
+```
+
+**For MinIO:**
+```json
+"MinIOConfiguration": {
+    "Endpoint": "http://20.219.150.219:9000",
+    "AccessKey": "", // Move to Key Vault
+    "SecretKey": "", // Move to Key Vault
+    "UseSSL": "false",
+    "BucketName": "screenshots"
+}
+```
+
+**Implementation Steps:**
+
+1. Add secrets to Azure Key Vault:
+```bash
+az keyvault secret set --vault-name "meramonitorkeyvault" --name "ServiceBusConnectionString" --value "YOUR_CONNECTION_STRING"
+az keyvault secret set --vault-name "meramonitorkeyvault" --name "SFTPPassword" --value "YOUR_SFTP_PASSWORD"
+az keyvault secret set --vault-name "meramonitorkeyvault" --name "MinIOAccessKey" --value "YOUR_ACCESS_KEY"
+az keyvault secret set --vault-name "meramonitorkeyvault" --name "MinIOSecretKey" --value "YOUR_SECRET_KEY"
+```
+
+2. Access in code:
+```csharp
+var serviceBusConnectionString = builder.Configuration["ServiceBusConnectionString"];
+var sftpPassword = builder.Configuration["SFTPPassword"];
+var minioAccessKey = builder.Configuration["MinIOAccessKey"];
+var minioSecretKey = builder.Configuration["MinIOSecretKey"];
+```
+
+### 4. ?? **Missing Authorization on Stealth Endpoints** - HIGH PRIORITY
+**Status:** NEW SECURITY CONTROLS ADDED  
+**Location:** `TeamTamApi/Controllers/LoginController.cs`
+
+**Vulnerable Endpoints:**
+- `GET /api/v1/Login/stealthLoginByEmail` - Line 152
+- `GET /api/v1/Login/loginForStealth` - Line 159
+
+**NEW FILE CREATED:** `TeamTamApi/MMSecurity/StealthModeAuthorizeAttribute.cs`
+
+**REQUIRED CHANGES:**
+
+Update `LoginController.cs`:
+```csharp
+[HttpGet]
+[Route("stealthLoginByEmail")]
+[ApiKey]
+[StealthModeAuthorize] // ADD THIS
+public async Task<LoginConfigResponse> stealthloginByEmail(string email)
+{
+    return await _loginService.StealthLoginByEmailAsync(email);
+}
+
+[HttpGet]
+[Route("loginForStealth")]
+[ApiKey]
+[StealthModeAuthorize] // ADD THIS
+public async Task<LoginConfigResponse> loginForStealth(string email)
+{
+    return await _loginService.StealthLoginWithConfigAsync(email);
+}
+```
+
+### 5. ? HTTPS Metadata
+**Status:** IMPLEMENTED  
+**Location:** `Program.cs` - Line 92
+
+```csharp
+x.RequireHttpsMetadata = !builder.Environment.IsDevelopment();
+```
+
+**Note:** HTTPS metadata validation is enabled in production and disabled only in development.
+
+### 6. ? Input Validation
+**Status:** IMPLEMENTED  
+**Location:** 
+- `TeamTamApi/Filters/ValidateInputFilter.cs`
+- `TeamTamApi.Dto/Validation/InputValidationAttributes.cs`
+
+**Configured in Program.cs:**
+```csharp
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<TeamTamApi.Filters.ValidateInputFilter>();
+});
+```
+
+### 7. ?? **Weak Password Policy** - MEDIUM PRIORITY
+**Status:** ENHANCED  
+**Location:** `TeamTamApi.Dto/Validation/InputValidationAttributes.cs`
+
+**NEW FILE CREATED:** `TeamTamApi/MMSecurity/PasswordPolicyConfiguration.cs`
+
+**Current Policy:**
+- Minimum 12 characters
+- Requires uppercase, lowercase, digit, special character
+- Checks common passwords
+
+**Enhanced Policy Adds:**
+- Sequential character detection
+- Repeated character detection
+- Password age tracking (90 days)
+- Password history (5 previous passwords)
+- Account lockout (5 failed attempts, 30 min lockout)
+
+**REQUIRED CHANGES:**
+
+Update password DTOs to use enhanced validation:
+
+**File:** `TeamTamApi.Dto/Request/PasswordRequest.cs`
+```csharp
+using TeamTamApi.MMSecurity; // Add this
+
+// Update ResetPasswordRequest:
+[Required(ErrorMessage = "Password is required")]
+[EnhancedPassword] // Change from StrongPassword
+[SanitizeInput]
+public string Password { get; set; } = string.Empty;
+```
+
+### 8. ?? **Unrestricted File Upload** - HIGH PRIORITY
+**Status:** NEW CONTROLS ADDED  
+**NEW FILE CREATED:** `TeamTamApi/MMSecurity/FileUploadValidationAttribute.cs`
+
+**Features:**
+- File size validation (default: 10 MB max)
+- File extension whitelist
+- MIME type validation
+- Malicious filename detection
+- Executable file detection
+- Script injection UploadDocument
+
+**REQUIRED CHANGES:**
+
+Apply to file upload endpoints (example):
+```csharp
+[HttpPost]
+[Route("UploadDocument")]
+[ValidateFileUpload(maxFileSizeInMB: 10, allowedExtensions: ".pdf,.doc,.docx")]
+public async Task<IActionResult> UploadDocument(IFormFile file)
+{
+    // Your upload logic here
+}
+
+[HttpPost]
+[Route("UploadProfileImage")]
+[ValidateFileUpload(maxFileSizeInMB: 5, allowedExtensions: ".jpg,.jpeg,.png")]
+public async Task<IActionResult> UploadProfileImage(IFormFile file)
+{
+    // Your upload logic here
+}
+```
+
+### 9. ? Security Audit Logging
+**Status:** IMPLEMENTED  
+**Location:** `TeamTamApi/MMSecurity/SecurityAuditLoggingMiddleware.cs`
+
+**Features:**
+- Logs all authentication attempts
+- Tracks failed login attempts
+- Detects SQL injection attempts
+- Detects XSS attempts
+- Detects path traversal attempts
+- Monitors suspicious user agents
+
+## Additional Security Recommendations
+
+### 1. Environment-Specific Configuration
+Create separate configuration files:
+- `appsettings.Development.json` - Development settings (no secrets)
+- `appsettings.Production.json` - Production settings (no secrets)
+- Use Azure Key Vault for all secrets
+
+### 2. Connection String Security
+Never store connection strings in source control. Use:
+- Azure Key Vault
+- Environment variables
+- Azure Managed Identity
+
+### 3. API Key Rotation
+Implement regular API key rotation policy:
+- Rotate keys every 90 days
+- Support multiple active keys during transition
+- Log all key usage
+
+### 4. Regular Security Audits
+- Schedule quarterly security reviews
+- Update dependencies regularly
+- Monitor security advisories
+
+### 5. Implement Web Application Firewall (WAF)
+Consider adding Azure WAF or similar for additional protection against:
+- DDoS attacks
+- SQL injection
+- XSS attacks
+- Bot traffic
+
+## Implementation Checklist
+
+### Immediate Actions (Critical - Within 24 hours)
+- [ ] Remove hardcoded Azure credentials from appsettings.json
+- [ ] Move all secrets to Azure Key Vault
+- [ ] Update Program.cs to read secrets from Key Vault
+- [ ] Add StealthModeAuthorize attribute to stealth endpoints
+- [ ] Test all authentication flows
+
+### High Priority (Within 1 week)
+- [ ] Apply file upload validation to all upload endpoints
+- [ ] Update password validation to use EnhancedPassword attribute
+- [ ] Implement password history tracking
+- [ ] Implement account lockout mechanism
+- [ ] Add file upload size limits in web.config/program.cs
+
+### Medium Priority (Within 2 weeks)
+- [ ] Review and update all controller endpoints for proper authorization
+- [ ] Implement password expiration (90 days)
+- [ ] Add monitoring for failed authentication attempts
+- [ ] Create alerts for security events
+
+### Low Priority (Within 1 month)
+- [ ] Implement comprehensive logging dashboard
+- [ ] Add automated security scanning to CI/CD pipeline
+- [ ] Document security policies
+- [ ] Create incident response plan
+
+## Testing Security Controls
+
+### 1. Test Rate Limiting
+```bash
+# Test login rate limit (should block after 5 attempts)
+for i in {1..10}; do
+  curl -X POST "https://your-api/api/v1/Login/LoginWithDomain" \
+  -H "Content-Type: application/json" \
+  -d '{"email":"test@example.com","password":"wrong"}'
+done
+```
+
+### 2. Test File Upload Validation
+```bash
+# Test file size limit
+curl -X POST "https://your-api/api/v1/Upload" \
+  -F "file=@large_file.pdf"
+
+# Test file extension validation
+curl -X POST "https://your-api/api/v1/Upload" \
+  -F "file=@malicious.exe"
+```
+
+### 3. Test Password Policy
+```bash
+# Test weak password (should fail)
+curl -X POST "https://your-api/api/v1/Login/ResetPassword" \
+  -H "Content-Type: application/json" \
+  -d '{"email":"test@example.com","password":"123456","token":"xyz"}'
+```
+
+## Monitoring and Alerts
+
+Set up alerts for:
+1. Multiple failed login attempts from same IP
+2. Access to stealth endpoints
+3. Large file uploads
+4. Unusual API usage patterns
+5. Credential exposure attempts
+
+## Compliance
+
+This security configuration helps meet:
+- OWASP Top 10 requirements
+- GDPR data protection requirements
+- SOC 2 security controls
+- ISO 27001 standards
+
+## Support
+
+For security concerns or questions, contact:
+- Security Team: security@meramonitor.com
+- DevOps Team: devops@meramonitor.com
+
+Last Updated: 2024

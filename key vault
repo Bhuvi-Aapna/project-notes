@@ -4,3 +4,13 @@ MinIOAccessKey JZJPQZH1PYTMAR9VV3AT
 MinIOSecretKey 6GRgCEqrs+wfg43GFRuvoaSJbsHZDPGgt6feZzlM
 ServiceBusConnectionString
 
+Security Configuration 
+Security Issues
+Rate Limiting
+removing Hardcoded Credentials
+HTTPS Metadata
+Input Validation
+Enhanced Passowrd Policy
+File Upload Validation Policy
+Security Audit Logging
+Implement Web Application Firewall

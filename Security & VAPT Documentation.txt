@@ -1,0 +1,382 @@
+# TeamTam API - Security & VAPT Documentation
+
+## ?? Overview
+
+This folder contains comprehensive security documentation and implementations for the TeamTam API application following the Vulnerability Assessment and Penetration Testing (VAPT) process.
+
+---
+
+## ?? Documentation Files
+
+### 1. **VAPT_SECURITY_REPORT.md**
+Comprehensive security assessment report identifying:
+- **8 Critical** vulnerabilities
+- **12 High** severity issues
+- **15 Medium** severity issues
+- **8 Low** severity issues
+
+**Key Findings:**
+- Hardcoded credentials in configuration
+- Missing authorization on sensitive endpoints
+- Insufficient input validation
+- No rate limiting
+- Missing security headers
+- Weak session management
+
+### 2. **SECURITY_IMPLEMENTATION_GUIDE.md**
+Step-by-step implementation guide organized by priority:
+- **Immediate (0-7 days):** Critical security fixes
+- **Short-term (7-30 days):** High priority improvements
+- **Medium-term (30-90 days):** Compliance and monitoring
+
+### 3. **SECURITY_TESTING_CHECKLIST.md**
+Practical testing guide with:
+- 22 security test categories
+- Command-line test examples
+- Automated testing tool recommendations
+- Test result templates
+
+---
+
+## ?? Security Implementation Files
+
+### Security/SecurityHeadersMiddleware.cs
+Implements HTTP security headers:
+- X-Frame-Options (Clickjacking protection)
+- Content-Security-Policy
+- X-Content-Type-Options (MIME sniffing protection)
+- Strict-Transport-Security (HSTS)
+- X-XSS-Protection
+
+### Security/RateLimitingConfiguration.cs
+Implements API rate limiting:
+- IP-based rate limiting
+- Endpoint-specific limits
+- Authentication endpoint protection (5 attempts/minute)
+- Advanced user-based tracking
+
+### Security/InputValidationAttributes.cs
+Custom validation attributes:
+- `[SanitizeInput]` - XSS and SQL injection prevention
+- `[StrictEmail]` - Email format validation
+- `[ValidObjectId]` - MongoDB ID validation
+- `[SafeFilePath]` - Path traversal prevention
+- `[SafeUrl]` - SSRF attack prevention
+- `[StrongPassword]` - Password complexity enforcement
+
+### Security/SecurityAuditLoggingMiddleware.cs
+Comprehensive audit logging:
+- Request/response logging
+- Authentication attempt tracking
+- Security threat detection
+- Sensitive data sanitization
+- Anomaly detection
+
+---
+
+## ?? Quick Start Implementation
+
+### Step 1: Install Required Packages
+```bash
+cd TeamTamApi
+dotnet add package AspNetCoreRateLimit
+dotnet add package Microsoft.Extensions.Caching.StackExchangeRedis
+```
+
+### Step 2: Update Program.cs
+```csharp
+using TeamTamApi.Security;
+
+// Add rate limiting configuration
+AuthenticationRateLimitConfiguration.ConfigureRateLimiting(builder.Services, configuration);
+
+var app = builder.Build();
+
+// Add security middleware (in order)
+app.UseSecurityHeaders();
+app.UseSecurityAuditLogging();
+app.UseHttpsRedirection();
+app.UseIpRateLimiting();
+app.UseMiddleware<AdvancedRateLimitingMiddleware>();
+app.UseAuthentication();
+app.UseAuthorization();
+```
+
+### Step 3: Fix Critical Issues
+1. **Remove hardcoded credentials from appsettings.json**
+   ```bash
+   # Move to Azure Key Vault or environment variables
+   # Rotate all exposed credentials immediately
+   ```
+
+2. **Add authorization to stealth endpoints**
+   ```csharp
+   [Authorize(Roles = RoleConstant.SuperAdmin_Role)]
+   public async Task<LoginConfigResponse> StealthLoginByEmail(string email)
+   ```
+
+3. **Enable HTTPS metadata validation**
+   ```csharp
+   x.RequireHttpsMetadata = !builder.Environment.IsDevelopment();
+   ```
+
+### Step 4: Add Input Validation to DTOs
+```csharp
+using TeamTamApi.Security;
+
+public class LoginRequest
+{
+    [Required]
+    [StrictEmail]
+    [SanitizeInput]
+    public string Email { get; set; }
+
+    [Required]
+    [StrongPassword(minLength: 12)]
+    public string Password { get; set; }
+}
+```
+
+---
+
+## ?? Critical Vulnerabilities (Fix Immediately)
+
+| # | Vulnerability | Severity | Location | Status |
+|---|---------------|----------|----------|--------|
+| 1 | Hardcoded Azure credentials | Critical | appsettings.json:39 | ?? Open |
+| 2 | Missing authorization | Critical | LoginController.cs:141-158 | ?? Open |
+| 3 | HTTPS metadata disabled | Critical | Program.cs:92 | ?? Open |
+| 4 | No rate limiting | Critical | All auth endpoints | ?? Open |
+| 5 | Missing security headers | Critical | Application-wide | ?? Open |
+| 6 | Weak password policy | Critical | Password validation | ?? Open |
+| 7 | Unrestricted file upload | Critical | Cloud storage endpoints | ?? Open |
+| 8 | Insufficient input validation | Critical | All endpoints | ?? Open |
+
+---
+
+## ?? Testing the Security Implementation
+
+### Manual Testing
+```bash
+# Test security headers
+curl -I https://api.teamtam.com/api/v1/Login
+
+# Test rate limiting
+for i in {1..10}; do
+  curl -X POST http://localhost:5000/api/v1/Login/LoginWithDomain \
+    -d '{"email":"test@test.com","password":"test"}'
+done
+
+# Test input validation
+curl -X POST http://localhost:5000/api/v1/Login \
+  -d '{"email":"<script>alert(1)</script>"}'
+```
+
+### Automated Testing
+```bash
+# OWASP ZAP baseline scan
+docker run -t owasp/zap2docker-stable zap-baseline.py \
+  -t http://localhost:5000/api/v1
+
+# Dependency vulnerability check
+dotnet list package --vulnerable
+
+# Run Nikto scanner
+nikto -h http://localhost:5000
+```
+
+---
+
+## ?? Security Metrics
+
+### Current Status
+- **Security Rating:** ?? High Risk
+- **Critical Issues:** 8
+- **Compliance:** ? Not compliant
+
+### Target Status (After Implementation)
+- **Security Rating:** ? Low Risk
+- **Critical Issues:** 0
+- **Compliance:** ? OWASP Top 10, GDPR baseline
+
+---
+
+## ?? Security Best Practices Implemented
+
+- ? Defense in depth
+- ? Principle of least privilege
+- ? Secure by default
+- ? Input validation
+- ? Output encoding
+- ? Security logging and monitoring
+- ? Rate limiting
+- ? Strong authentication
+- ? Proper error handling
+- ? Secure configuration management
+
+---
+
+## ?? Implementation Timeline
+
+### Week 1 (Days 0-7) - Critical Fixes
+- [x] Security documentation created
+- [ ] Remove hardcoded credentials
+- [ ] Implement security headers
+- [ ] Add authorization checks
+- [ ] Enable HTTPS validation
+- [ ] Implement rate limiting
+- [ ] Add input validation
+
+### Week 2-4 (Days 7-30) - High Priority
+- [ ] CSRF protection
+- [ ] Enhanced JWT security
+- [ ] Token blacklisting
+- [ ] File upload validation
+- [ ] CORS hardening
+- [ ] Error handling
+- [ ] Request size limits
+
+### Month 2-3 (Days 30-90) - Medium Priority
+- [ ] Security testing in CI/CD
+- [ ] Penetration testing
+- [ ] Security training
+- [ ] Compliance documentation
+- [ ] Incident response plan
+
+---
+
+## ?? Monitoring and Alerts
+
+### Set Up Alerts For:
+- Failed authentication attempts (>10 in 5 min)
+- Rate limit violations
+- Detected security threats
+- Multiple failed 2FA attempts
+- Unusual access patterns
+- Database query anomalies
+
+### Logging Requirements:
+- All authentication events
+- Authorization failures
+- Data access (especially sensitive)
+- Configuration changes
+- Security policy violations
+
+---
+
+## ?? Additional Resources
+
+### OWASP References
+- [OWASP Top 10 2021](https://owasp.org/Top10/)
+- [OWASP API Security Top 10](https://owasp.org/www-project-api-security/)
+- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
+
+### Microsoft Security
+- [ASP.NET Core Security](https://docs.microsoft.com/en-us/aspnet/core/security/)
+- [Azure Security Best Practices](https://docs.microsoft.com/en-us/azure/security/)
+
+### Tools
+- [OWASP ZAP](https://www.zaproxy.org/)
+- [Burp Suite](https://portswigger.net/burp)
+- [SonarQube](https://www.sonarqube.org/)
+- [Snyk](https://snyk.io/)
+
+---
+
+## ?? Team Responsibilities
+
+### Developers
+- Implement security fixes
+- Follow secure coding practices
+- Peer review security changes
+- Update security tests
+
+### DevOps
+- Secure CI/CD pipeline
+- Manage secrets and credentials
+- Monitor security alerts
+- Maintain security scanning
+
+### Security Team
+- Regular security audits
+- Penetration testing
+- Security training
+- Incident response
+
+---
+
+## ?? Security Contact
+
+**Security Issues:** security@teamtam.com  
+**Emergency:** security-emergency@teamtam.com  
+**PGP Key:** Available at `.well-known/security.txt`
+
+---
+
+## ?? Change Log
+
+### 2024-12-XX - Initial Security Assessment
+- Completed VAPT assessment
+- Identified 43 security vulnerabilities
+- Created security implementation framework
+- Developed security middleware components
+
+---
+
+## ? Pre-Deployment Checklist
+
+Before deploying to production, ensure:
+
+- [ ] All Critical vulnerabilities fixed
+- [ ] High severity issues addressed
+- [ ] Security headers implemented
+- [ ] Rate limiting configured
+- [ ] Input validation on all endpoints
+- [ ] HTTPS enforced
+- [ ] Secrets moved to Key Vault
+- [ ] All credentials rotated
+- [ ] Security audit logging enabled
+- [ ] Error handling sanitized
+- [ ] CORS properly configured
+- [ ] Swagger disabled in production
+- [ ] Security testing passed
+- [ ] Penetration test completed
+- [ ] Security documentation updated
+- [ ] Team trained on security practices
+
+---
+
+## ?? Next Steps
+
+1. **Immediate Actions (Today)**
+   - Review VAPT_SECURITY_REPORT.md
+   - Remove hardcoded credentials
+   - Rotate exposed keys
+
+2. **This Week**
+   - Implement security middleware
+   - Add authorization to all endpoints
+   - Configure rate limiting
+   - Add input validation
+
+3. **This Month**
+   - Complete all critical and high fixes
+   - Conduct security testing
+   - Set up monitoring and alerts
+   - Update documentation
+
+---
+
+## ?? License
+
+This security documentation is confidential and intended for internal use by the TeamTam development team only.
+
+---
+
+**Last Updated:** December 2024  
+**Version:** 1.0  
+**Status:** ?? Implementation Required
+
+---
+
+*For questions or clarifications, please contact the security team.*

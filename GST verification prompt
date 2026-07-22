@@ -1,0 +1,55 @@
+Create a production-ready GSTIN verification module using ASP.NET Core Web API (.NET 8).
+Requirements:
+1.	Create clean architecture structure:
+•	Controllers
+•	Services
+•	Interfaces
+•	DTOs
+•	Repository layer
+•	Middleware
+•	Configuration
+•	Dependency Injection
+2.	Implement GST provider abstraction: Create interface:
+public interface IGstProvider { Task<GstDetailsResponse> VerifyGstinAsync(string gstin); }
+3.	Create provider implementations:
+•	GSTINValidatorProvider
+4.	Add automatic fallback logic: call GSTINValidatorProvider
+5.	Create endpoint: GET /api/gst/search/{gstin}
+6.	Validate GSTIN format before API call:
+•	Regex validation
+•	Return proper validation response
+7.	Add HttpClientFactory implementation:
+•	Typed HttpClient
+•	Polly retry policy
+•	Timeout policy
+•	Circuit breaker
+8.	Add caching:
+•	Cache GST responses for 24 hours
+•	Use GSTIN as cache key
+9.	Create response model: { "gstin": "", "legalName": "", "tradeName": "", "address": "", "state": "", "pincode": "", "status": "", "lastUpdated": "" }
+10.	Add structured logging using Serilog:
+•	Request logging
+•	External API failure logging
+•	Response timing
+11.	Add global exception middleware.
+12.	Add rate limiting:
+•	Max 50 requests per minute per IP
+13.	Add Swagger documentation.
+14.	Add appsettings.json configuration:
+•	API keys
+•	Base URLs
+•	Timeout settings
+15.	Create complete implementation with:
+•	Controller code
+•	Service code
+•	Provider implementations
+•	Retry policies
+•	Cache handling
+•	DTOs
+•	Program.cs setup
+•	Middleware
+•	Sample appsettings.json
+16.	Use async/await everywhere.
+17.	Use proper SOLID principles and clean coding practices.
+18.	Add comments explaining critical production decisions.
+Generate complete working code.

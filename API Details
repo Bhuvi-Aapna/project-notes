@@ -1,0 +1,1327 @@
+# MeraWork API Documentation
+
+## Table of Contents
+1. [API Overview](#api-overview)
+2. [Authentication](#authentication)
+3. [Authorization](#authorization)
+4. [Rate Limiting](#rate-limiting)
+5. [Webhook Security](#webhook-security)
+6. [API Endpoints](#api-endpoints)
+7. [Error Handling](#error-handling)
+8. [Security Features](#security-features)
+9. [Best Practices](#best-practices)
+
+---
+
+## API Overview
+
+**Base URL (Internal):** `https://api.merawork.com/api/v1/`  
+**Base URL (Integration):** `https://api.merawork.com/api/integration/v1/`  
+**Version:** v1  
+**.NET Framework:** .NET 6
+
+The MeraWork API provides comprehensive workforce management and monitoring capabilities. The API supports both internal and external (partner) integrations with robust security mechanisms including JWT authentication, API Key validation, rate limiting, and webhook signature verification.
+
+### API Versions
+
+- **Internal API** (`/api/v1/*`) - Used by internal applications and authenticated users
+- **Public/Integration API** (`/api/integration/v1/*`) - Used by external partners and integrations
+
+---
+
+## Authentication
+
+### 1. JWT Bearer Token Authentication
+
+**Used for:** Internal API endpoints and user-authenticated requests
+
+#### How to Use
+
+Include a JWT Bearer token in the `Authorization` header:
+
+```bash
+curl -X GET "https://api.merawork.com/api/v1/endpoint" \
+  -H "Authorization: Bearer <JWT_TOKEN>"
+```
+
+#### Token Structure
+
+- **Algorithm:** HS256 (HMAC SHA-256)
+- **Issuer Signing Key:** Configured in `appSettings.json` (IssuerSigningKey)
+- **Validation:**
+  - IssuerSigningKey validation: ✓ Enabled
+  - HTTPS metadata: ✓ Enabled (production only)
+  - Audience validation: ✗ Disabled
+  - Issuer validation: ✗ Disabled
+
+#### Token Claims
+
+Standard JWT claims are supported including:
+- `sub` (subject)
+- `sid` (session ID)
+- `userId` (user identifier)
+- `email` (user email)
+- Custom claims as defined in your application
+
+#### Token Validation Process
+
+```csharp
+// Configuration in Program.cs
+builder.Services.AddAuthentication(x =>
+{
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(x =>
+{
+    x.RequireHttpsMetadata = !builder.Environment.IsDevelopment();
+    x.SaveToken = true;
+    x.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config.IssuerSigningKey)),
+        ValidateAudience = false,
+        ValidateIssuer = false
+    };
+});
+```
+
+#### Token Example (Decoded)
+
+```json
+{
+  "header": {
+    "alg": "HS256",
+    "typ": "JWT"
+  },
+  "payload": {
+    "sub": "user-123",
+    "sid": "session-456",
+    "userId": "user-123",
+    "email": "user@example.com",
+    "iat": 1700000000,
+    "exp": 1700003600
+  }
+}
+```
+
+### 2. API Key Authentication
+
+**Used for:** Partner integrations and external API access
+
+#### How to Use
+
+Include the API Key in the `X-Api-Key` header:
+
+```bash
+curl -X GET "https://api.merawork.com/api/integration/v1/endpoint" \
+  -H "X-Api-Key: your_api_key_here"
+```
+
+#### API Key Requirements
+
+- **Header Name:** `X-Api-Key`
+- **Key Format:** UUID or alphanumeric string
+- **Validation Location:** `AuthValidationMiddleware`
+- **Configuration:** `appsettings.json` (PortalIntegrationApiKey)
+
+#### API Key Validation Flow
+
+1. Check for `X-Api-Key` header presence
+2. Retrieve expected key from configuration
+3. Compare provided key with stored key (case-sensitive)
+4. Return `401 Unauthorized` if validation fails
+
+```csharp
+// API Key validation in AuthValidationMiddleware
+if (!context.Request.Headers.TryGetValue(ApiKeyHeaderName, out StringValues extractedApiKey))
+{
+    return Unauthorized("Authentication is required to access this resource.");
+}
+
+var mmApiKey = configuration["PortalIntegrationApiKey"];
+if (mmApiKey != null && !mmApiKey.Equals(extractedApiKey))
+{
+    return Unauthorized("Authentication is required to access this resource.");
+}
+```
+
+### 3. Session Validation
+
+**Used for:** Verifying active user sessions
+
+#### Session Revocation
+
+Sessions can be revoked at any time. Revoked session tokens are rejected even if they are still valid:
+
+```csharp
+// Session validation in AuthValidationMiddleware
+if (context.User.Identity?.IsAuthenticated == true)
+{
+    var sidClaim = context.User.Claims.FirstOrDefault(c => c.Type == "sid");
+    if (sidClaim != null)
+    {
+        var sessionId = sidClaim.Value;
+        var isRevoked = await userSessionRepository.IsSessionRevokedAsync(sessionId);
+
+        if (isRevoked)
+        {
+            return Unauthorized("Session has been revoked.");
+        }
+    }
+}
+```
+
+#### Response on Revoked Session
+
+```json
+{
+  "type": "https://httpstatuses.com/401",
+  "title": "Unauthorized",
+  "status": 401,
+  "detail": "Authentication is required to access this resource.",
+  "traceId": "00-xxxx-xxxx-00"
+}
+```
+
+---
+
+## Authorization
+
+### Role-Based Access Control (RBAC)
+
+The API implements custom role-based authorization using policy-based requirements.
+
+#### Authorization Attributes
+
+```csharp
+// Use [Authorize] attribute to require authentication
+[Authorize]
+[HttpGet("secure-endpoint")]
+public IActionResult SecureEndpoint() { }
+
+// Use custom policies for role-based access
+[Authorize(Policy = "AdminOnly")]
+[HttpGet("admin-endpoint")]
+public IActionResult AdminEndpoint() { }
+```
+
+#### Permission-Based Authorization
+
+A custom `RolePermissionAuthorizationHandler` provides fine-grained access control:
+
+- **Policy Provider:** `RolePermissionPolicyProvider`
+- **Authorization Handler:** `RolePermissionAuthorizationHandler`
+- **Requirement:** `RolePermissionRequirement`
+
+#### Adding Role-Based Authorization
+
+```csharp
+// Register authorization services
+builder.Services.AddAuthorization();
+builder.Services.AddSingleton<IAuthorizationPolicyProvider, RolePermissionPolicyProvider>();
+builder.Services.AddSingleton<IAuthorizationHandler, RolePermissionAuthorizationHandler>();
+```
+
+#### Role Requirements
+
+Apply role-specific requirements using the custom attribute:
+
+```csharp
+[RoleRequirePermission("AdminRead", "AdminWrite")]
+[HttpGet("protected-resource")]
+public IActionResult GetProtectedResource() { }
+```
+
+### Roles and Permissions
+
+| Role | Description | Permissions |
+|------|-------------|------------|
+| Super Admin | Full system access | All permissions |
+| Admin | Organization administrator | Org-level management |
+| Manager | Team management | Team and project management |
+| Employee | Standard user | Self-service operations |
+| Partner | External partner | Limited API access |
+
+---
+
+## Rate Limiting
+
+### Overview
+
+Rate limiting protects the API from abuse and ensures fair resource utilization. The system implements multiple strategies:
+
+1. **IP-based Rate Limiting** - Limits requests per IP address
+2. **User-based Rate Limiting** - Limits requests per authenticated user
+3. **Endpoint-specific Rate Limiting** - Custom limits per endpoint
+4. **Authentication Attempt Limiting** - Stricter limits for login endpoints
+
+### Configuration
+
+#### Global Rate Limit Rules
+
+```json
+{
+  "General": {
+    "Endpoint": "*",
+    "Period": "1m",
+    "Limit": 100
+  }
+}
+```
+
+All endpoints have a baseline limit of **100 requests per minute**.
+
+### Endpoint-Specific Rate Limits
+
+| Endpoint | Method | Limit | Period | Purpose |
+|----------|--------|-------|--------|---------|
+| `/api/v1/Login/LoginWithDomain` | POST | 20 | 1 minute | Prevent brute force |
+| `/api/v1/Login/LoginWithDomain` | POST | 25 | 1 hour | Prevent distributed attacks |
+| `/api/v1/Login/ForgotPassword` | POST | 3 | 15 minutes | Protect password reset |
+| `/api/v1/Login/ResetPassword` | POST | 5 | 1 hour | Secure password reset |
+| `/api/v1/Login/Validate2FAVerificationCode` | POST | 5 | 5 minutes | Protect 2FA attempts |
+| `/api/v1/Login/LoginAsPartner` | POST | 10 | 1 minute | Partner login attempts |
+| `/api/v1/Login/SSOLogin` | POST | 20 | 1 minute | SSO authentication |
+| `/health` | GET | Unlimited | N/A | Health check endpoint |
+
+### Rate Limit Response
+
+When rate limit is exceeded, the API returns:
+
+**Status Code:** `429 Too Many Requests`
+
+**Response Headers:**
+```
+Retry-After: 60
+X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 0
+X-RateLimit-Reset: 1700000060
+```
+
+**Response Body:**
+```json
+{
+  "message": "Rate limit exceeded. Please try again later.",
+  "retryAfter": "60"
+}
+```
+
+### Client Identifier Logic
+
+Rate limits are applied based on client identifier priority:
+
+1. **Authenticated User** - Uses `userId` claim from JWT token
+2. **Email-based** - For specific user tracking
+3. **IP Address** - Falls back to IP-based limiting
+   - Header Priority: `X-Forwarded-For` > Direct IP
+   - Supports up to 2 proxy hops
+
+### Rate Limit Configuration Code
+
+```csharp
+// In AuthenticationRateLimitConfiguration.cs
+services.Configure<IpRateLimitOptions>(options =>
+{
+    options.EnableEndpointRateLimiting = true;
+    options.StackBlockedRequests = false;
+    options.HttpStatusCode = 429;
+    options.RealIpHeader = "X-Forwarded-For";
+    options.ClientIdHeader = "X-ClientId";
+    options.GeneralRules = new List<RateLimitRule> { /* ... */ };
+});
+```
+
+### Handling Rate Limit Responses
+
+```csharp
+// Example: Retry with exponential backoff
+async Task<T> CallApiWithRetry<T>(Func<Task<T>> apiCall, int maxRetries = 3)
+{
+    int retryCount = 0;
+    while (retryCount < maxRetries)
+    {
+        try
+        {
+            return await apiCall();
+        }
+        catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
+        {
+            retryCount++;
+            if (retryCount >= maxRetries) throw;
+
+            var delaySeconds = (int)Math.Pow(2, retryCount); // Exponential backoff
+            await Task.Delay(TimeSpan.FromSeconds(delaySeconds));
+        }
+    }
+}
+```
+
+---
+
+## Webhook Security
+
+### Overview
+
+Webhooks allow external systems to receive real-time notifications about events in MeraWork. Multiple webhook providers are supported:
+
+1. **Razorpay Webhooks** - Payment and subscription events
+2. **Reditus Webhooks** - Third-party tracking events
+
+### Webhook Security Mechanisms
+
+#### 1. Signature Verification
+
+**All webhooks must be validated using cryptographic signatures.**
+
+#### Razorpay Webhook Security
+
+**Signature Algorithm:** HMAC SHA256
+
+**Implementation:**
+```csharp
+// RazorpayWebhookController.cs
+[HttpPost("RazorPaySubscriptionPaymentWebhookResponse")]
+[AllowAnonymous]
+public async Task<IActionResult> WebhookResponse()
+{
+    // Read raw body
+    Request.EnableBuffering();
+    using var reader = new StreamReader(Request.Body, Encoding.UTF8, leaveOpen: true);
+    var body = await reader.ReadToEndAsync();
+    Request.Body.Position = 0;
+
+    // Extract signature from header
+    string signature = Request.Headers["X-Razorpay-Signature"].ToString();
+
+    // Validate and process
+    var result = await _webhookService.HandleSubscriptionPaymentAsync(body, signature);
+
+    if (!result.Success)
+    {
+        if (result.ErrorCode == RazorpayBillingWebhookErrorCodes.InvalidSignature)
+            return Unauthorized(new { status = "invalid_signature" });
+        return BadRequest(new { status = "error" });
+    }
+
+    return Ok(new { status = "ok" });
+}
+```
+
+**Headers Required:**
+- `X-Razorpay-Signature` - HMAC SHA256 signature of the webhook payload
+
+**Signature Validation Process:**
+1. Retrieve the Razorpay webhook secret from configuration
+2. Compute HMAC SHA256 of raw JSON payload using the secret
+3. Compare computed signature with `X-Razorpay-Signature` header
+4. Reject webhook if signatures don't match (return 401)
+
+**Example Validation:**
+```csharp
+using System.Security.Cryptography;
+using System.Text;
+
+string ComputeRazorpaySignature(string payload, string secret)
+{
+    using (var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(secret)))
+    {
+        var hash = hmac.ComputeHash(Encoding.UTF8.GetBytes(payload));
+        return BitConverter.ToString(hash).Replace("-", "").ToLower();
+    }
+}
+
+// Usage
+bool IsValidRazorpayWebhook(string payload, string receivedSignature, string secret)
+{
+    string expectedSignature = ComputeRazorpaySignature(payload, secret);
+    return expectedSignature.Equals(receivedSignature, StringComparison.OrdinalIgnoreCase);
+}
+```
+
+#### Reditus Webhook Security
+
+**Signature Algorithm:** HMAC SHA256
+
+**Implementation:**
+```csharp
+// ReditusWebhookController.cs
+[HttpPost]
+[AllowAnonymous]
+public async Task<IActionResult> HandleWebhook()
+{
+    var correlationId = Guid.NewGuid().ToString();
+
+    // Read raw payload
+    Request.EnableBuffering();
+    using var reader = new StreamReader(Request.Body, Encoding.UTF8, leaveOpen: true);
+    var rawPayload = await reader.ReadToEndAsync();
+    Request.Body.Position = 0;
+
+    // Extract signature
+    var signature = Request.Headers["X-Signature"].ToString();
+
+    if (string.IsNullOrWhiteSpace(signature))
+    {
+        return BadRequest(new { status = "error", message = "Signature header missing" });
+    }
+
+    // Validate signature
+    if (!ValidateSignature(rawPayload, signature))
+    {
+        _logger.LogWarning("Webhook signature validation failed. CorrelationId: {CorrelationId}", correlationId);
+        return Unauthorized(new { status = "error", message = "Invalid signature" });
+    }
+
+    // Process webhook
+    var result = await _webhookService.ProcessEventAsync(rawPayload);
+    return result ? Ok(new { status = "ok" }) : StatusCode(500);
+}
+
+private bool ValidateSignature(string payload, string receivedSignature)
+{
+    var secret = _configuration["ReditusWebhookSecret"];
+    using (var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(secret)))
+    {
+        var hash = hmac.ComputeHash(Encoding.UTF8.GetBytes(payload));
+        var expectedSignature = Convert.ToBase64String(hash);
+        return expectedSignature.Equals(receivedSignature, StringComparison.OrdinalIgnoreCase);
+    }
+}
+```
+
+**Headers Required:**
+- `X-Signature` - HMAC SHA256 signature (Base64 encoded) of the webhook payload
+
+**Signature Validation Process:**
+1. Retrieve the Reditus webhook secret from `appsettings.json` (ReditusWebhookSecret)
+2. Compute HMAC SHA256 of raw JSON payload using the secret
+3. Encode as Base64
+4. Compare with `X-Signature` header
+5. Reject webhook if signatures don't match (return 401)
+
+### Webhook Endpoints
+
+#### Razorpay Webhooks
+
+**Subscription Payment Webhook:**
+```
+POST /api/v1/razorpaywebhook/RazorPaySubscriptionPaymentWebhookResponse
+```
+
+**Payment Webhook:**
+```
+POST /api/v1/razorpaywebhook/RazorPayPaymentWebhook
+```
+
+**Supported Events:**
+- Subscription created
+- Subscription payment succeeded
+- Subscription payment failed
+- Subscription renewed
+- Payment authorized
+- Payment captured
+
+#### Reditus Webhooks
+
+**Event Webhook:**
+```
+POST /api/v1/redituswebhook
+```
+
+**Supported Events:**
+- User activity tracked
+- Device enrollment
+- Session started/ended
+- Compliance alerts
+
+### Webhook Payload Requirements
+
+#### Raw Payload Format
+
+Webhooks must be sent as raw JSON body with `Content-Type: application/json`:
+
+```bash
+curl -X POST "https://api.merawork.com/api/v1/razorpaywebhook/RazorPayPaymentWebhook" \
+  -H "Content-Type: application/json" \
+  -H "X-Razorpay-Signature: <signature>" \
+  -d '{
+    "entity": "event",
+    "id": "evt_1234567890",
+    "event": "payment.authorized",
+    "payload": { /* event data */ }
+  }'
+```
+
+#### Critical: Body Preservation
+
+1. **Do NOT** parse and re-serialize the JSON before signature verification
+2. **DO** read the raw body as-is from the request stream
+3. **DO** use the exact raw bytes for signature computation
+4. Request body buffering is enabled to allow multiple reads:
+   ```csharp
+   Request.EnableBuffering();
+   // Read multiple times if needed
+   Request.Body.Position = 0;
+   ```
+
+### Webhook Error Handling
+
+| Status Code | Scenario | Action |
+|-------------|----------|--------|
+| 200 OK | Webhook processed successfully | Event is recorded |
+| 400 Bad Request | Empty payload or missing signature | Check payload format |
+| 401 Unauthorized | Signature validation failed | Verify signing secret |
+| 500 Internal Server Error | Processing error | Retry with exponential backoff |
+
+### Webhook Retry Strategy
+
+Implement retry logic with exponential backoff for failed webhooks:
+
+```csharp
+// Recommended retry strategy
+async Task<bool> SendWebhookWithRetry(
+    string webhookUrl, 
+    string payload, 
+    string signature,
+    int maxRetries = 5)
+{
+    for (int attempt = 1; attempt <= maxRetries; attempt++)
+    {
+        try
+        {
+            using var client = new HttpClient();
+            var request = new HttpRequestMessage(HttpMethod.Post, webhookUrl)
+            {
+                Content = new StringContent(payload, Encoding.UTF8, "application/json")
+            };
+
+            // Add signature header based on provider
+            request.Headers.Add("X-Razorpay-Signature", signature); // or X-Signature for Reditus
+
+            var response = await client.SendAsync(request);
+
+            if (response.IsSuccessStatusCode)
+                return true;
+
+            if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                return false; // Don't retry on auth failure
+        }
+        catch (Exception ex)
+        {
+            // Log error
+        }
+
+        // Exponential backoff: 2^attempt seconds
+        await Task.Delay(TimeSpan.FromSeconds(Math.Pow(2, attempt)));
+    }
+
+    return false;
+}
+```
+
+### Webhook Configuration
+
+Store webhook secrets securely in configuration:
+
+```json
+{
+  "Webhook": {
+    "RazorpaySecret": "your-razorpay-webhook-secret",
+    "ReditusWebhookSecret": "your-reditus-webhook-secret"
+  }
+}
+```
+
+---
+
+## API Endpoints
+
+### Authentication Endpoints
+
+#### Login
+
+```
+POST /api/v1/Login/LoginWithDomain
+```
+
+**Request Body:**
+```json
+{
+  "email": "user@example.com",
+  "password": "password123",
+  "domain": "example.com"
+}
+```
+
+**Response (200 OK):**
+```json
+{
+  "success": true,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "expiresIn": 3600,
+  "user": {
+    "id": "user-123",
+    "email": "user@example.com",
+    "name": "John Doe",
+    "roles": ["Employee"]
+  }
+}
+```
+
+**Rate Limit:** 20 per minute, 25 per hour per IP
+
+#### Forgot Password
+
+```
+POST /api/v1/Login/ForgotPassword
+```
+
+**Request Body:**
+```json
+{
+  "email": "user@example.com"
+}
+```
+
+**Response (200 OK):**
+```json
+{
+  "success": true,
+  "message": "Password reset link has been sent to your email."
+}
+```
+
+**Rate Limit:** 3 per 15 minutes
+
+#### Reset Password
+
+```
+POST /api/v1/Login/ResetPassword
+```
+
+**Request Body:**
+```json
+{
+  "token": "reset-token-xxx",
+  "newPassword": "newpassword123"
+}
+```
+
+**Response (200 OK):**
+```json
+{
+  "success": true,
+  "message": "Password has been reset successfully."
+}
+```
+
+**Rate Limit:** 5 per hour
+
+### User Endpoints
+
+#### Get Current User Profile
+
+```
+GET /api/v1/Profile/GetCurrentUserProfile
+Authorization: Bearer <token>
+```
+
+**Response (200 OK):**
+```json
+{
+  "success": true,
+  "data": {
+    "id": "user-123",
+    "email": "user@example.com",
+    "firstName": "John",
+    "lastName": "Doe",
+    "phone": "+1234567890",
+    "organization": {
+      "id": "org-123",
+      "name": "Example Org"
+    },
+    "roles": ["Employee"],
+    "permissions": ["Read", "Write"]
+  }
+}
+```
+
+#### Update User Profile
+
+```
+PUT /api/v1/Profile/UpdateProfile
+Authorization: Bearer <token>
+```
+
+**Request Body:**
+```json
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "phone": "+1234567890"
+}
+```
+
+**Response (200 OK):**
+```json
+{
+  "success": true,
+  "message": "Profile updated successfully."
+}
+```
+
+### Organization Endpoints
+
+#### Get Organization Details
+
+```
+GET /api/v1/Organization/{organizationId}
+Authorization: Bearer <token>
+```
+
+**Response (200 OK):**
+```json
+{
+  "success": true,
+  "data": {
+    "id": "org-123",
+    "name": "Example Organization",
+    "email": "admin@example.com",
+    "phone": "+1234567890",
+    "address": "123 Main St",
+    "city": "New York",
+    "state": "NY",
+    "country": "USA",
+    "zipCode": "10001",
+    "timezone": "America/New_York",
+    "createdAt": "2023-01-01T00:00:00Z",
+    "updatedAt": "2023-12-01T00:00:00Z"
+  }
+}
+```
+
+---
+
+## Error Handling
+
+### Standard Error Response Format
+
+All errors follow this format:
+
+```json
+{
+  "type": "https://httpstatuses.com/400",
+  "title": "Bad Request",
+  "status": 400,
+  "detail": "Description of the error",
+  "traceId": "00-xxxxxxxxxxxx-xxxxxxxxxxxx-00",
+  "errors": {
+    "fieldName": [
+      "Error message"
+    ]
+  }
+}
+```
+
+### Common Error Codes
+
+| Status Code | Meaning | Typical Cause |
+|-------------|---------|--------------|
+| 200 | OK | Request successful |
+| 201 | Created | Resource created |
+| 400 | Bad Request | Validation error, invalid input |
+| 401 | Unauthorized | Missing/invalid token or API key |
+| 403 | Forbidden | User lacks required permission |
+| 404 | Not Found | Resource does not exist |
+| 429 | Too Many Requests | Rate limit exceeded |
+| 500 | Internal Server Error | Server-side error |
+| 503 | Service Unavailable | Service temporarily unavailable |
+
+### Validation Error Example
+
+```json
+{
+  "type": "https://httpstatuses.com/400",
+  "title": "One or more validation errors occurred.",
+  "status": 400,
+  "traceId": "00-xxxxxxxxxxxx-xxxxxxxxxxxx-00",
+  "errors": {
+    "email": [
+      "The Email field is required."
+    ],
+    "password": [
+      "The Password must be at least 8 characters long."
+    ]
+  }
+}
+```
+
+### Authentication Error Example
+
+```json
+{
+  "type": "https://httpstatuses.com/401",
+  "title": "Unauthorized",
+  "status": 401,
+  "detail": "Authentication is required to access this resource.",
+  "traceId": "00-xxxxxxxxxxxx-xxxxxxxxxxxx-00"
+}
+```
+
+---
+
+## Security Features
+
+### 1. Security Headers
+
+All API responses include security headers to prevent common attacks:
+
+| Header | Value | Purpose |
+|--------|-------|---------|
+| `X-Frame-Options` | DENY | Prevent clickjacking |
+| `X-Content-Type-Options` | nosniff | Prevent MIME sniffing |
+| `X-XSS-Protection` | 1; mode=block | Enable XSS protection |
+| `Content-Security-Policy` | Restrictive policy | Control resource loading |
+| `Referrer-Policy` | strict-origin-when-cross-origin | Control referrer information |
+| `Permissions-Policy` | Restrict browser features | Prevent feature misuse |
+| `Strict-Transport-Security` | max-age=31536000 | Enforce HTTPS |
+
+**CSP Policy:**
+```
+default-src 'self';
+script-src 'self';
+style-src 'self' 'unsafe-inline';
+img-src 'self' data: https:;
+font-src 'self';
+connect-src 'self';
+frame-ancestors 'none';
+base-uri 'self';
+form-action 'self'
+```
+
+### 2. Web Application Firewall (WAF)
+
+Custom WAF middleware provides additional protection:
+
+**Configured in:** `WebApplicationFirewallMiddleware.cs`
+
+**Features:**
+- SQL injection detection and blocking
+- XSS payload detection
+- Command injection prevention
+- Path traversal attack prevention
+- Suspicious pattern detection
+
+**Configuration:**
+```json
+{
+  "Security": {
+    "Waf": {
+      "Enabled": true,
+      "LogSuspiciousActivity": true,
+      "BlockMaliciousRequests": true
+    }
+  }
+}
+```
+
+### 3. Input Validation
+
+All API inputs are validated using a custom validation filter:
+
+**Filter:** `ValidateInputFilter`
+
+**Features:**
+- Model state validation
+- Size limit validation
+- Type validation
+- Format validation
+- SQL injection pattern detection
+
+```csharp
+// Applied globally to all controllers
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<ValidateInputFilter>();
+});
+```
+
+### 4. Request Size Limits
+
+Configured limits prevent resource exhaustion:
+
+```json
+{
+  "Security": {
+    "RequestLimits": {
+      "MaxRequestBodySizeBytes": 104857600,
+      "MultipartBodyLengthLimitBytes": 104857600,
+      "ValueLengthLimit": 16384,
+      "MultipartHeadersLengthLimit": 16384
+    }
+  }
+}
+```
+
+| Limit | Value | Purpose |
+|-------|-------|---------|
+| Max Request Body | 100 MB | Prevent DoS attacks |
+| Max Multipart Body | 100 MB | Limit file uploads |
+| Max Field Value | 16 KB | Prevent field overflow |
+| Max Headers | 16 KB | Limit header size |
+
+### 5. CORS Configuration
+
+Cross-Origin Resource Sharing is configured for specific domains:
+
+```json
+{
+  "Cors": {
+    "AllowedOrigins": [
+      "https://app.merawork.com",
+      "https://admin.merawork.com"
+    ],
+    "AllowedMethods": ["GET", "POST", "PUT", "DELETE"],
+    "AllowedHeaders": ["*"],
+    "AllowCredentials": true,
+    "MaxAge": 3600
+  }
+}
+```
+
+### 6. Security Audit Logging
+
+All security-related events are logged:
+
+**Logger:** `SecurityAuditLoggingMiddleware.cs`
+
+**Logged Events:**
+- Authentication attempts (success/failure)
+- Authorization failures
+- Rate limit violations
+- WAF blocks
+- Webhook signature validation failures
+- Suspicious request patterns
+
+**Storage:** MongoDB collection `security-audit`
+
+### 7. HTTPS Enforcement
+
+- Production: HTTPS required (enforced via middleware)
+- Requires valid SSL/TLS certificates
+- HSTS header set to 1 year with preload
+
+### 8. Password Security
+
+- Minimum 8 characters required
+- Password history tracked
+- Old passwords cannot be reused
+- Salted and hashed using bcrypt
+
+### 9. Two-Factor Authentication (2FA)
+
+Endpoints available for 2FA implementation:
+
+```
+POST /api/v1/TwoFactorAuth/Enable2FA
+POST /api/v1/TwoFactorAuth/Validate2FAVerificationCode
+POST /api/v1/TwoFactorAuth/Disable2FA
+```
+
+### 10. Azure Key Vault Integration
+
+Secrets are managed securely via Azure Key Vault:
+
+```csharp
+if (!isOnPrem)
+{
+    var keyVaultUri = new Uri(configuration["Azure:KeyVault:Uri"]);
+    var credential = new ClientSecretCredential(
+        configuration["Azure:TenantId"],
+        configuration["Azure:ClientId"],
+        configuration["Azure:ClientSecret"]
+    );
+    builder.Configuration.AddAzureKeyVault(keyVaultUri, credential);
+}
+```
+
+---
+
+## Best Practices
+
+### 1. Authentication
+
+✓ **DO:**
+- Use HTTPS for all API calls
+- Store tokens securely (in secure HTTP-only cookies for web)
+- Refresh tokens before expiry
+- Implement token rotation
+- Log out users explicitly
+- Monitor for suspicious authentication patterns
+
+✗ **DON'T:**
+- Send tokens in URL parameters
+- Store tokens in local storage (use secure cookies)
+- Use hardcoded tokens
+- Expose tokens in logs or error messages
+- Use HTTP instead of HTTPS
+
+### 2. Rate Limiting
+
+✓ **DO:**
+- Implement client-side rate limit handling
+- Use exponential backoff for retries
+- Check `Retry-After` header for wait duration
+- Monitor your API usage
+- Implement circuit breaker pattern for production
+
+✗ **DON'T:**
+- Ignore 429 responses
+- Retry immediately without delay
+- Overwhelm API with burst requests
+- Bypass rate limits with multiple API keys
+- Log in repeatedly to reset rate limits
+
+### 3. Webhook Security
+
+✓ **DO:**
+- Always verify webhook signatures before processing
+- Use the raw request body for signature verification
+- Implement idempotent webhook handlers
+- Log all webhook events for audit
+- Return 2xx response after processing
+- Implement exponential backoff for retries
+
+✗ **DON'T:**
+- Process webhooks without signature verification
+- Use parsed/serialized body for signature validation
+- Process duplicate webhook events
+- Ignore signature mismatches
+- Store sensitive data in webhook logs
+- Process webhooks synchronously for long operations
+
+### 4. Error Handling
+
+✓ **DO:**
+- Log all errors with context
+- Provide meaningful error messages
+- Use appropriate HTTP status codes
+- Include trace IDs for debugging
+- Implement proper error recovery
+- Validate responses before use
+
+✗ **DON'T:**
+- Expose internal error details to clients
+- Return 200 for errors
+- Ignore errors silently
+- Retry on client errors (4xx)
+- Log sensitive data in errors
+
+### 5. API Versioning
+
+✓ **DO:**
+- Use semantic versioning
+- Maintain backward compatibility
+- Deprecate features with warning period
+- Document breaking changes
+- Test version migrations
+
+✗ **DON'T:**
+- Remove endpoints without deprecation
+- Change response formats without notice
+- Mix API versions in single request
+
+### 6. Performance
+
+✓ **DO:**
+- Implement pagination for list endpoints
+- Use filtering and searching efficiently
+- Cache appropriate responses
+- Compress responses
+- Monitor API performance
+
+✗ **DON'T:**
+- Return unlimited results
+- Perform expensive operations
+- Make multiple API calls when one would suffice
+- Ignore pagination
+
+### 7. Data Protection
+
+✓ **DO:**
+- Use HTTPS for all communications
+- Encrypt sensitive data at rest
+- Implement data retention policies
+- Audit data access
+- Use encryption keys from Azure Key Vault
+
+✗ **DON'T:**
+- Send sensitive data in URL parameters
+- Store passwords in plaintext
+- Log sensitive information
+- Use hardcoded encryption keys
+- Expose customer data in error messages
+
+### 8. API Documentation
+
+✓ **DO:**
+- Keep documentation up-to-date
+- Provide code examples
+- Document all parameters and responses
+- Include error scenarios
+- Explain authentication requirements
+- Document rate limits
+
+✗ **DON'T:**
+- Leave code undocumented
+- Document outdated endpoints
+- Forget to mention rate limits
+- Omit authentication details
+
+---
+
+## Configuration Examples
+
+### appsettings.json
+
+```json
+{
+  "AppSettings": {
+    "IssuerSigningKey": "your-secret-key-min-32-chars-long!!!",
+    "JwtTokenExpiryInMinutes": 60,
+    "RefreshTokenExpiryInDays": 7
+  },
+  "PortalIntegrationApiKey": "your-api-key-here",
+  "Security": {
+    "RequestLimits": {
+      "MaxRequestBodySizeBytes": 104857600,
+      "MultipartBodyLengthLimitBytes": 104857600,
+      "ValueLengthLimit": 16384,
+      "MultipartHeadersLengthLimit": 16384
+    },
+    "Waf": {
+      "Enabled": true,
+      "LogSuspiciousActivity": true,
+      "BlockMaliciousRequests": true
+    }
+  },
+  "Webhook": {
+    "RazorpaySecret": "your-razorpay-webhook-secret",
+    "ReditusWebhookSecret": "your-reditus-webhook-secret"
+  },
+  "Azure": {
+    "KeyVault": {
+      "Uri": "https://your-keyvault-name.vault.azure.net/"
+    },
+    "TenantId": "your-tenant-id",
+    "ClientId": "your-client-id",
+    "ClientSecret": "your-client-secret"
+  },
+  "Cors": {
+    "AllowedOrigins": [
+      "https://app.merawork.com"
+    ]
+  }
+}
+```
+
+### Docker Deployment
+
+```dockerfile
+FROM mcr.microsoft.com/dotnet/aspnet:6.0
+WORKDIR /app
+COPY --from=builder /app/publish .
+ENV ASPNETCORE_URLS=https://+:443
+ENV ASPNETCORE_Kestrel__Certificates__Default__Path=/https/cert.pfx
+ENV ASPNETCORE_Kestrel__Certificates__Default__Password=${CERT_PASSWORD}
+EXPOSE 443
+ENTRYPOINT ["dotnet", "MeraWorkApi.dll"]
+```
+
+---
+
+## Support & Troubleshooting
+
+### Common Issues
+
+**Issue:** 401 Unauthorized with valid token
+- Check token expiry time
+- Verify JWT signing key matches configuration
+- Check if session has been revoked
+- Ensure HTTPS is being used in production
+
+**Issue:** 429 Rate Limit Exceeded
+- Check your request frequency
+- Implement exponential backoff
+- Wait for `Retry-After` duration before retrying
+- Check if using multiple API keys with same IP
+
+**Issue:** Webhook signature validation failing
+- Ensure raw payload is used (not parsed/serialized)
+- Check signature header name (X-Razorpay-Signature vs X-Signature)
+- Verify webhook secret is correct
+- Check request encoding (should be UTF-8)
+
+**Issue:** 400 Validation Error**
+- Review all required fields in documentation
+- Check data types match expected format
+- Validate field lengths and patterns
+- Ensure JSON is well-formed
+
+### Debugging
+
+Enable detailed logging in development:
+
+```json
+{
+  "Serilog": {
+    "MinimumLevel": "Debug",
+    "WriteTo": [
+      {
+        "Name": "Console"
+      },
+      {
+        "Name": "MongoDB",
+        "Args": {
+          "connectionString": "mongodb://...",
+          "collectionName": "logs"
+        }
+      }
+    ]
+  }
+}
+```
+
+### Contact Support
+
+For API issues, contact: api-support@merawork.com
+
+---
+
+## Changelog
+
+### Version 1.0 (Current)
+- Initial API release
+- JWT authentication
+- API Key authentication
+- Rate limiting
+- Webhook support (Razorpay, Reditus)
+- Role-based authorization
+- Security headers
+- WAF integration
+- Input validation
+
+### Future Enhancements
+- OAuth 2.0 support
+- OpenID Connect
+- GraphQL API
+- Webhook delivery guarantee
+- Advanced analytics
+- API monetization
+
+---
+
+**Last Updated:** 2024-01-15  
+**API Version:** 1.0  
+**.NET Version:** 6.0  
+**Status:** Production Ready

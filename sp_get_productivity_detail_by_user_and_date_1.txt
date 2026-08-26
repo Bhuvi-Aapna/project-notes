@@ -1,0 +1,412 @@
+-- PROCEDURE: public.sp_get_productivity_detail_by_user_and_date_1(text, text[], date, date, refcursor)
+
+-- DROP PROCEDURE IF EXISTS public.sp_get_productivity_detail_by_user_and_date_1(text, text[], date, date, refcursor);
+
+CREATE OR REPLACE PROCEDURE public.sp_get_productivity_detail_by_user_and_date_1(
+	IN p_organization_id text,
+	IN p_user_ids text[],
+	IN p_from_date date,
+	IN p_to_date date,
+	INOUT p_result refcursor DEFAULT 'p_result'::refcursor)
+LANGUAGE 'plpgsql'
+AS $BODY$
+DECLARE
+    v_org_id INTEGER;
+BEGIN
+
+    -- =========================================================
+    -- STEP 1: Resolve org ID once — single variable lookup
+    -- =========================================================
+    SELECT id INTO v_org_id
+    FROM   public.organization
+    WHERE  external_id = p_organization_id
+    LIMIT  1;
+
+    IF v_org_id IS NULL THEN
+        RAISE NOTICE 'Organization not found: %', p_organization_id;
+        OPEN p_result FOR
+            SELECT NULL::text AS user_id,
+                   NULL::date AS activity_date,
+                   NULL::int  AS app_url_id,
+                   NULL::text AS app_name,
+                   NULL::text AS url,
+                   NULL::int  AS catalogue_id,
+                   NULL::text AS catalogue_name,
+                   NULL::int  AS total_time_seconds
+            WHERE FALSE;
+        RETURN;
+    END IF;
+
+    -- =========================================================
+    -- STEP 2: Target users
+    --         ✅ UNLOGGED = no WAL overhead for temp writes
+    --         ✅ Indexes built after bulk insert (faster)
+    -- =========================================================
+    DROP TABLE IF EXISTS tmp_target_users;
+    CREATE TEMP TABLE tmp_target_users (
+        internal_id      INTEGER,
+        internal_org_id  INTEGER,
+        external_user_id TEXT,
+        dept_id          INTEGER
+    ) ON COMMIT DROP;
+
+    INSERT INTO tmp_target_users (
+        internal_id, internal_org_id, external_user_id, dept_id
+    )
+    SELECT
+        u.id,
+        u.organization_id,
+        u.external_user_id,
+        COALESCE(u.department_id, 0)
+    FROM public.users u
+    WHERE u.external_org_id  = p_organization_id
+      AND u.external_user_id = ANY(p_user_ids);
+
+    -- ✅ Analyze after insert so planner has accurate row estimates
+    ANALYZE tmp_target_users;
+
+    CREATE INDEX idx_tmp_tu_internal
+        ON tmp_target_users (internal_id, internal_org_id);
+    CREATE INDEX idx_tmp_tu_external
+        ON tmp_target_users (external_user_id);
+
+    -- =========================================================
+    -- STEP 3: Screen base
+    --         ✅ No ::date cast — uses index directly
+    --         ✅ Includes only columns needed downstream
+    -- =========================================================
+    DROP TABLE IF EXISTS tmp_screen_base;
+    CREATE TEMP TABLE tmp_screen_base (
+        screen_id        INTEGER,
+        activity_date    DATE,
+        start_time       TIMESTAMPTZ,
+        end_time         TIMESTAMPTZ,
+        app_url_id       INTEGER,
+        external_user_id TEXT,
+        internal_user_id INTEGER,
+        dept_id          INTEGER,
+        total_sec        INTEGER
+    ) ON COMMIT DROP;
+
+    INSERT INTO tmp_screen_base (
+        screen_id, activity_date, start_time, end_time,
+        app_url_id, external_user_id, internal_user_id, dept_id, total_sec
+    )
+    SELECT
+        s.id,
+        s.activity_date,
+        s.start_time,
+        s.end_time,
+        s.app_url_id,
+        tu.external_user_id,
+        tu.internal_id,
+        tu.dept_id,
+        GREATEST(0,
+            EXTRACT(EPOCH FROM (s.end_time - s.start_time))::int
+        )
+    FROM public.user_screen_activity s
+    JOIN tmp_target_users tu
+      ON tu.internal_id     = s.user_id
+     AND tu.internal_org_id = s.organization_id
+    WHERE s.activity_date BETWEEN p_from_date AND p_to_date;
+
+    -- ✅ Analyze before creating indexes — better index planning
+    ANALYZE tmp_screen_base;
+
+    CREATE INDEX idx_tmp_sb_user_date
+        ON tmp_screen_base (external_user_id, activity_date);
+    CREATE INDEX idx_tmp_sb_screen_id
+        ON tmp_screen_base (screen_id);
+    -- ✅ Covering index for idle join — avoids heap fetch
+    CREATE INDEX idx_tmp_sb_times
+        ON tmp_screen_base (external_user_id, activity_date, start_time, end_time);
+
+    -- =========================================================
+    -- STEP 4: Idle base — entire date range loaded ONCE
+    --         ✅ Was: correlated subquery per screen row
+    --         ✅ Now: single batch load
+    -- =========================================================
+    DROP TABLE IF EXISTS tmp_idle_base;
+    CREATE TEMP TABLE tmp_idle_base (
+        external_user_id TEXT,
+        activity_date    DATE,
+        idle_start       TIMESTAMPTZ,
+        idle_end         TIMESTAMPTZ
+    ) ON COMMIT DROP;
+
+    INSERT INTO tmp_idle_base (
+        external_user_id, activity_date, idle_start, idle_end
+    )
+    SELECT
+        tu.external_user_id,
+        i.activity_date,
+        i.last_activity_time,
+        i.current_activity_time
+    FROM public.user_idle_activity i
+    JOIN tmp_target_users tu
+      ON tu.internal_id     = i.user_id
+     AND tu.internal_org_id = i.organization_id
+    WHERE i.activity_date BETWEEN p_from_date AND p_to_date;
+
+    ANALYZE tmp_idle_base;
+
+    -- ✅ Covering index — all join + filter columns in one index
+    CREATE INDEX idx_tmp_ib_user_date_times
+        ON tmp_idle_base (external_user_id, activity_date, idle_start, idle_end);
+
+    -- =========================================================
+    -- STEP 5: Idle overlap — island merge algorithm
+    --         ✅ No nested aggregates (fixed 42803 error)
+    --         ✅ Three clean levels: pairs → islands → bounds → durations → sum
+    -- =========================================================
+    DROP TABLE IF EXISTS tmp_idle_per_screen;
+    CREATE TEMP TABLE tmp_idle_per_screen (
+        screen_id   INTEGER,
+        overlap_sec INTEGER
+    ) ON COMMIT DROP;
+
+    INSERT INTO tmp_idle_per_screen (screen_id, overlap_sec)
+    WITH
+    -- Level 1: raw overlapping pairs
+    screen_idle_pairs AS (
+        SELECT
+            sb.screen_id,
+            GREATEST(sb.start_time, ib.idle_start) AS overlap_start,
+            LEAST(sb.end_time,      ib.idle_end)   AS overlap_end
+        FROM tmp_screen_base sb
+        JOIN tmp_idle_base ib
+          ON  ib.external_user_id = sb.external_user_id
+          AND ib.activity_date    = sb.activity_date
+          AND ib.idle_start       < sb.end_time
+          AND ib.idle_end         > sb.start_time
+        WHERE GREATEST(sb.start_time, ib.idle_start)
+            < LEAST(sb.end_time,      ib.idle_end)
+    ),
+    -- Level 2: flag new island start
+    idle_flagged AS (
+        SELECT
+            screen_id,
+            overlap_start,
+            overlap_end,
+            CASE
+                WHEN overlap_start > MAX(overlap_end) OVER (
+                         PARTITION BY screen_id
+                         ORDER BY overlap_start, overlap_end
+                         ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING
+                     )
+                  OR MAX(overlap_end) OVER (
+                         PARTITION BY screen_id
+                         ORDER BY overlap_start, overlap_end
+                         ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING
+                     ) IS NULL
+                THEN 1 ELSE 0
+            END AS is_new_island
+        FROM screen_idle_pairs
+    ),
+    -- Level 3: assign island group
+    idle_islands AS (
+        SELECT
+            screen_id,
+            overlap_start,
+            overlap_end,
+            SUM(is_new_island) OVER (
+                PARTITION BY screen_id
+                ORDER BY overlap_start, overlap_end
+            ) AS island_id
+        FROM idle_flagged
+    ),
+    -- Level 4: get min/max boundary per island
+    --          ✅ Only MIN/MAX here — no SUM nesting
+    island_bounds AS (
+        SELECT
+            screen_id,
+            island_id,
+            MIN(overlap_start) AS island_start,
+            MAX(overlap_end)   AS island_end
+        FROM idle_islands
+        GROUP BY screen_id, island_id
+    ),
+    -- Level 5: duration per island
+    --          ✅ Only EXTRACT here — no aggregate nesting
+    island_durations AS (
+        SELECT
+            screen_id,
+            EXTRACT(EPOCH FROM (island_end - island_start))::int AS island_sec
+        FROM island_bounds
+    )
+    -- Level 6: total overlap per screen row
+    --          ✅ Only SUM here — clean single aggregate
+    SELECT
+        screen_id,
+        SUM(island_sec)::int AS overlap_sec
+    FROM island_durations
+    GROUP BY screen_id;
+
+    ANALYZE tmp_idle_per_screen;
+
+    CREATE INDEX idx_tmp_ips_screen_id
+        ON tmp_idle_per_screen (screen_id);
+
+    -- =========================================================
+    -- STEP 6: Screen effective
+    --         ✅ Filter > 0 here — reduces rows for catalogue step
+    -- =========================================================
+    DROP TABLE IF EXISTS tmp_screen_effective;
+    CREATE TEMP TABLE tmp_screen_effective (
+        activity_date    DATE,
+        app_url_id       INTEGER,
+        external_user_id TEXT,
+        internal_user_id INTEGER,
+        dept_id          INTEGER,
+        effective_sec    INTEGER
+    ) ON COMMIT DROP;
+
+    INSERT INTO tmp_screen_effective (
+        activity_date, app_url_id, external_user_id,
+        internal_user_id, dept_id, effective_sec
+    )
+    SELECT
+        sb.activity_date,
+        sb.app_url_id,
+        sb.external_user_id,
+        sb.internal_user_id,
+        sb.dept_id,
+        GREATEST(0, sb.total_sec - COALESCE(ip.overlap_sec, 0))
+    FROM  tmp_screen_base sb
+    LEFT  JOIN tmp_idle_per_screen ip ON ip.screen_id = sb.screen_id
+    WHERE GREATEST(0, sb.total_sec - COALESCE(ip.overlap_sec, 0)) > 0;
+
+    ANALYZE tmp_screen_effective;
+
+    -- ✅ Composite covering index for final GROUP BY
+    CREATE INDEX idx_tmp_se_user_app
+        ON tmp_screen_effective (internal_user_id, app_url_id);
+    CREATE INDEX idx_tmp_se_user_date
+        ON tmp_screen_effective (external_user_id, activity_date);
+
+    -- =========================================================
+    -- STEP 7: Catalogue lookup
+    --         ✅ Was: N × fn_get_all_app_web_with_catalogue per row
+    --         ✅ Now: ONE batch ranked query for ALL distinct apps
+    --         ✅ Same priority: user > dept > org
+    -- =========================================================
+    DROP TABLE IF EXISTS tmp_app_catalogue;
+    CREATE TEMP TABLE tmp_app_catalogue (
+        internal_user_id INTEGER,
+        app_url_id       INTEGER,
+        app_name         TEXT,
+        url              TEXT,
+        catalogue_id     INTEGER,
+        catalogue_name   TEXT
+    ) ON COMMIT DROP;
+
+    INSERT INTO tmp_app_catalogue (
+        internal_user_id, app_url_id, app_name,
+        url, catalogue_id, catalogue_name
+    )
+    WITH
+    -- ✅ Only distinct combinations — minimizes catalogue rows to rank
+    needed AS (
+        SELECT DISTINCT
+            internal_user_id,
+            dept_id,
+            app_url_id
+        FROM tmp_screen_effective
+    ),
+    -- ✅ Single ROW_NUMBER pass for ALL users/apps at once
+    catalogue_ranked AS (
+        SELECT
+            n.internal_user_id,
+            n.app_url_id,
+            m.catalogue_id,
+            ROW_NUMBER() OVER (
+                PARTITION BY n.internal_user_id, n.app_url_id
+                ORDER BY
+                    CASE
+                        WHEN m.user_id       = n.internal_user_id
+                         AND m.department_id IS NULL                THEN 1
+                        WHEN m.department_id = n.dept_id
+                         AND n.dept_id       > 0
+                         AND m.user_id       IS NULL                THEN 2
+                        WHEN m.department_id IS NULL
+                         AND m.user_id       IS NULL                THEN 3
+                        ELSE 4
+                    END,
+                    m.id ASC
+            ) AS rn
+        FROM  needed n
+        JOIN  public.organization_category_app_url_detail m
+           ON m.organization_id = v_org_id
+          AND m.app_url_id      = n.app_url_id
+          -- ✅ Predicate pushdown — only load relevant rows
+          AND (
+                  (m.user_id       = n.internal_user_id AND m.department_id IS NULL)
+               OR (m.department_id = n.dept_id          AND n.dept_id > 0   AND m.user_id IS NULL)
+               OR (m.user_id       IS NULL              AND m.department_id IS NULL)
+              )
+    ),
+    effective_catalogue AS (
+        SELECT internal_user_id, app_url_id, catalogue_id
+        FROM   catalogue_ranked
+        WHERE  rn = 1
+    )
+    SELECT
+        ec.internal_user_id,
+        ec.app_url_id,
+        COALESCE(a.app_name, '')               AS app_name,
+        COALESCE(a.url,      '')               AS url,
+        COALESCE(ec.catalogue_id, 0)           AS catalogue_id,
+        CASE
+            WHEN LOWER(COALESCE(c.name, '')) = 'productive'   THEN 'Productive'
+            WHEN LOWER(COALESCE(c.name, '')) = 'unproductive' THEN 'Unproductive'
+            ELSE 'Neutral'
+        END                                    AS catalogue_name
+    FROM   effective_catalogue ec
+    JOIN   public.app_url_master a     ON a.id  = ec.app_url_id
+    LEFT   JOIN public.catalogue_master c ON c.id = ec.catalogue_id;
+
+    ANALYZE tmp_app_catalogue;
+
+    -- ✅ Covering index for final join
+    CREATE INDEX idx_tmp_ac_user_app
+        ON tmp_app_catalogue (internal_user_id, app_url_id)
+        INCLUDE (app_name, url, catalogue_id, catalogue_name);
+
+    -- =========================================================
+    -- STEP 8: Open cursor
+    --         ✅ All heavy work done in steps above
+    --         ✅ This is just a lightweight join on indexed
+    --            in-memory temp tables — should be <10ms
+    -- =========================================================
+    OPEN p_result FOR
+    SELECT
+        se.external_user_id                    AS user_id,
+        se.activity_date,
+        se.app_url_id,
+        COALESCE(ac.app_name,       '')        AS app_name,
+        COALESCE(ac.url,            '')        AS url,
+        COALESCE(ac.catalogue_id,   0)         AS catalogue_id,
+        COALESCE(ac.catalogue_name, 'Neutral') AS catalogue_name,
+        SUM(se.effective_sec)::int             AS total_time_seconds
+    FROM   tmp_screen_effective se
+    LEFT   JOIN tmp_app_catalogue ac
+        ON  ac.internal_user_id = se.internal_user_id
+        AND ac.app_url_id       = se.app_url_id
+    GROUP  BY
+        se.external_user_id,
+        se.activity_date,
+        se.app_url_id,
+        ac.app_name,
+        ac.url,
+        ac.catalogue_id,
+        ac.catalogue_name
+    ORDER  BY
+        se.external_user_id,
+        se.activity_date,
+        total_time_seconds DESC;
+
+END;
+$BODY$;
+ALTER PROCEDURE public.sp_get_productivity_detail_by_user_and_date_1(text, text[], date, date, refcursor)
+    OWNER TO mmuser;
+

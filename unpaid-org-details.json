@@ -1,0 +1,389 @@
+[
+  
+  {
+    "organizationId": "6a0edc181547f67fd9598984",
+    "organizationName": "TECHVEIN IT SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "lastPaymentDate": "2026-07-04T23:08:29.196Z",
+    "terminationDate": "2026-08-05T00:00:00Z",
+    "suspentionDate": "2026-08-12T00:00:00Z"
+  },
+  {
+    "organizationId": "6a17ff0c394c686e080abf81",
+    "organizationName": "DESIGNING HUB WORLD",
+    "organizationStatus": "Suspended",
+    "lastPaymentDate": "2026-07-12T07:30:00.288Z",
+    "terminationDate": "2026-08-12T00:00:00Z",
+    "suspentionDate": "2026-08-19T00:00:00Z"
+  },
+  {
+    "organizationId": "6a16dbf248061407b9e5aaf1",
+    "organizationName": "Vision Power Analytics Private Limited",
+    "organizationStatus": "Suspended",
+    "lastPaymentDate": "2026-07-17T03:57:07.472Z",
+    "terminationDate": "2026-08-15T00:00:00Z",
+    "suspentionDate": "2026-08-22T00:00:00Z"
+  },
+  
+  {
+    "organizationId": "6a2655ab1f1154eebe506875",
+    "organizationName": "INVENTO ONE PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-08-30T07:27:15.63Z",
+    "terminationDate": "2026-09-29T00:00:00Z",
+    "suspentionDate": "2026-10-06T00:00:00Z"
+  },
+  {
+    "organizationId": "691ff26185156ab97b09b456",
+    "organizationName": "DIGITUP SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "lastPaymentDate": "2026-09-07T18:32:35.138Z",
+    "terminationDate": "2026-10-06T00:00:00Z",
+    "suspentionDate": "2026-10-13T00:00:00Z"
+  },
+
+  {
+    "organizationId": "69dddc42311f946ea394035d",
+    "organizationName": "DEEPA  GEORGE",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-02T08:26:09.717Z",
+    "terminationDate": "2026-10-29T00:00:00Z",
+    "suspentionDate": "2026-11-05T00:00:00Z"
+  },
+  {
+    "organizationId": "680738d6ff13bbf65bf724ea",
+    "organizationName": "A2Z PLACEMENTS",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-02T21:58:38.253Z",
+    "terminationDate": "2026-11-03T00:00:00Z",
+    "suspentionDate": "2026-11-10T00:00:00Z"
+  },
+  {
+    "organizationId": "68a48d14316ae0c465a5087f",
+    "organizationName": "Surekha Infra Solutions",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-03T22:40:31.134Z",
+    "terminationDate": "2026-11-03T00:00:00Z",
+    "suspentionDate": "2026-11-10T00:00:00Z"
+  },
+  {
+    "organizationId": "6a326bfa52018080655b5b1b",
+    "organizationName": "TECHNIANS SOFTECH PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-05T07:10:29.04Z",
+    "terminationDate": "2026-11-02T00:00:00Z",
+    "suspentionDate": "2026-11-09T00:00:00Z"
+  },
+  {
+    "organizationId": "69e10a2b07342c3baf2edf6e",
+    "organizationName": "INNOVA ACADEMY",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-06T04:56:34.121Z",
+    "terminationDate": "2026-11-06T00:00:00Z",
+    "suspentionDate": "2026-11-13T00:00:00Z"
+  },
+  {
+    "organizationId": "6aaa7101547376a57972e651",
+    "organizationName": "NEWMEDICLUE DIAGNOSTICS (OPC) PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-06T07:55:37.025Z",
+    "terminationDate": "2026-11-06T00:00:00Z",
+    "suspentionDate": "2026-11-13T00:00:00Z"
+  },
+  {
+    "organizationId": "6a9812f89e30450f5b51f713",
+    "organizationName": "KELAPA KERELAS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-06T12:17:58.955Z",
+    "terminationDate": "2026-11-06T00:00:00Z",
+    "suspentionDate": "2026-11-13T00:00:00Z"
+  },
+  {
+    "organizationId": "6a265ebc7621364525595637",
+    "organizationName": "Global Child Wellness",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-06T21:55:02.13Z",
+    "terminationDate": "2026-11-07T00:00:00Z",
+    "suspentionDate": "2026-11-14T00:00:00Z"
+  },
+  {
+    "organizationId": "6a609708a12d2775744d5921",
+    "organizationName": "ACCUPRINTS",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-06T22:39:58.936Z",
+    "terminationDate": "2026-11-07T00:00:00Z",
+    "suspentionDate": "2026-11-14T00:00:00Z"
+  },
+  {
+    "organizationId": "684fc4b99f05ab3147e1181e",
+    "organizationName": "BELNET E-MARKETING (OPC) PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-07T07:12:10Z",
+    "terminationDate": "2026-11-07T00:00:00Z",
+    "suspentionDate": "2026-11-14T00:00:00Z"
+  },
+  {
+    "organizationId": "680751eeff13bbf65b0216c3",
+    "organizationName": "HI TECH INTERNATIONAL",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-07T07:12:21.951Z",
+    "terminationDate": "2026-11-07T00:00:00Z",
+    "suspentionDate": "2026-11-14T00:00:00Z"
+  },
+  {
+    "organizationId": "6a6b7e4cd3112f7b3f601131",
+    "organizationName": "SUPER SHELDON LLP",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-07T18:02:50.355Z",
+    "terminationDate": "2026-11-03T00:00:00Z",
+    "suspentionDate": "2026-11-10T00:00:00Z"
+  },
+  {
+    "organizationId": "6ac8be48be336dfca5e59036",
+    "organizationName": "BEETLOOP GLOBAL SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-09T10:19:57.229Z",
+    "terminationDate": "2026-11-09T00:00:00Z",
+    "suspentionDate": "2026-11-16T00:00:00Z"
+  },
+  {
+    "organizationId": "6a269400fc5ad79c48363c8f",
+    "organizationName": "SUNFLOWER SOLUTIONS",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-11T07:12:21.602Z",
+    "terminationDate": "2026-11-11T00:00:00Z",
+    "suspentionDate": "2026-11-18T00:00:00Z"
+  },
+  {
+    "organizationId": "6a68ae74aa31c8f2901cb9a9",
+    "organizationName": "SCIENTISTAI TECHNOLOGIES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-11T22:12:11.172Z",
+    "terminationDate": "2026-11-12T00:00:00Z",
+    "suspentionDate": "2026-11-19T00:00:00Z"
+  },
+  {
+    "organizationId": "68b53e1b6e3c8feb1e9a97e5",
+    "organizationName": "Craitrix Technologies",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-12T23:08:30.599Z",
+    "terminationDate": "2026-11-13T00:00:00Z",
+    "suspentionDate": "2026-11-20T00:00:00Z"
+  },
+  {
+    "organizationId": "6a0dfd644f5d6e8548e781d6",
+    "organizationName": "ARK Tours and Travels",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-13T18:05:20.097Z",
+    "terminationDate": "2026-11-07T00:00:00Z",
+    "suspentionDate": "2026-11-14T00:00:00Z"
+  },
+  {
+    "organizationId": "6a80628ee05bbc173577b93f",
+    "organizationName": "BINDU NATURAL WORLD",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-15T00:08:28.652Z",
+    "terminationDate": "2026-11-15T00:00:00Z",
+    "suspentionDate": "2026-11-22T00:00:00Z"
+  },
+  {
+    "organizationId": "6a47dc265a654b5c313112f7",
+    "organizationName": "RESOLVIFY SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-16T21:37:46.49Z",
+    "terminationDate": "2026-11-17T00:00:00Z",
+    "suspentionDate": "2026-11-24T00:00:00Z"
+  },
+  {
+    "organizationId": "6a09454a6a7a6d6155fb1d1f",
+    "organizationName": "KC OVERSEAS VIZAG",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-16T21:54:17.081Z",
+    "terminationDate": "2026-11-17T00:00:00Z",
+    "suspentionDate": "2026-11-24T00:00:00Z"
+  },
+  {
+    "organizationId": "6872a00df45ca4ddaefe4565",
+    "organizationName": "INSIGHTOGRAM PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-17T07:09:15.543Z",
+    "terminationDate": "2026-12-13T00:00:00Z",
+    "suspentionDate": "2026-12-20T00:00:00Z"
+  },
+  {
+    "organizationId": "68b584316e3c8feb1ed2ca12",
+    "organizationName": "Sumit Lehra",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-17T07:22:54.89Z",
+    "terminationDate": "2026-11-17T00:00:00Z",
+    "suspentionDate": "2026-11-24T00:00:00Z"
+  },
+  {
+    "organizationId": "6948e7cfcd359ff97163d707",
+    "organizationName": "VISIBILITY GURUS",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-17T22:38:45.837Z",
+    "terminationDate": "2026-11-17T00:00:00Z",
+    "suspentionDate": "2026-11-24T00:00:00Z"
+  },
+  {
+    "organizationId": "69158a22110290b7120400f0",
+    "organizationName": "MORSER SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-19T21:28:27.1Z",
+    "terminationDate": "2026-11-21T00:00:00Z",
+    "suspentionDate": "2026-11-28T00:00:00Z"
+  },
+  {
+    "organizationId": "69f98f808141402c3df1227c",
+    "organizationName": "R K STUDYHUB PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-19T21:38:11.563Z",
+    "terminationDate": "2026-11-20T00:00:00Z",
+    "suspentionDate": "2026-11-27T00:00:00Z"
+  },
+  {
+    "organizationId": "694288ca8c6040af6dd3e980",
+    "organizationName": "Saneforce",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-20T07:09:20.723Z",
+    "terminationDate": "2026-11-20T00:00:00Z",
+    "suspentionDate": "2026-11-27T00:00:00Z"
+  },
+  {
+    "organizationId": "69bcdd6cc0427f9b7cd3cc52",
+    "organizationName": "Bharat Book Bureau",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-20T07:09:59.695Z",
+    "terminationDate": "2026-11-20T00:00:00Z",
+    "suspentionDate": "2026-11-27T00:00:00Z"
+  },
+  {
+    "organizationId": "69f35394195f49462e2dbb35",
+    "organizationName": "SIMPLIFIED DYNAMICS SOLUTIONS",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-20T21:10:19.665Z",
+    "terminationDate": "2026-11-21T00:00:00Z",
+    "suspentionDate": "2026-11-28T00:00:00Z"
+  },
+  {
+    "organizationId": "677bd079d77efd749212826a",
+    "organizationName": "QIABEN HEALTHCARE SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-21T07:34:55.724Z",
+    "terminationDate": "2026-11-21T00:00:00Z",
+    "suspentionDate": "2026-11-28T00:00:00Z"
+  },
+  {
+    "organizationId": "6ac6334e987ecdd90065c465",
+    "organizationName": "XLBYTE PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-22T10:37:12.086Z",
+    "terminationDate": "2026-11-22T00:00:00Z",
+    "suspentionDate": "2026-11-29T00:00:00Z"
+  },
+  {
+    "organizationId": "6878d06682720b5d73d6452b",
+    "organizationName": "SANTOSH A. KULKARANI & ASSOCIATES",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-23T05:35:47.367Z",
+    "terminationDate": "2026-11-23T00:00:00Z",
+    "suspentionDate": "2026-11-30T00:00:00Z"
+  },
+  {
+    "organizationId": "69faefd0e445681b13977fcc",
+    "organizationName": "WELLVORT FASHION PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-23T13:16:14.255Z",
+    "terminationDate": "2026-11-18T00:00:00Z",
+    "suspentionDate": "2026-11-25T00:00:00Z"
+  },
+  {
+    "organizationId": "6ac78f433272ff57c884fd4e",
+    "organizationName": "APNAGODAM.COM",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-24T08:40:56.861Z",
+    "terminationDate": "2026-11-24T00:00:00Z",
+    "suspentionDate": "2026-12-01T00:00:00Z"
+  },
+  {
+    "organizationId": "6a1e7fa93d18d4e1dfb9719b",
+    "organizationName": "Mistura Software Technologies Private Limited",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-24T18:05:21.613Z",
+    "terminationDate": "2026-12-19T00:00:00Z",
+    "suspentionDate": "2026-12-26T00:00:00Z"
+  },
+  {
+    "organizationId": "6a1411abe14e38dd33e24962",
+    "organizationName": "Kazuu",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-25T22:28:34.835Z",
+    "terminationDate": "2026-11-23T00:00:00Z",
+    "suspentionDate": "2026-11-30T00:00:00Z"
+  },
+  {
+    "organizationId": "6a4f3d3d241265085e592a51",
+    "organizationName": "Ecreations Multimedia",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-26T22:08:41.154Z",
+    "terminationDate": "2026-11-27T00:00:00Z",
+    "suspentionDate": "2026-12-04T00:00:00Z"
+  },
+  {
+    "organizationId": "698ebca75071b45f415a5667",
+    "organizationName": "Clinic Dermatech Private Limited",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-27T08:57:30.463Z",
+    "terminationDate": "2026-11-27T00:00:00Z",
+    "suspentionDate": "2026-12-04T00:00:00Z"
+  },
+  {
+    "organizationId": "6aba29c5a36fd6864b73dae3",
+    "organizationName": "TALLYUNNATI INFO SERVICES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-28T04:20:53.782Z",
+    "terminationDate": "2026-11-28T00:00:00Z",
+    "suspentionDate": "2026-12-05T00:00:00Z"
+  },
+  {
+    "organizationId": "6a0150bc3266effc4484b956",
+    "organizationName": "ACCSOURCE KNOWLEDGE PROCESS OUTSOURCING PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-28T07:11:38.051Z",
+    "terminationDate": "2026-11-27T00:00:00Z",
+    "suspentionDate": "2026-12-04T00:00:00Z"
+  },
+  {
+    "organizationId": "6aa11a89f331f66d268530b7",
+    "organizationName": "GuiRes Healthcare Private Limited",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-28T08:12:38.48Z",
+    "terminationDate": "2026-11-25T00:00:00Z",
+    "suspentionDate": "2026-12-02T00:00:00Z"
+  },
+  {
+    "organizationId": "66d6010b9d11932949609245",
+    "organizationName": "INVESTATION TEAM PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-29T07:11:17.041Z",
+    "terminationDate": "2026-11-29T00:00:00Z",
+    "suspentionDate": "2026-12-06T00:00:00Z"
+  },
+  {
+    "organizationId": "6835aa93342ad7c3ea04e08b",
+    "organizationName": "One Six One",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-31T07:09:03.531Z",
+    "terminationDate": "2026-12-01T00:00:00Z",
+    "suspentionDate": "2026-12-08T00:00:00Z"
+  },
+  {
+    "organizationId": "6634a4df4d3e943c5e52d1a2",
+    "organizationName": "Triseasuae",
+    "organizationStatus": "Paid",
+    "lastPaymentDate": "2026-10-31T19:29:36.051Z",
+    "terminationDate": "2026-12-01T00:00:00Z",
+    "suspentionDate": "2026-12-08T00:00:00Z"
+  }
+]

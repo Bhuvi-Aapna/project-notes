@@ -1,0 +1,5092 @@
+[
+  {
+    "organizationId": "65fbeb03d8077db93a5c70fe",
+    "organizationName": "The Remote Staff.com",
+    "organizationStatus": "",
+    "billingPlanType": "",
+    "lastPaymentDate": "2024-08-22T12:43:54.842Z",
+    "terminationDate": "2024-09-21T00:00:00Z",
+    "suspentionDate": "2024-10-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "66051ac9023765e727e13c23",
+    "organizationName": "PlanCover",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2024-10-16T11:15:30.139Z",
+    "terminationDate": "2025-08-31T00:00:00Z",
+    "suspentionDate": "2025-09-10T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "65e985860a72747d5f154fd3",
+    "organizationName": "FineSoft Technologies",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2024-11-26T06:40:23.227Z",
+    "terminationDate": "2025-09-30T00:00:00Z",
+    "suspentionDate": "2025-10-10T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "677cfef3b6082092f84f61a7",
+    "organizationName": "IntegrationWings",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-01-08T05:43:14.634Z",
+    "terminationDate": "2025-12-31T00:00:00Z",
+    "suspentionDate": "2026-01-10T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "66b70e8cfd5ebb0829d20f41",
+    "organizationName": "Talent Steer Partners",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-01-23T08:03:22.255Z",
+    "terminationDate": "2026-01-22T00:00:00Z",
+    "suspentionDate": "2026-02-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "66d9dbd42d27191d07e309f0",
+    "organizationName": "Lindsey Architects",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "",
+    "lastPaymentDate": "2025-02-06T14:37:28.498Z",
+    "terminationDate": "2026-02-08T00:00:00Z",
+    "suspentionDate": "2026-02-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "677e5b392c6f72166d4be1c8",
+    "organizationName": "Chawtech Solutions Pvt Ltd",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-03-03T06:08:42.166Z",
+    "terminationDate": "2025-04-01T00:00:00Z",
+    "suspentionDate": "2025-04-11T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6756bfe8d2256d6ddd1feac2",
+    "organizationName": "Arhant",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-03-05T11:09:40.464Z",
+    "terminationDate": "2026-03-04T00:00:00Z",
+    "suspentionDate": "2026-03-14T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67adf5f4134e0e8801b64522",
+    "organizationName": "Tranetech Software Solutions",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-03-24T10:03:59.792Z",
+    "terminationDate": "2026-03-03T00:00:00Z",
+    "suspentionDate": "2026-03-10T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67e1b1b0f64340298aef86a1",
+    "organizationName": "Vinfotech Skills and Education",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-04-02T12:18:24.326Z",
+    "terminationDate": "2026-03-31T00:00:00Z",
+    "suspentionDate": "2026-04-08T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67a9d56aef1a2d52c7937ea9",
+    "organizationName": "Fixit Design",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2025-04-15T12:04:57.258Z",
+    "terminationDate": "2025-07-04T00:00:00Z",
+    "suspentionDate": "2025-07-11T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67ed21ddd1674fa926830214",
+    "organizationName": "GUJAR INDUSTRIES INDIA PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-04-19T06:14:58.29Z",
+    "terminationDate": "2026-04-19T00:00:00Z",
+    "suspentionDate": "2026-04-26T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6805ed320f1eb1d2624878d6",
+    "organizationName": "GH Labs",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-04-22T07:48:34.89Z",
+    "terminationDate": "2026-04-21T00:00:00Z",
+    "suspentionDate": "2026-04-28T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67fcf00cbe754351c41ee336",
+    "organizationName": "Alphech Global",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-04-29T14:43:40.974Z",
+    "terminationDate": "2026-04-28T00:00:00Z",
+    "suspentionDate": "2026-05-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67ef8fd7706e3330e85cf403",
+    "organizationName": "TalentDove",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-04-30T09:30:24.631Z",
+    "terminationDate": "2026-03-31T00:00:00Z",
+    "suspentionDate": "2026-04-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67aa8d84ef1a2d52c7a820d5",
+    "organizationName": "Digital Minds",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-05-01T06:46:59.845Z",
+    "terminationDate": "2025-05-30T00:00:00Z",
+    "suspentionDate": "2025-06-06T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "680a8be6aa409941adcb66dc",
+    "organizationName": "UFirst Federal Credit Union",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-05-13T08:40:36.766Z",
+    "terminationDate": "2026-04-25T00:00:00Z",
+    "suspentionDate": "2026-05-02T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6826f87e8253d9e3d8c5b1f2",
+    "organizationName": "Sureways Shipping",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-05-16T09:58:17.214Z",
+    "terminationDate": "2026-06-15T00:00:00Z",
+    "suspentionDate": "2026-06-15T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6809e9c010459fe684aff15a",
+    "organizationName": "SrankTech",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2025-05-21T05:39:27.757Z",
+    "terminationDate": "2025-08-19T00:00:00Z",
+    "suspentionDate": "2025-08-26T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6818442d455871c7b2d63f01",
+    "organizationName": "Purva Marketing",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-05-21T07:49:52.589Z",
+    "terminationDate": "2026-05-20T00:00:00Z",
+    "suspentionDate": "2026-05-27T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "683035794773cc0d911b8c8d",
+    "organizationName": "Marudhararts",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-05-23T08:52:24.345Z",
+    "terminationDate": "2026-05-22T00:00:00Z",
+    "suspentionDate": "2026-05-29T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67863d25a36f6a6b33dc8b66",
+    "organizationName": "teck tech",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-05-27T06:50:37.13Z",
+    "terminationDate": "2025-06-25T00:00:00Z",
+    "suspentionDate": "2025-07-02T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67ff4118487792ae00abe620",
+    "organizationName": "Micronstars",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-06-04T10:09:54.985Z",
+    "terminationDate": "2026-06-03T00:00:00Z",
+    "suspentionDate": "2026-06-10T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6824715ac031915bc4939c26",
+    "organizationName": "BBMC",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-06-06T06:28:48.538Z",
+    "terminationDate": "2025-07-05T00:00:00Z",
+    "suspentionDate": "2025-07-12T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "682b378a4f2a661d70c17627",
+    "organizationName": "Ideal Jobs Employment Inc",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-06-09T14:05:05.246Z",
+    "terminationDate": "2025-07-08T00:00:00Z",
+    "suspentionDate": "2025-07-15T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68346268d23594edcf9dd064",
+    "organizationName": "Virajo AutoSoft Pvt Ltd",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2025-06-10T05:50:48.251Z",
+    "terminationDate": "2028-06-08T00:00:00Z",
+    "suspentionDate": "2028-06-15T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6826fed68253d9e3d8c8b3ca",
+    "organizationName": "Foremost Leads",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-06-10T10:08:38.076Z",
+    "terminationDate": "2025-07-09T00:00:00Z",
+    "suspentionDate": "2025-07-16T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "682ae1ce4f2a661d7091a698",
+    "organizationName": "Seaways Machinery India pvt ltd",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2025-06-13T13:11:25.776Z",
+    "terminationDate": "2025-09-11T00:00:00Z",
+    "suspentionDate": "2025-09-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6811bd2f9e0d46154bc239db",
+    "organizationName": "VIRTUED ACADEMY INTERNATIONAL",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-06-16T10:54:09.039Z",
+    "terminationDate": "2026-06-16T00:00:00Z",
+    "suspentionDate": "2026-06-23T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6852b94a7a5bd74649b4fe21",
+    "organizationName": "Alphech",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-06-18T14:47:09.953Z",
+    "terminationDate": "2026-06-18T00:00:00Z",
+    "suspentionDate": "2026-06-25T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "682aedae4f2a661d70978af1",
+    "organizationName": "Melco India pVt Ltd",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-06-19T11:21:06.767Z",
+    "terminationDate": "2026-06-19T00:00:00Z",
+    "suspentionDate": "2026-06-26T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67ecd1d1d1674fa926657a4f",
+    "organizationName": "SIGMA OUTSOURCING SERVICES PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-06-24T06:02:42.478Z",
+    "terminationDate": "2025-07-23T00:00:00Z",
+    "suspentionDate": "2025-07-30T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "681c64dabe3da98693b351c6",
+    "organizationName": "Skash Rich",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-06-24T07:07:36.028Z",
+    "terminationDate": "2026-06-23T00:00:00Z",
+    "suspentionDate": "2026-06-30T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "680b77bcaa409941ad0327d6",
+    "organizationName": "SimpliGo Global Services",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-06-25T06:50:54.397Z",
+    "terminationDate": "2025-07-24T00:00:00Z",
+    "suspentionDate": "2025-07-31T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "685df2ec955844b19234581c",
+    "organizationName": "RESERVATION SUPPORT",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-06-27T02:12:17.652Z",
+    "terminationDate": "2025-07-26T00:00:00Z",
+    "suspentionDate": "2025-08-02T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "684aadbdab4ad2c548dd955f",
+    "organizationName": "weshoppe",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-06-30T08:45:50.294Z",
+    "terminationDate": "2025-07-30T00:00:00Z",
+    "suspentionDate": "2025-08-06T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "684972cdd763a0cfcbae1f50",
+    "organizationName": "TYSIX APP LABS LLP",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-06-30T12:02:14.952Z",
+    "terminationDate": "2025-07-29T00:00:00Z",
+    "suspentionDate": "2025-08-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6852586f7a5bd74649734f4c",
+    "organizationName": "Vyapariclub",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-07-03T07:48:54.516Z",
+    "terminationDate": "2026-07-02T00:00:00Z",
+    "suspentionDate": "2026-07-09T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68220d02172d2704f6b3cded",
+    "organizationName": "Incredimate Studio",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-07-04T08:14:08.64Z",
+    "terminationDate": "2025-07-27T00:00:00Z",
+    "suspentionDate": "2025-08-03T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6862e047771123b7c5557996",
+    "organizationName": "Bitorio IT Services Private Limited",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2025-07-07T07:13:52.873Z",
+    "terminationDate": "2025-10-20T00:00:00Z",
+    "suspentionDate": "2025-10-27T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68591a53515226c7fce75843",
+    "organizationName": "THROTTLL",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2025-07-09T09:32:03.618Z",
+    "terminationDate": "2025-09-16T00:00:00Z",
+    "suspentionDate": "2025-09-23T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68567a39186e291874e9c107",
+    "organizationName": "BCon Consultancy OPC Pvt Ltd",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-07-10T10:10:17.184Z",
+    "terminationDate": "2026-07-09T00:00:00Z",
+    "suspentionDate": "2026-07-16T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67c253f2233f7038fefb161b",
+    "organizationName": "Core Inc",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-07-14T16:25:22.361Z",
+    "terminationDate": "2025-08-12T00:00:00Z",
+    "suspentionDate": "2025-08-19T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6829d77442373d114bedc927",
+    "organizationName": "dr lal pathlabs",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-07-15T07:11:08.433Z",
+    "terminationDate": "2025-08-13T00:00:00Z",
+    "suspentionDate": "2025-08-20T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "682d8219ed2fd7e095a20139",
+    "organizationName": "VLE Bazaar Pvt. Ltd",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-07-16T10:49:00.463Z",
+    "terminationDate": "2025-08-13T00:00:00Z",
+    "suspentionDate": "2025-08-20T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6864152f771123b7c5cc1c2c",
+    "organizationName": "Fyntera IT Services",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-07-18T04:25:54.234Z",
+    "terminationDate": "2026-07-14T00:00:00Z",
+    "suspentionDate": "2026-07-21T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68640f1d771123b7c5cab6c9",
+    "organizationName": "Fare Destination Pvt Ltd",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-07-18T12:57:24.192Z",
+    "terminationDate": "2025-08-16T00:00:00Z",
+    "suspentionDate": "2025-08-23T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "686644b46767c1479eee8344",
+    "organizationName": "Scintillation Research",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2025-07-22T13:15:35.144Z",
+    "terminationDate": "2025-10-19T00:00:00Z",
+    "suspentionDate": "2025-10-26T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "687f7d089e6dfe9db3efc825",
+    "organizationName": "SECUTECH SYSTEMS AND SOLUTIONS",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-07-23T09:50:13.646Z",
+    "terminationDate": "2025-08-21T00:00:00Z",
+    "suspentionDate": "2025-08-28T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "681b2a8614269e38b599c183",
+    "organizationName": "Paperless Services Private Limited",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-07-24T07:45:02.082Z",
+    "terminationDate": "2026-07-23T00:00:00Z",
+    "suspentionDate": "2026-07-30T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6877b39b986c745b028599b2",
+    "organizationName": "Vantage Point Consulting",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-07-29T15:52:52.867Z",
+    "terminationDate": "2026-07-28T00:00:00Z",
+    "suspentionDate": "2026-08-04T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6889791af15651bf6a0efb84",
+    "organizationName": "Worldwide Book of Records",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-07-30T01:55:28.435Z",
+    "terminationDate": "2025-08-28T00:00:00Z",
+    "suspentionDate": "2025-09-04T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6870bd1a7021853a94dbea4a",
+    "organizationName": "APU and Company",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-08-01T09:38:02.128Z",
+    "terminationDate": "2026-07-31T00:00:00Z",
+    "suspentionDate": "2026-08-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "685d381f9e399c9968789264",
+    "organizationName": "Mieux Technologies Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-08-07T06:18:37.442Z",
+    "terminationDate": "2025-07-31T00:00:00Z",
+    "suspentionDate": "2025-08-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68415fc41c7b6e73a8956d19",
+    "organizationName": "RIMJHIM ISPAT LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2025-08-07T13:54:54.257Z",
+    "terminationDate": "2026-07-08T00:00:00Z",
+    "suspentionDate": "2026-07-15T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6644a365d82ae7c7fd255568",
+    "organizationName": "Cloudedots tech Pvt. Ltd",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2025-08-07T14:09:14.965Z",
+    "terminationDate": "2025-10-21T00:00:00Z",
+    "suspentionDate": "2025-10-28T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68763020e04cb82ca852bfd2",
+    "organizationName": "Viablesoft Solutions Private Limited",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-08-08T10:15:00.681Z",
+    "terminationDate": "2026-08-08T00:00:00Z",
+    "suspentionDate": "2026-08-15T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "688a54d9f15651bf6a785b67",
+    "organizationName": "Private",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-08-08T12:08:28.146Z",
+    "terminationDate": "2025-09-06T00:00:00Z",
+    "suspentionDate": "2025-09-13T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67acfcda3f7bfe1f4ffbbac1",
+    "organizationName": "Harrington",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2025-08-11T06:40:00.834Z",
+    "terminationDate": "2025-11-09T00:00:00Z",
+    "suspentionDate": "2025-11-16T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "689ad3a3e0393b2d1937f1b1",
+    "organizationName": "Click Sailors LLP",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-08-12T05:52:18.62Z",
+    "terminationDate": "2025-09-10T00:00:00Z",
+    "suspentionDate": "2025-09-17T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "686605716767c1479ec2b1d8",
+    "organizationName": "PDK Tech Corp",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2025-08-13T11:28:28.796Z",
+    "terminationDate": "2025-11-11T00:00:00Z",
+    "suspentionDate": "2025-11-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "687499204610b54b2570998e",
+    "organizationName": "Phoqtek LABS",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-08-14T10:46:16.222Z",
+    "terminationDate": "2025-09-12T00:00:00Z",
+    "suspentionDate": "2025-09-19T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68636d48771123b7c5688201",
+    "organizationName": "Habilite Clinics",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-08-20T13:17:26.377Z",
+    "terminationDate": "2025-09-19T00:00:00Z",
+    "suspentionDate": "2025-09-26T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67e535eda50039dfd5a69e27",
+    "organizationName": "J S Variar",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-08-23T04:39:29.598Z",
+    "terminationDate": "2025-09-21T00:00:00Z",
+    "suspentionDate": "2025-09-28T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6815bba2633c50ac736d00b5",
+    "organizationName": "MAHAJYOTI",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2025-08-27T11:17:57.457Z",
+    "terminationDate": "2025-11-22T00:00:00Z",
+    "suspentionDate": "2025-11-22T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6899d637e0393b2d19fa0da8",
+    "organizationName": "Avijo",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-08-28T06:51:20.721Z",
+    "terminationDate": "2025-09-26T00:00:00Z",
+    "suspentionDate": "2025-09-26T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68528ab47a5bd74649947417",
+    "organizationName": "Imperial Designers",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-08-29T11:47:34.791Z",
+    "terminationDate": "2026-08-29T00:00:00Z",
+    "suspentionDate": "2026-08-29T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68a14137a81b44d5f3775caa",
+    "organizationName": "Ignition Consulting",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-09-01T03:57:54.113Z",
+    "terminationDate": "2026-08-31T00:00:00Z",
+    "suspentionDate": "2026-08-31T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68a6c607b4107a2b5c7b7f9b",
+    "organizationName": "International Schooling Consultancy",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-09-02T11:10:10.713Z",
+    "terminationDate": "2026-08-29T00:00:00Z",
+    "suspentionDate": "2026-08-29T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "686775bac97366e405975472",
+    "organizationName": "Nexa Officeinfosystems",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-09-03T11:56:02.371Z",
+    "terminationDate": "2026-09-02T00:00:00Z",
+    "suspentionDate": "2026-09-02T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "689dcb2a612374bc34f75266",
+    "organizationName": "Graphx Techstudio Pvt Ltd",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-09-08T07:17:31.476Z",
+    "terminationDate": "2025-10-07T00:00:00Z",
+    "suspentionDate": "2025-10-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6856661f186e291874e556ac",
+    "organizationName": "Navigate Outsourcers",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-09-08T14:54:35.819Z",
+    "terminationDate": "2025-10-07T00:00:00Z",
+    "suspentionDate": "2025-10-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "684fe4299f05ab3147f4c34e",
+    "organizationName": "Treatment Traveller",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-09-25T13:11:05.723Z",
+    "terminationDate": "2025-10-25T00:00:00Z",
+    "suspentionDate": "2025-10-25T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6867de75c97366e405dda270",
+    "organizationName": "mind huntz digital services pvt ltd",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-10-06T05:54:22.858Z",
+    "terminationDate": "2025-11-04T00:00:00Z",
+    "suspentionDate": "2025-11-04T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "686677166767c1479e154d82",
+    "organizationName": "Kumari chips",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-10-09T14:38:56.579Z",
+    "terminationDate": "2025-11-07T00:00:00Z",
+    "suspentionDate": "2025-11-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6888bcd9e223bfcfc8c10e5e",
+    "organizationName": "RAVKANT SONS PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-10-10T08:35:22.845Z",
+    "terminationDate": "2025-11-09T00:00:00Z",
+    "suspentionDate": "2025-11-09T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68cb9ac1004e4651cfe7fd6d",
+    "organizationName": "STW Services LLP",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2025-10-10T12:39:47.362Z",
+    "terminationDate": "2028-10-09T00:00:00Z",
+    "suspentionDate": "2028-10-09T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "686fe0467021853a94a5f17a",
+    "organizationName": "Best Use Auto Parts",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-10-14T06:36:11.44Z",
+    "terminationDate": "2026-10-14T00:00:00Z",
+    "suspentionDate": "2026-10-14T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68d10c07467f28fce965279a",
+    "organizationName": "Seven Procure",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-10-16T10:46:03.093Z",
+    "terminationDate": "2026-10-16T00:00:00Z",
+    "suspentionDate": "2026-10-16T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68c84de993275de21b3fac9c",
+    "organizationName": "APPYCODES TECHNOLOGIES LLP",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-10-16T16:33:20.041Z",
+    "terminationDate": "2025-11-14T00:00:00Z",
+    "suspentionDate": "2025-11-14T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6871103e7021853a9417923c",
+    "organizationName": "Fiftyone DigitalMedia LLP",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-10-17T05:58:28.565Z",
+    "terminationDate": "2025-11-15T00:00:00Z",
+    "suspentionDate": "2025-11-15T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68e64baa382da5b9971063b5",
+    "organizationName": "MyData Insights Pvt Ltd",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-10-24T05:14:07.157Z",
+    "terminationDate": "2025-11-22T00:00:00Z",
+    "suspentionDate": "2025-11-22T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68e4dcac9065d0404aceef23",
+    "organizationName": "IDESLABS PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-10-27T10:22:55.816Z",
+    "terminationDate": "2025-11-25T00:00:00Z",
+    "suspentionDate": "2025-11-25T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68c1942acd3adbcaa08a6051",
+    "organizationName": "Kaiten Software",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-10-29T18:21:52.931Z",
+    "terminationDate": "2026-10-28T00:00:00Z",
+    "suspentionDate": "2026-10-28T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6720ebd35d2e37ed9ecc07ab",
+    "organizationName": "Plasico Computers",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-10-30T06:05:25.638Z",
+    "terminationDate": "2026-10-30T00:00:00Z",
+    "suspentionDate": "2026-10-30T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68b8236ec53a027ba8fba138",
+    "organizationName": "Bespoke Digital Media",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-10-30T14:10:35.815Z",
+    "terminationDate": "2025-11-28T00:00:00Z",
+    "suspentionDate": "2025-11-28T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69049e6f091f3ed593002cf3",
+    "organizationName": "CVIT Infotech",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Semi-Annually",
+    "lastPaymentDate": "2025-10-31T11:36:25.781Z",
+    "terminationDate": "2026-04-29T00:00:00Z",
+    "suspentionDate": "2026-04-29T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "687122eb7021853a941edbd5",
+    "organizationName": "Bitpad Technologies Private Limited",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-10-31T12:48:43.015Z",
+    "terminationDate": "2025-11-29T00:00:00Z",
+    "suspentionDate": "2025-11-29T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6904e870aa37171b34f75bda",
+    "organizationName": "Stockquant Technologies Private Limited",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-10-31T16:54:03.014Z",
+    "terminationDate": "2025-11-29T00:00:00Z",
+    "suspentionDate": "2025-11-29T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68c3b05a7804bbcdcadf89af",
+    "organizationName": "Matrix JEE Academy",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-11-04T04:55:27.297Z",
+    "terminationDate": "2026-11-03T00:00:00Z",
+    "suspentionDate": "2026-11-03T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "690c72dd711973a228e3b92c",
+    "organizationName": "ICROZ SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Semi-Annually",
+    "lastPaymentDate": "2025-11-06T12:00:21.412Z",
+    "terminationDate": "2026-05-05T00:00:00Z",
+    "suspentionDate": "2026-05-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68d0d23a467f28fce936dac8",
+    "organizationName": "Couponed",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-11-07T03:39:23.899Z",
+    "terminationDate": "2025-12-06T00:00:00Z",
+    "suspentionDate": "2025-12-06T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68ff42cfd261dde9c14e240c",
+    "organizationName": "VIGILANT CORPORATE SERVICES PVT LTD",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-11-10T11:28:00.111Z",
+    "terminationDate": "2026-11-10T00:00:00Z",
+    "suspentionDate": "2026-11-10T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68d223eb5477aecd74cf15d0",
+    "organizationName": "SAMP ASSOCIATES PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2025-11-11T12:01:03.832Z",
+    "terminationDate": "2026-02-09T00:00:00Z",
+    "suspentionDate": "2026-02-09T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "681b65cdbe3da98693847be6",
+    "organizationName": "Kingston Solution",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-11-12T18:47:42.736Z",
+    "terminationDate": "2025-12-11T00:00:00Z",
+    "suspentionDate": "2025-12-11T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68e3f1069065d0404a7d6dfb",
+    "organizationName": "BHUMA INFOTECH PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-11-14T06:54:15.88Z",
+    "terminationDate": "2026-11-14T00:00:00Z",
+    "suspentionDate": "2026-11-14T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6915b5d0110290b7122d4dc6",
+    "organizationName": "Mavenox Prime Pvt Ltd",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-11-19T04:56:30.299Z",
+    "terminationDate": "2026-11-18T00:00:00Z",
+    "suspentionDate": "2026-11-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68dcb9a7bb3a200eae163d19",
+    "organizationName": "NETCOM HARDWARE SERVICES",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-11-19T06:49:44.961Z",
+    "terminationDate": "2026-11-19T00:00:00Z",
+    "suspentionDate": "2026-11-19T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "686704016767c1479e39e594",
+    "organizationName": "AIKIZ INTERNATIONAL PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-11-19T08:36:21.298Z",
+    "terminationDate": "2025-12-19T00:00:00Z",
+    "suspentionDate": "2025-12-19T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68494ffad763a0cfcb94c43a",
+    "organizationName": "PERFECTO GLOBUS PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2025-11-20T10:22:14.645Z",
+    "terminationDate": "2026-02-18T00:00:00Z",
+    "suspentionDate": "2026-02-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "690c6e7f711973a228df1193",
+    "organizationName": "DIGITAL MARKETING STUDIOGENIX LLP",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-11-20T10:33:25.649Z",
+    "terminationDate": "2026-11-20T00:00:00Z",
+    "suspentionDate": "2026-11-20T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68e36ad39065d0404a1f9404",
+    "organizationName": "Orbion Infotech",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-11-26T11:37:22.268Z",
+    "terminationDate": "2025-12-25T00:00:00Z",
+    "suspentionDate": "2025-12-25T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69171172227012f347c5b992",
+    "organizationName": "KAMAL SANITATIONS",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2025-11-26T13:32:34.765Z",
+    "terminationDate": "2026-02-24T00:00:00Z",
+    "suspentionDate": "2026-02-24T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "690dd9dbf306b8158bd64c87",
+    "organizationName": "A D Patel and Associates",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2025-11-27T05:41:16.757Z",
+    "terminationDate": "2027-11-23T00:00:00Z",
+    "suspentionDate": "2027-11-23T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "683eed08151e16a86ee29e1e",
+    "organizationName": "THE SOLUTION CONSULTING FZ CO",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-11-27T09:28:10.275Z",
+    "terminationDate": "2026-11-27T00:00:00Z",
+    "suspentionDate": "2026-11-27T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "686660526767c1479e03a1d4",
+    "organizationName": "Mack Insurance Surveyors",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-11-28T09:45:11.857Z",
+    "terminationDate": "2025-12-27T00:00:00Z",
+    "suspentionDate": "2025-12-27T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68d3a70cc7110b169f0004ca",
+    "organizationName": "HECATE WIZARD MALL",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-11-28T11:19:14.22Z",
+    "terminationDate": "2026-11-27T00:00:00Z",
+    "suspentionDate": "2026-11-27T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69188b93bd04839b9c3e7dbd",
+    "organizationName": "Nexus AI Solutions",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-12-02T07:02:53.773Z",
+    "terminationDate": "2025-12-31T00:00:00Z",
+    "suspentionDate": "2025-12-31T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6876059be04cb82ca83260da",
+    "organizationName": "RITVI STEELS BUILDINGS INDIA PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-12-08T09:53:29.588Z",
+    "terminationDate": "2026-01-06T00:00:00Z",
+    "suspentionDate": "2026-01-06T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69256743ff2246387829a04b",
+    "organizationName": "GANESH BHONDE AND CO",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-12-09T12:00:31.825Z",
+    "terminationDate": "2026-12-08T00:00:00Z",
+    "suspentionDate": "2026-12-08T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "672874210f555cd01ce477dd",
+    "organizationName": "WIZARD EVENTS AND CONFERENCES PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2025-12-11T10:23:43.598Z",
+    "terminationDate": "2026-02-16T00:00:00Z",
+    "suspentionDate": "2026-02-16T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "691c55d79b6b308259b2a8c0",
+    "organizationName": "Adkindia LLC",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-12-19T05:19:46.911Z",
+    "terminationDate": "2026-12-18T00:00:00Z",
+    "suspentionDate": "2026-12-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68d66dd17338f3b43b479859",
+    "organizationName": "MACK INSURANCE SURVEYORS & LOSS ASSESSORS PVT LTD",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-12-19T14:06:45.335Z",
+    "terminationDate": "2025-12-28T00:00:00Z",
+    "suspentionDate": "2025-12-28T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68491dddd763a0cfcb74e124",
+    "organizationName": "AMULYA BIZ-CON INDIA PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2025-12-22T10:35:13.504Z",
+    "terminationDate": "2028-12-21T00:00:00Z",
+    "suspentionDate": "2028-12-21T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6596bb6b5a11b06946d39478",
+    "organizationName": "Dev Organization",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-12-23T10:05:45.065Z",
+    "terminationDate": "2028-01-21T00:00:00Z",
+    "suspentionDate": "2028-01-21T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68dfb5a1eb5c4f84daf18acf",
+    "organizationName": "SUNDERJI GOSAR & CO",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-12-23T11:38:19.194Z",
+    "terminationDate": "2027-01-01T00:00:00Z",
+    "suspentionDate": "2027-01-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "694ba9092f6216882b6c7e41",
+    "organizationName": "Revv Growth",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-12-24T10:36:32.597Z",
+    "terminationDate": "2026-01-22T00:00:00Z",
+    "suspentionDate": "2026-01-22T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6903579e7825fee906eae50a",
+    "organizationName": "SALVIK INDIA",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2025-12-29T06:55:22.406Z",
+    "terminationDate": "2026-01-28T00:00:00Z",
+    "suspentionDate": "2026-01-28T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6928c6024215cea7d70077b1",
+    "organizationName": "GANESH SKY BALLOON",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2025-12-29T12:23:21.524Z",
+    "terminationDate": "2026-03-29T00:00:00Z",
+    "suspentionDate": "2026-03-29T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69396a79f248ba014e0c36eb",
+    "organizationName": "AI EARTHING",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2025-12-30T12:46:43.241Z",
+    "terminationDate": "2026-12-30T00:00:00Z",
+    "suspentionDate": "2026-12-30T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "694a80b67a3299f93b82482d",
+    "organizationName": "Revivify Interiors LLP",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-01-02T04:55:36.424Z",
+    "terminationDate": "2027-01-01T00:00:00Z",
+    "suspentionDate": "2027-01-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "691bf5ca3b5bf909eaef4f62",
+    "organizationName": "HIMT",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-01-02T05:31:07.31Z",
+    "terminationDate": "2026-01-31T00:00:00Z",
+    "suspentionDate": "2026-01-31T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6902109b726ca59b8770355d",
+    "organizationName": "GROWTHMAX AGENCY LLP",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-01-02T07:10:04.859Z",
+    "terminationDate": "2026-02-01T00:00:00Z",
+    "suspentionDate": "2026-02-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69578aa20d12a6804de7e7a8",
+    "organizationName": "Chittaranjan Info Solutions Pvt Ltd",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-01-02T11:05:28.841Z",
+    "terminationDate": "2027-01-01T00:00:00Z",
+    "suspentionDate": "2027-01-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "693a84d3466b19f6a31f40ef",
+    "organizationName": "LIFEPULSE",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-01-04T16:47:51.874Z",
+    "terminationDate": "2027-01-03T00:00:00Z",
+    "suspentionDate": "2027-01-03T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68a99bef6362b7f389f461f0",
+    "organizationName": "VIAYAAM",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2026-01-05T06:32:46.578Z",
+    "terminationDate": "2026-11-15T00:00:00Z",
+    "suspentionDate": "2026-11-15T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68c40cd07804bbcdca2e5b74",
+    "organizationName": "VS FINTECH PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-01-08T06:56:15.969Z",
+    "terminationDate": "2026-02-06T00:00:00Z",
+    "suspentionDate": "2026-02-06T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "694bc4712f6216882b852b4c",
+    "organizationName": "Tokimonk",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-01-08T07:16:44.298Z",
+    "terminationDate": "2026-12-24T00:00:00Z",
+    "suspentionDate": "2026-12-24T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68d11818467f28fce96f4da6",
+    "organizationName": "RBL NATURAL RESOURCES LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-01-09T05:46:06.819Z",
+    "terminationDate": "2026-02-06T00:00:00Z",
+    "suspentionDate": "2026-02-06T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68529fed7a5bd74649a3c1a5",
+    "organizationName": "SRIYUG PRINT PRODUCTION",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-01-12T07:05:24.785Z",
+    "terminationDate": "2026-04-12T00:00:00Z",
+    "suspentionDate": "2026-04-12T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68d687221b3ad4d98be0057e",
+    "organizationName": "MKAPITOL",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-01-12T13:19:03.888Z",
+    "terminationDate": "2027-01-11T00:00:00Z",
+    "suspentionDate": "2027-01-11T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6967a4c1956dd6636529260a",
+    "organizationName": "HaithamQawar Inc",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-01-14T14:34:58.645Z",
+    "terminationDate": "2026-02-12T00:00:00Z",
+    "suspentionDate": "2026-02-12T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69567c1c0d12a6804da5e0fb",
+    "organizationName": "Inguide Solutions",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-01-15T04:05:04.447Z",
+    "terminationDate": "2026-02-13T00:00:00Z",
+    "suspentionDate": "2026-02-13T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68e75c42af1477e648a13da9",
+    "organizationName": "Positive Medicare Private Limited",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-01-15T10:03:25.274Z",
+    "terminationDate": "2026-04-15T00:00:00Z",
+    "suspentionDate": "2026-04-15T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69142b54627d640e16f3cebe",
+    "organizationName": "KSKS ACCOUNTING SERVICES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-01-19T08:11:16.22Z",
+    "terminationDate": "2027-01-18T00:00:00Z",
+    "suspentionDate": "2027-01-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6825d4d979179dc8f970d01f",
+    "organizationName": "AVENSYS CONSULTING PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-01-21T13:27:03.174Z",
+    "terminationDate": "2026-02-20T00:00:00Z",
+    "suspentionDate": "2026-02-20T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "690b1c193862129f807565d6",
+    "organizationName": "THE LEADSCON ENTERPRISES",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-01-27T13:22:41.81Z",
+    "terminationDate": "2026-02-25T00:00:00Z",
+    "suspentionDate": "2026-02-25T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "696612412117b82a536e2a65",
+    "organizationName": "R.T.R. SUPPORTS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-01-27T15:43:17.363Z",
+    "terminationDate": "2027-01-27T00:00:00Z",
+    "suspentionDate": "2027-01-27T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68919bb1a408dd7992ea4171",
+    "organizationName": "Shambhuraj Khamkar's Trading Academy",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-01-29T06:54:44.318Z",
+    "terminationDate": "2026-04-29T00:00:00Z",
+    "suspentionDate": "2026-04-29T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68ec9a167d5c5ed814b6142a",
+    "organizationName": "ENERGY DESIGN WORKS LLP",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-01-29T07:07:18.394Z",
+    "terminationDate": "2027-02-01T00:00:00Z",
+    "suspentionDate": "2027-02-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "688f40817833556c9844b75f",
+    "organizationName": "REMOTE COMPUTING TECHNOLOGIES",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2026-01-29T10:14:07.338Z",
+    "terminationDate": "2026-09-03T00:00:00Z",
+    "suspentionDate": "2026-09-03T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6964a1ae1b524b6223e8e13e",
+    "organizationName": "S MURARKA & ASSOCIATES",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-01-29T11:21:03.013Z",
+    "terminationDate": "2027-01-23T00:00:00Z",
+    "suspentionDate": "2027-01-23T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "680a18e810459fe684c620d3",
+    "organizationName": "DREAMWEBBY W3 SERVICES",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-01-29T12:43:58.992Z",
+    "terminationDate": "2026-06-30T00:00:00Z",
+    "suspentionDate": "2026-06-30T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69707551c6772a59c9b1a6be",
+    "organizationName": "PROSQUAD CONSULTING PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-02-02T08:12:08.342Z",
+    "terminationDate": "2027-02-05T00:00:00Z",
+    "suspentionDate": "2027-02-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "693b95f131793ba079883a2f",
+    "organizationName": "Enrich Innovations",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-02-02T10:40:25.725Z",
+    "terminationDate": "2027-02-01T00:00:00Z",
+    "suspentionDate": "2027-02-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6968e6e1956dd663659f81fe",
+    "organizationName": "SEMICOLON ITES",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-02-02T13:24:04.823Z",
+    "terminationDate": "2026-03-03T00:00:00Z",
+    "suspentionDate": "2026-03-03T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "688b71cf9b33be6ca22ac248",
+    "organizationName": "COMPLYANY INFOTECH INDIA PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-02-04T10:38:10.98Z",
+    "terminationDate": "2026-03-05T00:00:00Z",
+    "suspentionDate": "2026-03-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69495d9fcd359ff971c2bf15",
+    "organizationName": "Stellent IT India Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-02-04T14:39:21.945Z",
+    "terminationDate": "2027-02-02T00:00:00Z",
+    "suspentionDate": "2027-02-02T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6942c0828c6040af6d13904d",
+    "organizationName": "AVJ FREIGHT SERVICES LLC",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-02-04T18:06:27.208Z",
+    "terminationDate": "2026-03-05T00:00:00Z",
+    "suspentionDate": "2026-03-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67ac6158c0648f9375f65c53",
+    "organizationName": "Trigon Synergies Private Limited",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2026-02-05T14:01:00.54Z",
+    "terminationDate": "2026-03-31T00:00:00Z",
+    "suspentionDate": "2026-04-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69746b3aad3269428ee3c050",
+    "organizationName": "ZENPATH ADVISORY",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-02-06T07:54:35.225Z",
+    "terminationDate": "2027-02-08T00:00:00Z",
+    "suspentionDate": "2027-02-15T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6970c8fb9f66d483456ab655",
+    "organizationName": "BR CPA PROFESSIONAL CORPORATION",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-02-06T10:48:21.824Z",
+    "terminationDate": "2027-02-06T00:00:00Z",
+    "suspentionDate": "2027-02-13T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6971d1369f66d48345c0de62",
+    "organizationName": "TECHNYK",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-02-07T13:56:29.736Z",
+    "terminationDate": "2027-02-07T00:00:00Z",
+    "suspentionDate": "2027-02-14T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6954ccbcb811420b9370fde0",
+    "organizationName": "INFILUX APPSEC",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-02-08T08:02:31.639Z",
+    "terminationDate": "2027-02-08T00:00:00Z",
+    "suspentionDate": "2027-02-15T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "695f94a1830fc1cb6b0bee19",
+    "organizationName": "Culture Holidays India Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-02-09T13:20:17.583Z",
+    "terminationDate": "2027-02-04T00:00:00Z",
+    "suspentionDate": "2027-02-11T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "685d6a4b955844b19221a52a",
+    "organizationName": "Deltadots AI Tech Private Limited",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-02-12T08:07:31.562Z",
+    "terminationDate": "2026-03-14T00:00:00Z",
+    "suspentionDate": "2026-03-21T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "691ab3d73b5bf909ea5c30c6",
+    "organizationName": "MoneyAnna",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2026-02-12T09:07:45.248Z",
+    "terminationDate": "2027-01-30T00:00:00Z",
+    "suspentionDate": "2027-02-06T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69735ce22468a301acf46b27",
+    "organizationName": "Maclec Technical Project",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-02-12T12:39:15.782Z",
+    "terminationDate": "2027-02-11T00:00:00Z",
+    "suspentionDate": "2027-02-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6974e95cad3269428e07e816",
+    "organizationName": "Elevate Biz Hub",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-02-12T12:40:29.883Z",
+    "terminationDate": "2027-02-11T00:00:00Z",
+    "suspentionDate": "2027-02-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "697074aec6772a59c9b1040f",
+    "organizationName": "AJANTA PRODUCTS",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-02-13T07:31:44.549Z",
+    "terminationDate": "2026-03-14T00:00:00Z",
+    "suspentionDate": "2026-03-21T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "693bfe2431793ba079f08c89",
+    "organizationName": "National Chemical Co.",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-02-13T10:25:01.959Z",
+    "terminationDate": "2027-02-13T00:00:00Z",
+    "suspentionDate": "2027-02-20T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6888b605e223bfcfc8bc3137",
+    "organizationName": "Wealthmax Financial Advisers Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-02-18T17:32:54.826Z",
+    "terminationDate": "2027-02-17T00:00:00Z",
+    "suspentionDate": "2027-02-24T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6780a068eb21d7cbe1bfb646",
+    "organizationName": "EDANBROOK CONSULTANCY SERVICES (OPC) PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-02-19T07:16:13.732Z",
+    "terminationDate": "2027-02-19T00:00:00Z",
+    "suspentionDate": "2027-02-26T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "692d5a6e1f5bb3c2bd9c97fa",
+    "organizationName": "VISUAL MEDIA MONITOR",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-02-19T10:13:09.652Z",
+    "terminationDate": "2026-03-20T00:00:00Z",
+    "suspentionDate": "2026-03-27T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69804db59258f3e55be42fc2",
+    "organizationName": "TechKopra Solutions LLP",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-02-19T10:45:02.433Z",
+    "terminationDate": "2027-02-18T00:00:00Z",
+    "suspentionDate": "2027-02-25T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "692ac3dd947b4f9165639bdc",
+    "organizationName": "Rova Engineering Solutions India Pvt Ltd",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-02-19T11:13:45.321Z",
+    "terminationDate": "2027-02-18T00:00:00Z",
+    "suspentionDate": "2027-02-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "695ccbe65b2513283db3d6a9",
+    "organizationName": "NEXMARK DIGITAL",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-02-20T13:08:15.722Z",
+    "terminationDate": "2026-04-20T00:00:00Z",
+    "suspentionDate": "2026-04-27T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "685e3059955844b19244332b",
+    "organizationName": "TAURIAN MPS LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-02-21T10:06:51.266Z",
+    "terminationDate": "2026-03-23T00:00:00Z",
+    "suspentionDate": "2026-03-30T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6989879a0d419d9ebe74a52d",
+    "organizationName": "Eaztaxbiz",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2026-02-23T07:00:16.932Z",
+    "terminationDate": "2029-02-22T00:00:00Z",
+    "suspentionDate": "2029-03-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "680611da0f1eb1d26256f64a",
+    "organizationName": "SAHAJ INFOTECH PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-02-23T10:38:17.693Z",
+    "terminationDate": "2026-05-24T00:00:00Z",
+    "suspentionDate": "2026-05-31T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68d1235a467f28fce97a01fe",
+    "organizationName": "Memory Technology Middle East FZCO",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-02-24T06:42:29.917Z",
+    "terminationDate": "2026-03-25T00:00:00Z",
+    "suspentionDate": "2026-04-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "696dfa3c552c7ece58deb246",
+    "organizationName": "Adiance Technologies",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-02-25T12:02:26.565Z",
+    "terminationDate": "2027-02-25T00:00:00Z",
+    "suspentionDate": "2027-03-04T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69158117110290b712fa8f8f",
+    "organizationName": "Codepillars",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-02-27T03:53:32.078Z",
+    "terminationDate": "2026-03-28T00:00:00Z",
+    "suspentionDate": "2026-04-04T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69857e57e957870c42a9db54",
+    "organizationName": "Fundsutra Capital Advisory Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2026-03-04T07:36:37.576Z",
+    "terminationDate": "2029-02-28T00:00:00Z",
+    "suspentionDate": "2029-03-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6989ac6e0d419d9ebe94993b",
+    "organizationName": "Avinyasai Techsystems Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-03-04T07:41:17.862Z",
+    "terminationDate": "2027-03-01T00:00:00Z",
+    "suspentionDate": "2027-03-08T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "698038bf9258f3e55bcfd1bd",
+    "organizationName": "TURBO ENERGY PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-03-05T09:19:46.118Z",
+    "terminationDate": "2027-03-05T00:00:00Z",
+    "suspentionDate": "2027-03-12T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6846c91e4b49aa799dee01e0",
+    "organizationName": "Aukark",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-03-06T06:01:18.752Z",
+    "terminationDate": "2026-04-04T00:00:00Z",
+    "suspentionDate": "2026-04-11T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67c9704fc715d9224f0b20db",
+    "organizationName": "ANSHUL MAHESHWARI AND COMPANY",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-03-06T10:29:48.701Z",
+    "terminationDate": "2026-06-03T00:00:00Z",
+    "suspentionDate": "2026-06-10T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68488caad763a0cfcb5ca164",
+    "organizationName": "NIJU Business Solutions Private Limited",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2026-03-06T14:23:43.542Z",
+    "terminationDate": "2026-03-06T00:00:00Z",
+    "suspentionDate": "2026-03-13T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69a28cd52009af13ed0fcc9a",
+    "organizationName": "AGARSON SHOES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2026-03-06T15:34:49.898Z",
+    "terminationDate": "2027-03-15T00:00:00Z",
+    "suspentionDate": "2027-03-22T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68ffb6a7d261dde9c18bfde0",
+    "organizationName": "OXALE INFOTECH",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-03-07T07:32:11.324Z",
+    "terminationDate": "2027-03-13T00:00:00Z",
+    "suspentionDate": "2027-03-20T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6836a4ad426a6c78e7e3408a",
+    "organizationName": "GETYOURJOB RECRUITMENT SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-03-11T12:28:54.879Z",
+    "terminationDate": "2026-04-10T00:00:00Z",
+    "suspentionDate": "2026-04-17T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68f38a67cd3b9e990b6bc0cb",
+    "organizationName": "Tekance LLP",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-03-12T09:29:50.711Z",
+    "terminationDate": "2027-03-11T00:00:00Z",
+    "suspentionDate": "2027-03-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68a878201136db5f50ecf8e4",
+    "organizationName": "INSTYLE INTERNATIONAL",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-03-13T14:55:20.158Z",
+    "terminationDate": "2026-06-11T00:00:00Z",
+    "suspentionDate": "2026-06-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "695e4092123e3d1fbfc8680d",
+    "organizationName": "Mithun Enterp",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-03-15T04:01:26.649Z",
+    "terminationDate": "2027-03-14T00:00:00Z",
+    "suspentionDate": "2027-03-21T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68e501ed382da5b99780b280",
+    "organizationName": "Vernure",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-03-17T05:06:22.21Z",
+    "terminationDate": "2026-04-15T00:00:00Z",
+    "suspentionDate": "2026-04-22T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6968a678956dd663656ff88a",
+    "organizationName": "Sushrut Ranade",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-03-17T11:50:14.48Z",
+    "terminationDate": "2027-03-16T00:00:00Z",
+    "suspentionDate": "2027-03-23T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68bac3acaf02cd41075f5bf0",
+    "organizationName": "Lattice Innovations",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-03-18T06:46:14.82Z",
+    "terminationDate": "2026-04-16T00:00:00Z",
+    "suspentionDate": "2026-04-23T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6995c268bd085eabb10d6a50",
+    "organizationName": "Pixaflip Technologies Pvt Ltd",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-03-23T05:38:36.593Z",
+    "terminationDate": "2026-04-23T00:00:00Z",
+    "suspentionDate": "2026-04-30T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69899d310d419d9ebe870ab4",
+    "organizationName": "ARESS SOFTWARE AND EDUCATION TECHNOLOGIES PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2026-03-26T12:05:28.704Z",
+    "terminationDate": "2026-05-11T00:00:00Z",
+    "suspentionDate": "2026-05-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69c60ff1130f35593261ca6a",
+    "organizationName": "ADONIA OFFSHORE CONSULTANTS PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-03-27T06:32:31.544Z",
+    "terminationDate": "2026-04-27T00:00:00Z",
+    "suspentionDate": "2026-05-04T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69afad8ac728193499bfa1c9",
+    "organizationName": "MENTHEE TECHNOLOGIES PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-03-27T09:21:03.873Z",
+    "terminationDate": "2026-04-26T00:00:00Z",
+    "suspentionDate": "2026-05-03T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67cffbdb4a7ec453e2ecd7cc",
+    "organizationName": "EQUEST SOLUTIONS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-03-30T05:48:21.272Z",
+    "terminationDate": "2027-04-12T00:00:00Z",
+    "suspentionDate": "2027-04-19T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "692ff15c5c5a6531c1258ead",
+    "organizationName": "ssgymsconsultancy",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-03-30T06:51:52.247Z",
+    "terminationDate": "2026-04-30T00:00:00Z",
+    "suspentionDate": "2026-05-07T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69537336445dd7fd8bb3d6aa",
+    "organizationName": "KNP ARISES GREEN ENERGY PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2026-03-30T07:13:05.38Z",
+    "terminationDate": "2027-01-14T00:00:00Z",
+    "suspentionDate": "2027-01-21T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69c77857ff36c8fdf5f5d9e0",
+    "organizationName": "MADHAV AUTOMOBILES PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-03-30T13:29:06.317Z",
+    "terminationDate": "2026-06-28T00:00:00Z",
+    "suspentionDate": "2026-07-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69c777c6ff36c8fdf5f598bd",
+    "organizationName": "AAN EV PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-03-30T13:30:26.484Z",
+    "terminationDate": "2026-06-28T00:00:00Z",
+    "suspentionDate": "2026-07-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69c77d9aff36c8fdf5f844b2",
+    "organizationName": "PLUTUS MADHAV LLP",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-03-30T13:32:46.827Z",
+    "terminationDate": "2026-06-28T00:00:00Z",
+    "suspentionDate": "2026-07-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69c77953ff36c8fdf5f64b87",
+    "organizationName": "MADHAV VEHICLES LLP",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-03-30T13:34:06.344Z",
+    "terminationDate": "2026-06-28T00:00:00Z",
+    "suspentionDate": "2026-07-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69c779daff36c8fdf5f68a47",
+    "organizationName": "AAN RETAILS",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-03-30T13:35:09.399Z",
+    "terminationDate": "2026-06-28T00:00:00Z",
+    "suspentionDate": "2026-07-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69c778daff36c8fdf5f615e4",
+    "organizationName": "AAN VEHICLES PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-03-30T13:36:16.552Z",
+    "terminationDate": "2026-06-28T00:00:00Z",
+    "suspentionDate": "2026-07-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69c788ffff36c8fdf5fd369b",
+    "organizationName": "AAN FINSERV LLP",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-03-30T13:37:11.698Z",
+    "terminationDate": "2026-06-28T00:00:00Z",
+    "suspentionDate": "2026-07-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "698dcb1bad348d1b46f883b4",
+    "organizationName": "MetaMinds Enterprise Private Limited",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-03-31T11:42:27.638Z",
+    "terminationDate": "2026-04-30T00:00:00Z",
+    "suspentionDate": "2026-05-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68e9151200342f802bc19789",
+    "organizationName": "D.J. TEX FAB",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-04-01T04:40:30.079Z",
+    "terminationDate": "2026-05-01T00:00:00Z",
+    "suspentionDate": "2026-05-08T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69b3e94fea5d7f6eb98423cf",
+    "organizationName": "Noak Infocom",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Semi-Annually",
+    "lastPaymentDate": "2026-04-01T12:45:00.407Z",
+    "terminationDate": "2026-09-28T00:00:00Z",
+    "suspentionDate": "2026-10-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69b3ff51ea5d7f6eb9999b4a",
+    "organizationName": "ATHARVYA VENTURES",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-04-04T08:11:23.145Z",
+    "terminationDate": "2027-04-04T00:00:00Z",
+    "suspentionDate": "2027-04-11T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69bbe0d80038457dbcf83b9b",
+    "organizationName": "TIQ CERTIFICATION AND INSPECTION PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-04-06T06:07:05.412Z",
+    "terminationDate": "2026-07-06T00:00:00Z",
+    "suspentionDate": "2026-07-13T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67dd37a21b6e49853080a1a0",
+    "organizationName": "ENERJ SMART LTD",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-04-07T11:33:14.147Z",
+    "terminationDate": "2027-04-07T00:00:00Z",
+    "suspentionDate": "2027-04-14T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69cf6192c0712cfc3d08c58e",
+    "organizationName": "NETWAY INDIA PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-04-08T07:50:55.623Z",
+    "terminationDate": "2027-04-08T00:00:00Z",
+    "suspentionDate": "2027-04-15T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "684185121c7b6e73a8ad9e39",
+    "organizationName": "HS Digital Solutions",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-04-09T13:46:44.887Z",
+    "terminationDate": "2026-05-13T00:00:00Z",
+    "suspentionDate": "2026-05-20T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "685937a4515226c7fcf9b83b",
+    "organizationName": "DIGINAMIC IT SERVICES PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-04-10T06:23:50.538Z",
+    "terminationDate": "2026-05-10T00:00:00Z",
+    "suspentionDate": "2026-05-17T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69a69f9f626dd3b50da3b45f",
+    "organizationName": "simba squad",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-04-13T09:39:42.182Z",
+    "terminationDate": "2026-05-13T00:00:00Z",
+    "suspentionDate": "2026-05-20T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69ce0e69a85a104e5e5c511c",
+    "organizationName": "PICCO ADVISORY GLOBAL PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-04-20T08:04:21.131Z",
+    "terminationDate": "2027-04-17T00:00:00Z",
+    "suspentionDate": "2027-04-24T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "696a1ca03127d0a98cc6dd9a",
+    "organizationName": "GROWBY EXX SERVICES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-04-21T10:34:21.878Z",
+    "terminationDate": "2027-04-21T00:00:00Z",
+    "suspentionDate": "2027-04-28T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6853d2454c6492e643a84d49",
+    "organizationName": "Addhyan Online",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-04-21T13:16:49.81Z",
+    "terminationDate": "2026-05-21T00:00:00Z",
+    "suspentionDate": "2026-05-28T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69cf97c0c0712cfc3d2fd93c",
+    "organizationName": "KRD EXPORTS PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-04-23T05:36:58.004Z",
+    "terminationDate": "2026-05-23T00:00:00Z",
+    "suspentionDate": "2026-05-30T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69ca55f3fb06a08d940533ed",
+    "organizationName": "HIMACHAL PHARMACEUTICALS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-04-23T09:37:28.362Z",
+    "terminationDate": "2027-04-23T00:00:00Z",
+    "suspentionDate": "2027-04-30T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "689b8a855d2fd32b801f972a",
+    "organizationName": "SOLOMONS INTERNATIONAL",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-04-23T15:58:56.03Z",
+    "terminationDate": "2026-05-23T00:00:00Z",
+    "suspentionDate": "2026-05-30T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69709392c6772a59c9cc63da",
+    "organizationName": "B D BANSAL AND CO",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2026-04-24T11:22:26.722Z",
+    "terminationDate": "2027-01-29T00:00:00Z",
+    "suspentionDate": "2027-02-06T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69c0e556a07148b9b6979ec4",
+    "organizationName": "STATFREE PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-04-25T06:45:11.319Z",
+    "terminationDate": "2026-05-25T00:00:00Z",
+    "suspentionDate": "2026-06-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69eefcebb465d4aa82b0405e",
+    "organizationName": "EODDLEY MEDICALS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-04-27T07:53:27.093Z",
+    "terminationDate": "2027-04-27T00:00:00Z",
+    "suspentionDate": "2027-05-04T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69dc7a45263f281ea54a814e",
+    "organizationName": "Smart Scale Labs",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-04-28T15:12:47.39Z",
+    "terminationDate": "2026-05-28T00:00:00Z",
+    "suspentionDate": "2026-06-04T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69de15e4d0124fe297de15ab",
+    "organizationName": "maksim consultants",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-04-29T04:35:52.806Z",
+    "terminationDate": "2027-04-29T00:00:00Z",
+    "suspentionDate": "2027-05-06T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68f0fb06106ebc48dc59f16c",
+    "organizationName": "THE INFORMATION COMPANY PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-04-29T13:01:36.412Z",
+    "terminationDate": "2026-05-27T00:00:00Z",
+    "suspentionDate": "2026-06-03T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6979aed0f001a9a58cc0848e",
+    "organizationName": "SAPCON STEELS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2026-04-29T13:07:50.472Z",
+    "terminationDate": "2027-03-06T00:00:00Z",
+    "suspentionDate": "2027-03-13T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68e57752382da5b997a87207",
+    "organizationName": "M/s. Farebarber INC",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-04-29T14:30:39.626Z",
+    "terminationDate": "2026-05-29T00:00:00Z",
+    "suspentionDate": "2026-06-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "695237c180308e008ff05eec",
+    "organizationName": "MOBIOTICS IT SOLUTION PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-05-05T06:50:25.328Z",
+    "terminationDate": "2026-06-05T00:00:00Z",
+    "suspentionDate": "2026-06-12T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69c56d4cac3bea7da768459e",
+    "organizationName": "WEBBEE ESOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-05-05T08:02:43.18Z",
+    "terminationDate": "2027-04-23T00:00:00Z",
+    "suspentionDate": "2027-04-30T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69e083609966f1211956a12e",
+    "organizationName": "HEXOLT LIFE SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-05-05T09:31:20.817Z",
+    "terminationDate": "2027-05-05T00:00:00Z",
+    "suspentionDate": "2027-05-12T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69bbaac50038457dbccf1c17",
+    "organizationName": "Tritusa",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-05-07T09:06:02.568Z",
+    "terminationDate": "2026-06-07T00:00:00Z",
+    "suspentionDate": "2026-06-14T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68ee397a950e6098ae8b6e6b",
+    "organizationName": "ALTILIUM ENERGIE PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-05-08T10:34:31.595Z",
+    "terminationDate": "2026-10-23T00:00:00Z",
+    "suspentionDate": "2026-10-23T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69f0505e9a367dfb478bc797",
+    "organizationName": "Aancerreality",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-05-13T04:32:09.852Z",
+    "terminationDate": "2026-06-13T00:00:00Z",
+    "suspentionDate": "2026-06-20T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "67b4824f8f08411be8e238fe",
+    "organizationName": "First Fly Travel",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-05-14T16:31:06.68Z",
+    "terminationDate": "2027-05-14T00:00:00Z",
+    "suspentionDate": "2027-05-21T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69f1adc7c207c80468c781f1",
+    "organizationName": "varsity Edification PVT LTD",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-05-18T06:05:49.738Z",
+    "terminationDate": "2026-06-18T00:00:00Z",
+    "suspentionDate": "2026-06-25T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "66f91bc70519caf4a0f1710c",
+    "organizationName": "Al Wadi Holding",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-05-19T13:08:23.565Z",
+    "terminationDate": "2027-05-18T00:00:00Z",
+    "suspentionDate": "2027-05-25T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69fd9bd19b55e0337d86913b",
+    "organizationName": "Isynbus Technologies Pvt. Ltd.",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-05-22T04:55:17.314Z",
+    "terminationDate": "2026-08-22T00:00:00Z",
+    "suspentionDate": "2026-08-29T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69ca6f4afb06a08d941f7702",
+    "organizationName": "Kumar",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-05-22T13:34:58.108Z",
+    "terminationDate": "2026-06-22T00:00:00Z",
+    "suspentionDate": "2026-06-29T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69e7192de86135b2d643a76f",
+    "organizationName": "AIKYA INDIA",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-05-25T11:46:21.677Z",
+    "terminationDate": "2027-05-25T00:00:00Z",
+    "suspentionDate": "2027-06-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69f86995e24123cde0f2bea7",
+    "organizationName": "TRANSIT ADVERTISING PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-05-25T15:46:34.826Z",
+    "terminationDate": "2027-05-26T00:00:00Z",
+    "suspentionDate": "2027-06-02T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6996a689bd085eabb1478412",
+    "organizationName": "AGARWAL PACKERS AND MOVERS LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-05-28T03:46:20.351Z",
+    "terminationDate": "2027-04-01T00:00:00Z",
+    "suspentionDate": "2027-04-08T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69662ea72117b82a538b4c49",
+    "organizationName": "Minda Corporation Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-05-29T13:46:40.77Z",
+    "terminationDate": "2027-06-01T00:00:00Z",
+    "suspentionDate": "2027-06-08T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68d10aed467f28fce96449ca",
+    "organizationName": "WEALIXIR CONSULTING PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-06-01T08:26:35.519Z",
+    "terminationDate": "2026-11-12T00:00:00Z",
+    "suspentionDate": "2026-11-12T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "697360d62468a301acf7fd52",
+    "organizationName": "LUTHRA PROJECTS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-06-02T06:20:31.379Z",
+    "terminationDate": "2027-06-02T00:00:00Z",
+    "suspentionDate": "2027-06-09T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "694a725b7a3299f93b741e4b",
+    "organizationName": "Nafee Digital",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-06-02T07:35:40.182Z",
+    "terminationDate": "2026-07-02T00:00:00Z",
+    "suspentionDate": "2026-07-09T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a142db5604e7a5769efb31a",
+    "organizationName": "RR CONSULTANTS",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-06-04T14:10:23.709Z",
+    "terminationDate": "2026-07-04T00:00:00Z",
+    "suspentionDate": "2026-07-11T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a0c930f4f5d6e8548276e97",
+    "organizationName": "Ymatech Professional Services Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-06-04T14:34:51.936Z",
+    "terminationDate": "2027-06-04T00:00:00Z",
+    "suspentionDate": "2027-06-11T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68ecb3937d5c5ed814ce5770",
+    "organizationName": "FyerX",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-06-04T17:37:13.553Z",
+    "terminationDate": "2026-07-04T00:00:00Z",
+    "suspentionDate": "2026-07-11T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6982d119c85e334d9d3b1805",
+    "organizationName": "uniconenct",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-06-06T06:56:51.289Z",
+    "terminationDate": "2026-07-06T00:00:00Z",
+    "suspentionDate": "2026-07-13T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "696f38eac6772a59c92b1a25",
+    "organizationName": "TECH GURU",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-06-10T05:44:41.902Z",
+    "terminationDate": "2026-07-09T00:00:00Z",
+    "suspentionDate": "2026-07-16T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69fda7609b55e0337d90374f",
+    "organizationName": "A. Paul Software System Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-06-10T06:09:40.549Z",
+    "terminationDate": "2027-06-01T00:00:00Z",
+    "suspentionDate": "2027-06-08T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69f885e21a01e131b96957da",
+    "organizationName": "HESTABIT TECHNOLOGIES PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-06-11T05:44:42.504Z",
+    "terminationDate": "2026-07-11T00:00:00Z",
+    "suspentionDate": "2026-07-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6855877f186e291874c6db8a",
+    "organizationName": "MANAGEMY VACATIONS LLP",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-06-11T15:13:47.929Z",
+    "terminationDate": "2026-12-11T00:00:00Z",
+    "suspentionDate": "2026-12-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "697c8e44783a460079e7c1fe",
+    "organizationName": "Honest Technology Solutions",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-06-12T04:35:06.567Z",
+    "terminationDate": "2026-09-12T00:00:00Z",
+    "suspentionDate": "2026-09-19T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a19337d914d190c7019a2fb",
+    "organizationName": "ITDS SOFTWARE SERVICES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-06-12T05:20:04.311Z",
+    "terminationDate": "2027-06-12T00:00:00Z",
+    "suspentionDate": "2027-06-19T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6814822a456ec2de62295e1e",
+    "organizationName": "HILKNIGHTLY INDIA PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-06-12T10:49:01.767Z",
+    "terminationDate": "2027-06-12T00:00:00Z",
+    "suspentionDate": "2027-06-19T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6834535ad23594edcf94cfe7",
+    "organizationName": "SARAF COMPUTERS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-06-12T11:35:54.655Z",
+    "terminationDate": "2027-06-13T00:00:00Z",
+    "suspentionDate": "2027-06-20T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "681215f29e0d46154bee48a6",
+    "organizationName": "yourCFO",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-06-12T14:56:01.633Z",
+    "terminationDate": "2027-06-12T00:00:00Z",
+    "suspentionDate": "2027-06-19T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "696b1133d627a5b3736c5672",
+    "organizationName": "Emanate",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-06-16T09:34:51.342Z",
+    "terminationDate": "2026-09-15T00:00:00Z",
+    "suspentionDate": "2026-09-22T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67f90bbda83fc306447a3081",
+    "organizationName": "RECLUTA TALENT MANAGEMENT PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-06-16T11:14:24.132Z",
+    "terminationDate": "2027-06-16T00:00:00Z",
+    "suspentionDate": "2027-06-23T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69537dc4445dd7fd8bbd6584",
+    "organizationName": "MADHAV AUTOLINK PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-06-17T07:28:26.208Z",
+    "terminationDate": "2026-09-17T00:00:00Z",
+    "suspentionDate": "2026-09-24T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "684af7fdab4ad2c548067c97",
+    "organizationName": "KV SOLUTIONS",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Semi-Annually",
+    "lastPaymentDate": "2026-06-17T09:37:44.805Z",
+    "terminationDate": "2026-10-27T00:00:00Z",
+    "suspentionDate": "2026-11-03T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68a2ebf87532e4e78a6478ba",
+    "organizationName": "SoftDef",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-06-17T17:10:17.29Z",
+    "terminationDate": "2026-07-17T00:00:00Z",
+    "suspentionDate": "2026-07-24T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "67b3364e523566e385357f77",
+    "organizationName": "SKILLNIX RECRUITMENT SERVICES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-06-19T11:21:15.738Z",
+    "terminationDate": "2027-06-19T00:00:00Z",
+    "suspentionDate": "2027-06-26T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a1ea704ee7210da2115056d",
+    "organizationName": "OOMS POLYMER MODIFIED BITUMEN PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-06-19T14:01:18.294Z",
+    "terminationDate": "2027-06-19T00:00:00Z",
+    "suspentionDate": "2027-06-26T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a05a473a10bc84b4746d36d",
+    "organizationName": "ASLE PHARMACEUTICALS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-06-23T13:05:46.166Z",
+    "terminationDate": "2027-06-23T00:00:00Z",
+    "suspentionDate": "2027-06-30T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69bc3481c0427f9b7cb20bfa",
+    "organizationName": "BROCUS IT SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-06-23T15:33:23.51Z",
+    "terminationDate": "2027-03-20T00:00:00Z",
+    "suspentionDate": "2027-03-27T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6825ef3179179dc8f97e34cc",
+    "organizationName": "TECHX SOLUTIONS",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-06-25T13:24:35.948Z",
+    "terminationDate": "2026-07-25T00:00:00Z",
+    "suspentionDate": "2026-08-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69e8df41bb64167809c4f006",
+    "organizationName": "mediaf5",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-06-29T08:03:17.595Z",
+    "terminationDate": "2026-07-29T00:00:00Z",
+    "suspentionDate": "2026-08-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68526a947a5bd746498061b7",
+    "organizationName": "TFSL SERVICES INDIA PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-06-29T12:01:50.886Z",
+    "terminationDate": "2027-06-29T00:00:00Z",
+    "suspentionDate": "2027-07-06T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68355784342ad7c3eacc78bc",
+    "organizationName": "TECHMASTERS INFOMATRIX PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-06-30T10:47:33.515Z",
+    "terminationDate": "2027-06-30T00:00:00Z",
+    "suspentionDate": "2027-07-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "692e969ec70f5b10c9b0940e",
+    "organizationName": "MARTECH MINDS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-07-01T13:51:30.575Z",
+    "terminationDate": "2026-12-15T00:00:00Z",
+    "suspentionDate": "2026-12-15T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69fc2bcdaf0ea07988c3ac74",
+    "organizationName": "SP EXPORTS",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-07-03T07:07:21.273Z",
+    "terminationDate": "2026-08-03T00:00:00Z",
+    "suspentionDate": "2026-08-10T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a3382d84853613a0b14477a",
+    "organizationName": "RM ALTOPOINTE LLP",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-07-04T06:30:14.99Z",
+    "terminationDate": "2027-07-04T00:00:00Z",
+    "suspentionDate": "2027-07-11T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "685be03b9e399c9968fe4ffa",
+    "organizationName": "CONSIGN SPACE SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-07-04T14:59:20.46Z",
+    "terminationDate": "2026-11-09T00:00:00Z",
+    "suspentionDate": "2026-11-16T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a0edc181547f67fd9598984",
+    "organizationName": "TECHVEIN IT SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-07-04T23:08:29.196Z",
+    "terminationDate": "2026-08-05T00:00:00Z",
+    "suspentionDate": "2026-08-12T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "698a2f790d419d9ebedda3e8",
+    "organizationName": "CSE",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-07-07T10:38:45.074Z",
+    "terminationDate": "2027-02-23T00:00:00Z",
+    "suspentionDate": "2027-03-02T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6833ff9fd23594edcf62424b",
+    "organizationName": "DESTINATION HR",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-07-07T12:08:02.811Z",
+    "terminationDate": "2027-07-07T00:00:00Z",
+    "suspentionDate": "2027-07-14T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69e5fd6ce86135b2d6d51fbd",
+    "organizationName": "UNIDOC",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-07-08T06:18:25.925Z",
+    "terminationDate": "2026-08-05T00:00:00Z",
+    "suspentionDate": "2026-08-12T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a2196f4665f3199e9b34c7e",
+    "organizationName": "MD Panel",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-07-09T08:21:25.804Z",
+    "terminationDate": "2026-10-09T00:00:00Z",
+    "suspentionDate": "2026-10-16T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69527f8c80308e008f2b5c49",
+    "organizationName": "AAJG & CO",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-07-11T13:19:52.06Z",
+    "terminationDate": "2026-08-11T00:00:00Z",
+    "suspentionDate": "2026-08-18T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6914230f627d640e16eb5e7d",
+    "organizationName": "r3 Consultant",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-07-12T04:08:32.562Z",
+    "terminationDate": "2027-06-15T00:00:00Z",
+    "suspentionDate": "2027-06-22T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a17ff0c394c686e080abf81",
+    "organizationName": "DESIGNING HUB WORLD",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-07-12T07:30:00.288Z",
+    "terminationDate": "2026-08-12T00:00:00Z",
+    "suspentionDate": "2026-08-19T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a294939c534aebd3599d238",
+    "organizationName": "TECHBRAWN IT SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-07-13T08:27:25.155Z",
+    "terminationDate": "2027-07-13T00:00:00Z",
+    "suspentionDate": "2027-07-20T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69a95a5ea2554232dc485632",
+    "organizationName": "harpreetpahulphotography",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-07-14T12:59:29.684Z",
+    "terminationDate": "2026-08-14T00:00:00Z",
+    "suspentionDate": "2026-08-21T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a33d50ec33c94afd3a3f04a",
+    "organizationName": "DIGIPHLOX",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-07-16T04:46:01.636Z",
+    "terminationDate": "2027-07-03T00:00:00Z",
+    "suspentionDate": "2027-07-10T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69df52651370944987129bb6",
+    "organizationName": "Devvrat Developers Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-07-16T09:04:27.065Z",
+    "terminationDate": "2027-05-01T00:00:00Z",
+    "suspentionDate": "2027-05-08T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a16dbf248061407b9e5aaf1",
+    "organizationName": "Vision Power Analytics Private Limited",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-07-17T03:57:07.472Z",
+    "terminationDate": "2026-08-15T00:00:00Z",
+    "suspentionDate": "2026-08-22T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69491862cd359ff9718ef65f",
+    "organizationName": "BRIXCODE TECHNOLOGIES LLP",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-07-19T12:56:21.193Z",
+    "terminationDate": "2026-08-19T00:00:00Z",
+    "suspentionDate": "2026-08-26T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a5dce0b481fac4404c79056",
+    "organizationName": "Quicksupport Inc",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-07-20T07:56:11.76Z",
+    "terminationDate": "2026-08-20T00:00:00Z",
+    "suspentionDate": "2026-08-27T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6839467e240ce28c0a6bc5e3",
+    "organizationName": "JYOTI GARG",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-07-20T08:25:52.324Z",
+    "terminationDate": "2027-07-20T00:00:00Z",
+    "suspentionDate": "2027-07-27T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68ad3b009536dd4d9eab5756",
+    "organizationName": "HAMKO ICT",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-07-22T03:42:35.897Z",
+    "terminationDate": "2026-08-23T00:00:00Z",
+    "suspentionDate": "2026-08-30T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "685920b5515226c7fceb97c6",
+    "organizationName": "U & D SQUARE SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-07-22T06:39:32.078Z",
+    "terminationDate": "2026-10-20T00:00:00Z",
+    "suspentionDate": "2026-11-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a583cce874bebd9debaee7c",
+    "organizationName": "LeaseHomez",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-07-22T09:31:56.546Z",
+    "terminationDate": "2026-10-31T00:00:00Z",
+    "suspentionDate": "2026-11-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69d8b3e26533bfa59a896e7c",
+    "organizationName": "RUDRASHIKA INDIA PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-07-23T10:22:23.502Z",
+    "terminationDate": "2026-10-25T00:00:00Z",
+    "suspentionDate": "2026-11-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67ffa17d0b5fc53fe3729d52",
+    "organizationName": "TAXLEGIT CONSULTING PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-07-23T12:33:00.027Z",
+    "terminationDate": "2027-06-29T00:00:00Z",
+    "suspentionDate": "2027-07-06T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69b26d426f6183ee1645ce3a",
+    "organizationName": "HINDUSTAN CONCRETE SOLUTION INDIA PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-07-27T09:41:39.836Z",
+    "terminationDate": "2027-07-27T00:00:00Z",
+    "suspentionDate": "2027-08-03T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "695e31075b2513283d61aa92",
+    "organizationName": "RAAH EQUIPMENT PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-07-29T06:34:38.815Z",
+    "terminationDate": "2027-06-08T00:00:00Z",
+    "suspentionDate": "2027-06-15T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a4e1b2c451c9084c4859c23",
+    "organizationName": "JAY JALARAM BRICKS WORKS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-07-29T12:34:56.36Z",
+    "terminationDate": "2027-07-29T00:00:00Z",
+    "suspentionDate": "2027-08-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a2f8d24cd6a7e600249b1e2",
+    "organizationName": "NARMADA INFOTECH",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-07-30T05:09:21.238Z",
+    "terminationDate": "2026-08-30T00:00:00Z",
+    "suspentionDate": "2026-09-06T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "685ea794955844b1928c2a91",
+    "organizationName": "ENHANCE BUSINESS SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-07-30T09:50:02.313Z",
+    "terminationDate": "2027-05-15T00:00:00Z",
+    "suspentionDate": "2027-05-22T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a2a7314843c250634fa7030",
+    "organizationName": "The Business Complement",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-07-31T07:13:06.848Z",
+    "terminationDate": "2027-07-31T00:00:00Z",
+    "suspentionDate": "2027-08-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6858f1e8515226c7fccd9638",
+    "organizationName": "AVERANCE PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-07-31T12:11:40.627Z",
+    "terminationDate": "2026-09-01T00:00:00Z",
+    "suspentionDate": "2026-09-08T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68776fa8986c745b025ca676",
+    "organizationName": "4B SERVE PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-03T12:40:13.615Z",
+    "terminationDate": "2027-07-30T00:00:00Z",
+    "suspentionDate": "2027-08-06T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a708df700201a51a66888bd",
+    "organizationName": "PRAGMATIC EDUCATIONAL SOCIETY",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-03T15:11:33.689Z",
+    "terminationDate": "2027-08-18T00:00:00Z",
+    "suspentionDate": "2027-08-25T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "699fdbe57857ea8bfd657e41",
+    "organizationName": "BEWISE EDUPLUS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-04T06:16:24.198Z",
+    "terminationDate": "2027-03-17T00:00:00Z",
+    "suspentionDate": "2027-03-24T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "691ec484866e1f252ff7d073",
+    "organizationName": "HUBOEXPERTS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-04T06:41:06.484Z",
+    "terminationDate": "2026-12-08T00:00:00Z",
+    "suspentionDate": "2026-12-08T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6751268e8728c7256ad5a3a3",
+    "organizationName": "OnCredit (Private) Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-08-06T05:02:49.54Z",
+    "terminationDate": "2026-11-06T00:00:00Z",
+    "suspentionDate": "2026-11-13T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "685d46a69e399c996881cc70",
+    "organizationName": "MOTION EDUCATION PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-06T07:12:22.412Z",
+    "terminationDate": "2027-08-06T00:00:00Z",
+    "suspentionDate": "2027-08-13T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a586e48d81fedaabbaaecab",
+    "organizationName": "NIKQIK TECHNOLOGIES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-06T07:52:00.824Z",
+    "terminationDate": "2027-08-06T00:00:00Z",
+    "suspentionDate": "2027-08-13T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a02bbb255304b952fdce079",
+    "organizationName": "LIFECELL INTERNATIONAL PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-07T11:02:09.237Z",
+    "terminationDate": "2027-08-10T00:00:00Z",
+    "suspentionDate": "2027-08-17T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a44547c674b222785685af3",
+    "organizationName": "Digital Nexus Consulting",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-08-07T18:13:42.909Z",
+    "terminationDate": "2026-11-07T00:00:00Z",
+    "suspentionDate": "2026-11-14T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a11a0705f7741ae198507e4",
+    "organizationName": "TJL DYNAMICS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-08T09:12:58.56Z",
+    "terminationDate": "2027-08-08T00:00:00Z",
+    "suspentionDate": "2027-08-15T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68c7ec1993275de21b0ca15a",
+    "organizationName": "The SafeTalk Group",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-08-10T09:57:06.831Z",
+    "terminationDate": "2026-12-29T00:00:00Z",
+    "suspentionDate": "2027-01-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69e5e6b6e86135b2d6bf6a59",
+    "organizationName": "NLINEAXIS IT SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-08-10T11:06:26.426Z",
+    "terminationDate": "2026-11-10T00:00:00Z",
+    "suspentionDate": "2026-11-17T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6960d45e4e6bc843d1255dcf",
+    "organizationName": "LA PINK Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-08-10T11:48:38.433Z",
+    "terminationDate": "2026-11-08T00:00:00Z",
+    "suspentionDate": "2026-11-15T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a6b19afd3112f7b3f06c01f",
+    "organizationName": "CYNO PHARMACEUTICALS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-11T06:19:01.192Z",
+    "terminationDate": "2027-08-11T00:00:00Z",
+    "suspentionDate": "2027-08-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69059bfaaa37171b340e59fb",
+    "organizationName": "SILO GRANITES INDIA PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-13T11:52:49.635Z",
+    "terminationDate": "2026-11-18T00:00:00Z",
+    "suspentionDate": "2026-11-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "691eef94866e1f252f221519",
+    "organizationName": "AVANCE GLOBALTECH CONSULTANCY PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-08-14T04:53:27.691Z",
+    "terminationDate": "2026-11-07T00:00:00Z",
+    "suspentionDate": "2026-11-14T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6870d0677021853a94e80543",
+    "organizationName": "CARTREND AUTO PARTS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-14T09:04:17.114Z",
+    "terminationDate": "2027-08-14T00:00:00Z",
+    "suspentionDate": "2027-08-21T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "696779b3956dd663650e69bb",
+    "organizationName": "CLAVIS TECHNOLOGIES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-08-14T09:35:08.807Z",
+    "terminationDate": "2026-11-06T00:00:00Z",
+    "suspentionDate": "2026-11-13T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68e89b5a00342f802b58c455",
+    "organizationName": "CHASE HR CONSULTING",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Non-Standard",
+    "lastPaymentDate": "2026-08-17T08:16:19.476Z",
+    "terminationDate": "2027-11-06T00:00:00Z",
+    "suspentionDate": "2027-11-06T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6970c2aac6772a59c9fac0f4",
+    "organizationName": "SAILEELA INFOTECH CONSULTANCY (OPC) PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-17T11:00:17.714Z",
+    "terminationDate": "2027-02-06T00:00:00Z",
+    "suspentionDate": "2027-02-13T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6964c2851b524b622306000c",
+    "organizationName": "PROLIENPRO AMERICAS LLC",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-17T14:31:19.225Z",
+    "terminationDate": "2027-02-09T00:00:00Z",
+    "suspentionDate": "2027-02-16T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69b7deb26806580b3592d093",
+    "organizationName": "Panasonic India",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-20T06:46:35.704Z",
+    "terminationDate": "2027-08-21T00:00:00Z",
+    "suspentionDate": "2027-08-28T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a7c29ddaf4043b10fa018ee",
+    "organizationName": "BEEZAASAN EXPLOTECH LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-20T06:56:01.49Z",
+    "terminationDate": "2027-08-27T00:00:00Z",
+    "suspentionDate": "2027-09-03T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68a5c869363262a17fcd3b6e",
+    "organizationName": "LOGIX GURU INDIA PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-21T10:44:16.804Z",
+    "terminationDate": "2027-08-20T00:00:00Z",
+    "suspentionDate": "2027-08-27T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a85dc56411f76932d519a46",
+    "organizationName": "RAPIDCREW SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-25T13:26:08.985Z",
+    "terminationDate": "2027-08-25T00:00:00Z",
+    "suspentionDate": "2027-09-01T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6876447ce04cb82ca8625ed7",
+    "organizationName": "BEAN HR CONSULTING",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-08-26T12:00:22.278Z",
+    "terminationDate": "2026-11-19T00:00:00Z",
+    "suspentionDate": "2026-11-26T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69d638d2917642d7e82f41ec",
+    "organizationName": "CHELSEA ENTERPRISES",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-08-27T06:39:12.412Z",
+    "terminationDate": "2026-09-27T00:00:00Z",
+    "suspentionDate": "2026-10-04T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a7302ebf53c3968888e94ed",
+    "organizationName": "GLOBAL OVERSEAS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-27T08:30:41.108Z",
+    "terminationDate": "2027-08-27T00:00:00Z",
+    "suspentionDate": "2027-09-03T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69585df2312eb6d556747c30",
+    "organizationName": "Owision AB",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-27T12:07:48.338Z",
+    "terminationDate": "2027-08-27T00:00:00Z",
+    "suspentionDate": "2027-09-03T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a70cc3c0d5279768e547f5e",
+    "organizationName": "HS Digital Solutions LTD",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-08-29T15:46:11.642Z",
+    "terminationDate": "2026-09-29T00:00:00Z",
+    "suspentionDate": "2026-10-06T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a2655ab1f1154eebe506875",
+    "organizationName": "INVENTO ONE PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-08-30T07:27:15.63Z",
+    "terminationDate": "2026-09-29T00:00:00Z",
+    "suspentionDate": "2026-10-06T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6871c6f4f45ca4ddaed124d5",
+    "organizationName": "Fundquest Financial Services  Pvt Ltd",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-30T14:00:02.304Z",
+    "terminationDate": "2027-08-30T00:00:00Z",
+    "suspentionDate": "2027-09-06T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6847e1b14b49aa799d326c6f",
+    "organizationName": "Aston Hill",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-08-31T05:38:30.967Z",
+    "terminationDate": "2026-09-30T00:00:00Z",
+    "suspentionDate": "2026-10-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a79978da04fd5bbd11293c6",
+    "organizationName": "PIVOTAL ACCESSIBILITY PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-31T12:28:32.068Z",
+    "terminationDate": "2027-08-31T00:00:00Z",
+    "suspentionDate": "2027-09-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a5772325919d6a817ba634e",
+    "organizationName": "INDIAN COUNCIL FOR TECNICAL RESEARCH AND DEVELOPEMENT",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-08-31T12:47:03.418Z",
+    "terminationDate": "2027-08-31T00:00:00Z",
+    "suspentionDate": "2027-09-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68f7546d90161288ebff3df9",
+    "organizationName": "ARMIA SYSTEMS PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-08-31T13:26:20.152Z",
+    "terminationDate": "2026-10-07T00:00:00Z",
+    "suspentionDate": "2026-10-21T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a73d4fbb71c293c0f150efe",
+    "organizationName": "BRAINYMEDIC EDUVERSE PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-09-01T12:03:16.119Z",
+    "terminationDate": "2026-12-01T00:00:00Z",
+    "suspentionDate": "2026-12-08T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6656c5bd282c1dfc1ab6d44f",
+    "organizationName": "Demo Org",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-09-02T05:45:56.198Z",
+    "terminationDate": "2027-09-02T00:00:00Z",
+    "suspentionDate": "2027-09-09T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a82c1ffdf7f2793dcae2b71",
+    "organizationName": "29 DIGITALS",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-09-02T13:51:50.206Z",
+    "terminationDate": "2026-10-02T00:00:00Z",
+    "suspentionDate": "2026-10-09T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a50a29965381bc3c6daddc6",
+    "organizationName": "AARADHYA CONSTRUCTIONS",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-09-03T23:32:42.58Z",
+    "terminationDate": "2026-10-04T00:00:00Z",
+    "suspentionDate": "2026-10-11T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "684292ba34642e64e5af0669",
+    "organizationName": "BIOVUS BLOCKCHAIN TECHNOLOGIES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-09-04T08:21:56.974Z",
+    "terminationDate": "2027-03-02T00:00:00Z",
+    "suspentionDate": "2027-03-09T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "691ff26185156ab97b09b456",
+    "organizationName": "DIGITUP SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-09-07T18:32:35.138Z",
+    "terminationDate": "2026-10-06T00:00:00Z",
+    "suspentionDate": "2026-10-13T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a7c325fa746bc112fd0b71d",
+    "organizationName": "AMAR EQUIPMENTS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-09-08T17:17:31.085Z",
+    "terminationDate": "2027-09-09T00:00:00Z",
+    "suspentionDate": "2027-09-16T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68a720f7b4107a2b5cbed920",
+    "organizationName": "Malik & Associates LLC",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-09-08T18:45:33.238Z",
+    "terminationDate": "2027-09-09T00:00:00Z",
+    "suspentionDate": "2027-09-16T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6842b26d34642e64e5beac1f",
+    "organizationName": "MILESTONE PLM SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-09-10T10:10:14.625Z",
+    "terminationDate": "2027-02-24T00:00:00Z",
+    "suspentionDate": "2027-03-03T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69818f3d8f133214b5c7e7b0",
+    "organizationName": "SILVERTECH INNOVATIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-09-11T11:37:43.438Z",
+    "terminationDate": "2027-04-06T00:00:00Z",
+    "suspentionDate": "2027-04-13T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68d3efbac7110b169f3e654c",
+    "organizationName": "INTELLI VYAPAR",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-09-11T13:06:18.821Z",
+    "terminationDate": "2026-12-11T00:00:00Z",
+    "suspentionDate": "2026-12-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "683d484ccd4658f0346d2088",
+    "organizationName": "B.K. AROGYAM & RESEARCH PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-09-14T07:43:58.22Z",
+    "terminationDate": "2026-12-09T00:00:00Z",
+    "suspentionDate": "2026-12-16T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6aa88824e31c3b1d9801507b",
+    "organizationName": "SKYLUXE JOURNEY",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-09-15T00:15:33.55Z",
+    "terminationDate": "2026-10-15T00:00:00Z",
+    "suspentionDate": "2026-10-22T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a8845f1c836c054eaa908a7",
+    "organizationName": "NAVKAR TRAVELS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-09-15T04:57:46.039Z",
+    "terminationDate": "2027-09-15T00:00:00Z",
+    "suspentionDate": "2027-09-22T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a424a376264b39d8787c56c",
+    "organizationName": "SHAKTI PUMPS (INDIA) LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-09-15T05:36:42.008Z",
+    "terminationDate": "2027-09-15T00:00:00Z",
+    "suspentionDate": "2027-09-22T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a7b3820112b7cdf795295fb",
+    "organizationName": "kamaiyoo",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-09-15T06:22:14.959Z",
+    "terminationDate": "2026-10-15T00:00:00Z",
+    "suspentionDate": "2026-10-22T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6842aa8734642e64e5bac551",
+    "organizationName": "ADSCHOLARS MARKETING INDIA PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-09-15T11:42:31.011Z",
+    "terminationDate": "2026-10-15T00:00:00Z",
+    "suspentionDate": "2026-10-22T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a5e198364616e9d63343ccb",
+    "organizationName": "LYNEX GLOBAL SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-09-16T09:30:09.254Z",
+    "terminationDate": "2026-10-09T00:00:00Z",
+    "suspentionDate": "2026-10-16T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "686cba8d351b53a4e124202b",
+    "organizationName": "GALLABOX INDIA PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-09-17T07:26:38.331Z",
+    "terminationDate": "2026-12-17T00:00:00Z",
+    "suspentionDate": "2026-12-24T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "695a2dec1c36a65b1be4eeee",
+    "organizationName": "Vasudha Techno Services",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-09-17T14:03:22.651Z",
+    "terminationDate": "2026-12-17T00:00:00Z",
+    "suspentionDate": "2026-12-24T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67f78a228f5011e9e772669b",
+    "organizationName": "IGEET ONLINE",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-09-19T07:38:28.862Z",
+    "terminationDate": "2027-09-19T00:00:00Z",
+    "suspentionDate": "2027-09-26T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6615433bea36c986c17a5679",
+    "organizationName": "ASA Corporate Catalyst India Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-09-21T06:28:20.682Z",
+    "terminationDate": "2027-08-01T00:00:00Z",
+    "suspentionDate": "2027-08-08T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6936a861cf389bde2c7b4249",
+    "organizationName": "techtron Future Tech Ltd",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-09-21T14:10:55.679Z",
+    "terminationDate": "2026-10-15T00:00:00Z",
+    "suspentionDate": "2026-10-22T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a02eaaa55304b952f0daedd",
+    "organizationName": "WEBOAPP DISCOVERY PRIVATE LIMITED",
+    "organizationStatus": "Suspended",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-09-21T14:22:37.75Z",
+    "terminationDate": "2026-10-25T00:00:00Z",
+    "suspentionDate": "2026-11-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a7967e8b303465aebf95247",
+    "organizationName": "VR DESIGN SOLUTIONS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-09-22T10:22:20.054Z",
+    "terminationDate": "2027-09-22T00:00:00Z",
+    "suspentionDate": "2027-09-29T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a6ce7ce6654bc5f96559313",
+    "organizationName": "PS Digital",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-09-22T11:16:50.519Z",
+    "terminationDate": "2027-09-22T00:00:00Z",
+    "suspentionDate": "2027-09-29T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a66fb4e1e6b1a6bcb2ae071",
+    "organizationName": "AIPL TAPES INDUSTRY LLC",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-09-23T06:50:17.103Z",
+    "terminationDate": "2026-12-23T00:00:00Z",
+    "suspentionDate": "2026-12-30T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a3dfb0a8667c83d5b49b4aa",
+    "organizationName": "S.G. ENTERPRISES",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-09-23T06:58:03.443Z",
+    "terminationDate": "2028-04-24T00:00:00Z",
+    "suspentionDate": "2028-05-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6aa2b385085dd1cbad4e7721",
+    "organizationName": "Net Soft Lab",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-09-23T12:51:58.493Z",
+    "terminationDate": "2027-09-25T00:00:00Z",
+    "suspentionDate": "2027-10-02T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "680383b8870b2f007ada7ecb",
+    "organizationName": "SAURABH INFRASTRUCTURE PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-09-24T07:48:02.552Z",
+    "terminationDate": "2027-09-24T00:00:00Z",
+    "suspentionDate": "2027-10-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68188b3f455871c7b2f8b315",
+    "organizationName": "ASHWANI TAYAL & ASSOCIATES",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-09-24T07:53:14.436Z",
+    "terminationDate": "2027-09-24T00:00:00Z",
+    "suspentionDate": "2027-10-01T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6aabb50a793fdd717b5facb0",
+    "organizationName": "V-LEAD ADVISORS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-09-29T06:09:49.091Z",
+    "terminationDate": "2027-10-02T00:00:00Z",
+    "suspentionDate": "2027-10-09T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "681c8c4cbe3da98693c8da03",
+    "organizationName": "TALENTIQO WORKFORCE AND RPO PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-09-30T10:01:02.943Z",
+    "terminationDate": "2026-10-30T00:00:00Z",
+    "suspentionDate": "2026-11-06T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6aa0f0cbc311a5693e873295",
+    "organizationName": "RENAISSANCE INVESTMENT MANAGERS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-09-30T15:13:20.105Z",
+    "terminationDate": "2027-10-01T00:00:00Z",
+    "suspentionDate": "2027-10-08T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6979a162f001a9a58cb3483e",
+    "organizationName": "FIVE HANDS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-10-01T07:03:47.112Z",
+    "terminationDate": "2027-02-11T00:00:00Z",
+    "suspentionDate": "2027-02-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a9f9ff3e56d5213666c58f4",
+    "organizationName": "ENVEE DRUG PVT LTD",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-10-01T09:34:39.554Z",
+    "terminationDate": "2027-10-01T00:00:00Z",
+    "suspentionDate": "2027-10-08T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a0aa1976a7a6d6155261f79",
+    "organizationName": "AW Protranslations",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-10-01T09:52:14.784Z",
+    "terminationDate": "2027-06-03T00:00:00Z",
+    "suspentionDate": "2027-06-10T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "686cff5b351b53a4e1571ebf",
+    "organizationName": "Neyyar Technologies Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-01T11:59:22.621Z",
+    "terminationDate": "2026-11-01T00:00:00Z",
+    "suspentionDate": "2026-11-08T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69dddc42311f946ea394035d",
+    "organizationName": "DEEPA  GEORGE",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-02T08:26:09.717Z",
+    "terminationDate": "2026-10-29T00:00:00Z",
+    "suspentionDate": "2026-11-05T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68b50b534a39072d96f32930",
+    "organizationName": "MITHUN ENTERPRISES",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-10-02T14:05:06.477Z",
+    "terminationDate": "2027-10-02T00:00:00Z",
+    "suspentionDate": "2027-10-09T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6800aa610b5fc53fe39daf0b",
+    "organizationName": "OX CONSULTANCY PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-10-03T03:08:16.789Z",
+    "terminationDate": "2026-11-21T00:00:00Z",
+    "suspentionDate": "2026-11-28T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69d917f5c922fa80b2b04a81",
+    "organizationName": "Monument Warehouse",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-03T16:19:34.886Z",
+    "terminationDate": "2026-11-11T00:00:00Z",
+    "suspentionDate": "2026-11-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a86ee48f6147c3be3af3f5e",
+    "organizationName": "JAI AMBE SYSTEMS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-03T22:53:51.473Z",
+    "terminationDate": "2026-11-04T00:00:00Z",
+    "suspentionDate": "2026-11-11T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69e10a2b07342c3baf2edf6e",
+    "organizationName": "INNOVA ACADEMY",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-06T04:56:34.121Z",
+    "terminationDate": "2026-11-06T00:00:00Z",
+    "suspentionDate": "2026-11-13T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68c15000ac0796e7ab12c857",
+    "organizationName": "LUMIVERSE SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-10-06T06:43:48Z",
+    "terminationDate": "2027-10-06T00:00:00Z",
+    "suspentionDate": "2027-10-13T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68b57d076e3c8feb1eccc340",
+    "organizationName": "METAREACH MARKETING PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-10-06T07:14:32.378Z",
+    "terminationDate": "2027-01-06T00:00:00Z",
+    "suspentionDate": "2027-01-13T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6aaa7101547376a57972e651",
+    "organizationName": "NEWMEDICLUE DIAGNOSTICS (OPC) PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-06T07:55:37.025Z",
+    "terminationDate": "2026-11-06T00:00:00Z",
+    "suspentionDate": "2026-11-13T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6abe82046c5e848d5a597aae",
+    "organizationName": "ONEULDC BUSINESS CONSULTING PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-06T11:19:10.321Z",
+    "terminationDate": "2026-11-06T00:00:00Z",
+    "suspentionDate": "2026-11-13T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "693162231b438744fc6511f3",
+    "organizationName": "HRIMTECH SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-10-06T11:20:16.137Z",
+    "terminationDate": "2026-12-26T00:00:00Z",
+    "suspentionDate": "2026-12-26T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a9812f89e30450f5b51f713",
+    "organizationName": "KELAPA KERELAS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-06T12:17:58.955Z",
+    "terminationDate": "2026-11-06T00:00:00Z",
+    "suspentionDate": "2026-11-13T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a265ebc7621364525595637",
+    "organizationName": "Global Child Wellness",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-06T21:55:02.13Z",
+    "terminationDate": "2026-11-07T00:00:00Z",
+    "suspentionDate": "2026-11-14T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69e34480341bc48898294bd7",
+    "organizationName": "Modern",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-06T21:55:24.519Z",
+    "terminationDate": "2026-11-07T00:00:00Z",
+    "suspentionDate": "2026-11-14T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a609708a12d2775744d5921",
+    "organizationName": "ACCUPRINTS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-06T22:39:58.936Z",
+    "terminationDate": "2026-11-07T00:00:00Z",
+    "suspentionDate": "2026-11-14T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6ab23e0e326cf89fae969c6a",
+    "organizationName": "THE ASTRO NOVA PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-07T05:28:17.565Z",
+    "terminationDate": "2026-11-07T00:00:00Z",
+    "suspentionDate": "2026-11-14T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "684fc4b99f05ab3147e1181e",
+    "organizationName": "BELNET E-MARKETING (OPC) PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-07T07:12:10Z",
+    "terminationDate": "2026-11-07T00:00:00Z",
+    "suspentionDate": "2026-11-14T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "680751eeff13bbf65b0216c3",
+    "organizationName": "HI TECH INTERNATIONAL",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-07T07:12:21.951Z",
+    "terminationDate": "2026-11-07T00:00:00Z",
+    "suspentionDate": "2026-11-14T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a1806352613f73ff5e1e559",
+    "organizationName": "ADMANTINE JEWELS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-10-07T08:06:21.666Z",
+    "terminationDate": "2027-06-12T00:00:00Z",
+    "suspentionDate": "2027-06-19T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "67d94d10c13dd0621bdcc96c",
+    "organizationName": "EMPLIANCE TECHNOLOGIES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-08T06:32:39.411Z",
+    "terminationDate": "2026-11-08T00:00:00Z",
+    "suspentionDate": "2026-11-15T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "690d9619f306b8158b9708e1",
+    "organizationName": "BM CONSULTING PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-08T09:26:04.258Z",
+    "terminationDate": "2026-11-08T00:00:00Z",
+    "suspentionDate": "2026-11-15T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6784c0634e21a54538b3cf5f",
+    "organizationName": "Precedence Research Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-08T10:39:33.28Z",
+    "terminationDate": "2026-11-14T00:00:00Z",
+    "suspentionDate": "2026-11-21T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68e6023a382da5b997c9ccf5",
+    "organizationName": "PINNACLE REWARDS & RECOGNITION PVT LTD.",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-10-08T11:04:10.467Z",
+    "terminationDate": "2027-10-08T00:00:00Z",
+    "suspentionDate": "2027-10-15T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6ac8be48be336dfca5e59036",
+    "organizationName": "BEETLOOP GLOBAL SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-09T10:19:57.229Z",
+    "terminationDate": "2026-11-09T00:00:00Z",
+    "suspentionDate": "2026-11-16T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68ac200b9536dd4d9e58143a",
+    "organizationName": "TRIVENI GLOBAL SOFTWARE SERVICES LLP",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-09T11:47:44.512Z",
+    "terminationDate": "2026-11-11T00:00:00Z",
+    "suspentionDate": "2026-11-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6968c024956dd6636582ed62",
+    "organizationName": "WMS Middle East LLC",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-09T11:59:40.26Z",
+    "terminationDate": "2026-11-13T00:00:00Z",
+    "suspentionDate": "2026-11-20T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "683ff0133948d5e8e61bfd3f",
+    "organizationName": "INVENTURE ENTERPRISES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-09T12:43:11.583Z",
+    "terminationDate": "2026-11-09T00:00:00Z",
+    "suspentionDate": "2026-11-16T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "692416cbff224638788970fb",
+    "organizationName": "AUGMENTED COGNIZANCE INNOVATION PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-11T00:22:46.355Z",
+    "terminationDate": "2026-11-10T00:00:00Z",
+    "suspentionDate": "2026-11-17T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a269400fc5ad79c48363c8f",
+    "organizationName": "SUNFLOWER SOLUTIONS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-11T07:12:21.602Z",
+    "terminationDate": "2026-11-11T00:00:00Z",
+    "suspentionDate": "2026-11-18T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a68ae74aa31c8f2901cb9a9",
+    "organizationName": "SCIENTISTAI TECHNOLOGIES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-11T22:12:11.172Z",
+    "terminationDate": "2026-11-12T00:00:00Z",
+    "suspentionDate": "2026-11-19T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "680f20bded17aa2d9eb5d201",
+    "organizationName": "DEE DESIGNERS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-12T05:03:10.814Z",
+    "terminationDate": "2026-11-12T00:00:00Z",
+    "suspentionDate": "2026-11-19T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6ab0fb381535b3eff3b586a1",
+    "organizationName": "RENURE CREATIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-10-12T07:13:30.612Z",
+    "terminationDate": "2029-10-11T00:00:00Z",
+    "suspentionDate": "2029-10-18T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68b95e623c065026431b250e",
+    "organizationName": "Lemon Yellow LLP",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-12T09:26:23.942Z",
+    "terminationDate": "2026-11-07T00:00:00Z",
+    "suspentionDate": "2026-11-14T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69fd837c9b55e0337d6e0932",
+    "organizationName": "AMENIFY INDIA PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-12T10:10:57.448Z",
+    "terminationDate": "2026-11-07T00:00:00Z",
+    "suspentionDate": "2026-11-14T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68c115a6ac0796e7abe450d3",
+    "organizationName": "COVENTINE DIGITAL PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-12T12:28:45.266Z",
+    "terminationDate": "2026-11-17T00:00:00Z",
+    "suspentionDate": "2026-11-24T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68656f25191dbcc8437703a8",
+    "organizationName": "MASSONIX SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-10-12T14:51:38.916Z",
+    "terminationDate": "2027-07-17T00:00:00Z",
+    "suspentionDate": "2027-07-24T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68b53e1b6e3c8feb1e9a97e5",
+    "organizationName": "Craitrix Technologies",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-12T23:08:30.599Z",
+    "terminationDate": "2026-11-13T00:00:00Z",
+    "suspentionDate": "2026-11-20T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a7312a7f53c396888a32191",
+    "organizationName": "MCLINE STUDIOS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-13T06:19:41.908Z",
+    "terminationDate": "2026-11-09T00:00:00Z",
+    "suspentionDate": "2026-11-16T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69c3bb2b3552253247264bc9",
+    "organizationName": "EUGENIX HAIR SCIENCES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-13T10:28:31.503Z",
+    "terminationDate": "2026-11-18T00:00:00Z",
+    "suspentionDate": "2026-11-25T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a9fae83167502c6f311754f",
+    "organizationName": "Sumeet Giri",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-13T13:36:09.194Z",
+    "terminationDate": "2026-11-13T00:00:00Z",
+    "suspentionDate": "2026-11-20T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6929204b2575eb9be1e4f5e9",
+    "organizationName": "PLUTUS VENTURES",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-10-13T15:31:08.556Z",
+    "terminationDate": "2027-01-21T00:00:00Z",
+    "suspentionDate": "2027-01-28T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a0dfd644f5d6e8548e781d6",
+    "organizationName": "ARK Tours and Travels",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-13T18:05:20.097Z",
+    "terminationDate": "2026-11-07T00:00:00Z",
+    "suspentionDate": "2026-11-14T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68f710fde3395e8a537f3b21",
+    "organizationName": "LAKEBA IT SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-14T10:45:35.723Z",
+    "terminationDate": "2026-11-15T00:00:00Z",
+    "suspentionDate": "2026-11-22T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "690539bdaa37171b34036a04",
+    "organizationName": "NERDY",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-14T22:07:42.399Z",
+    "terminationDate": "2026-11-19T00:00:00Z",
+    "suspentionDate": "2026-11-26T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a80628ee05bbc173577b93f",
+    "organizationName": "BINDU NATURAL WORLD",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-15T00:08:28.652Z",
+    "terminationDate": "2026-11-15T00:00:00Z",
+    "suspentionDate": "2026-11-22T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6854179d4c6492e643d5bc34",
+    "organizationName": "DIGITALVIA TECHNOLOGIES (OPC) PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-15T05:46:18.888Z",
+    "terminationDate": "2026-11-15T00:00:00Z",
+    "suspentionDate": "2026-11-22T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6926e96daf5618d5adbb7a02",
+    "organizationName": "DIVERGENT INSIGHTS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-15T10:28:10.208Z",
+    "terminationDate": "2026-11-10T00:00:00Z",
+    "suspentionDate": "2026-11-17T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a0efee81547f67fd9844fd5",
+    "organizationName": "Lawear",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-15T12:38:20.528Z",
+    "terminationDate": "2026-11-12T00:00:00Z",
+    "suspentionDate": "2026-11-19T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69aaf5324839d4ec192be723",
+    "organizationName": "NIJU BUSINESS SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-16T04:23:04.138Z",
+    "terminationDate": "2026-11-15T00:00:00Z",
+    "suspentionDate": "2026-11-22T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a6b6a12d3112f7b3f58aecc",
+    "organizationName": "Hotel Express Cyprus Ltd.",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-16T07:27:10.906Z",
+    "terminationDate": "2026-11-16T00:00:00Z",
+    "suspentionDate": "2026-11-23T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a47dc265a654b5c313112f7",
+    "organizationName": "RESOLVIFY SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-16T21:37:46.49Z",
+    "terminationDate": "2026-11-17T00:00:00Z",
+    "suspentionDate": "2026-11-24T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a09454a6a7a6d6155fb1d1f",
+    "organizationName": "KC OVERSEAS VIZAG",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-16T21:54:17.081Z",
+    "terminationDate": "2026-11-17T00:00:00Z",
+    "suspentionDate": "2026-11-24T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68ac49f99536dd4d9e78ee04",
+    "organizationName": "UPGRAFT LLP",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-16T23:30:45.495Z",
+    "terminationDate": "2026-11-15T00:00:00Z",
+    "suspentionDate": "2026-11-22T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6872a00df45ca4ddaefe4565",
+    "organizationName": "INSIGHTOGRAM PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-17T07:09:15.543Z",
+    "terminationDate": "2026-12-13T00:00:00Z",
+    "suspentionDate": "2026-12-20T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68b584316e3c8feb1ed2ca12",
+    "organizationName": "Sumit Lehra",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-17T07:22:54.89Z",
+    "terminationDate": "2026-11-17T00:00:00Z",
+    "suspentionDate": "2026-11-24T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69e1d5e107342c3baf652795",
+    "organizationName": "FITNESS WISER",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-17T21:53:23.454Z",
+    "terminationDate": "2026-11-18T00:00:00Z",
+    "suspentionDate": "2026-11-25T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6948e7cfcd359ff97163d707",
+    "organizationName": "VISIBILITY GURUS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-17T22:38:45.837Z",
+    "terminationDate": "2026-11-17T00:00:00Z",
+    "suspentionDate": "2026-11-24T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6aba5037a36fd6864bba207a",
+    "organizationName": "OSAKA CONNECT DOT COM PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-19T11:31:37.73Z",
+    "terminationDate": "2026-11-19T00:00:00Z",
+    "suspentionDate": "2026-11-26T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69158a22110290b7120400f0",
+    "organizationName": "MORSER SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-19T21:28:27.1Z",
+    "terminationDate": "2026-11-21T00:00:00Z",
+    "suspentionDate": "2026-11-28T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69f98f808141402c3df1227c",
+    "organizationName": "R K STUDYHUB PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-19T21:38:11.563Z",
+    "terminationDate": "2026-11-20T00:00:00Z",
+    "suspentionDate": "2026-11-27T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "684f989c9f05ab3147c7dcab",
+    "organizationName": "ILOGIN SOLUTIONS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-19T21:54:26.43Z",
+    "terminationDate": "2026-11-20T00:00:00Z",
+    "suspentionDate": "2026-11-27T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "694288ca8c6040af6dd3e980",
+    "organizationName": "Saneforce",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-20T07:09:20.723Z",
+    "terminationDate": "2026-11-20T00:00:00Z",
+    "suspentionDate": "2026-11-27T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69bcdd6cc0427f9b7cd3cc52",
+    "organizationName": "Bharat Book Bureau",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-20T07:09:59.695Z",
+    "terminationDate": "2026-11-20T00:00:00Z",
+    "suspentionDate": "2026-11-27T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68c8ffc293275de21b628c78",
+    "organizationName": "WORKOS TECHNOLOGIES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-20T07:10:16.559Z",
+    "terminationDate": "2026-11-20T00:00:00Z",
+    "suspentionDate": "2026-11-27T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68baf2f2af02cd410779ad01",
+    "organizationName": "BoT Tech Corp",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-20T07:10:33.843Z",
+    "terminationDate": "2026-11-19T00:00:00Z",
+    "suspentionDate": "2026-11-26T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69f35394195f49462e2dbb35",
+    "organizationName": "SIMPLIFIED DYNAMICS SOLUTIONS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-20T21:10:19.665Z",
+    "terminationDate": "2026-11-21T00:00:00Z",
+    "suspentionDate": "2026-11-28T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69dcc04e2e66fb0d05add2c4",
+    "organizationName": "Purple Heart Consultants",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-20T23:55:02.334Z",
+    "terminationDate": "2026-11-21T00:00:00Z",
+    "suspentionDate": "2026-11-28T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "685394504c6492e643818c0e",
+    "organizationName": "EAZYMED TECHNOLOGIES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-21T07:30:55.612Z",
+    "terminationDate": "2026-11-14T00:00:00Z",
+    "suspentionDate": "2026-11-21T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69df4ff2137094498710b6da",
+    "organizationName": "Safebooks Global",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-21T07:34:41.318Z",
+    "terminationDate": "2026-11-15T00:00:00Z",
+    "suspentionDate": "2026-11-22T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "677bd079d77efd749212826a",
+    "organizationName": "QIABEN HEALTHCARE SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-21T07:34:55.724Z",
+    "terminationDate": "2026-11-21T00:00:00Z",
+    "suspentionDate": "2026-11-28T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "681868fd455871c7b2e882d3",
+    "organizationName": "TECHBUBBLE INDIA PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-21T08:04:01.513Z",
+    "terminationDate": "2026-11-14T00:00:00Z",
+    "suspentionDate": "2026-11-21T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a9906ee186c03b49f25a593",
+    "organizationName": "EXCELERATE TECHNOLOGIES LLP",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-21T13:28:14.672Z",
+    "terminationDate": "2026-11-21T00:00:00Z",
+    "suspentionDate": "2026-11-28T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6925866dff22463878493eb2",
+    "organizationName": "HYPWAVE",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-10-21T13:51:10.65Z",
+    "terminationDate": "2027-01-21T00:00:00Z",
+    "suspentionDate": "2027-01-28T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6979a6a1f001a9a58cb84f4d",
+    "organizationName": "Gummalla Technologies",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-22T02:58:01.332Z",
+    "terminationDate": "2026-11-15T00:00:00Z",
+    "suspentionDate": "2026-11-22T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68d3b357c7110b169f08b97c",
+    "organizationName": "IRAJ EVOLUTION DESIGN COMPANY PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-10-22T06:17:50.164Z",
+    "terminationDate": "2027-10-22T00:00:00Z",
+    "suspentionDate": "2027-10-29T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a3bad751207fd3522b1cd0f",
+    "organizationName": "Tenfolds Accounting LLP",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-22T07:32:38.117Z",
+    "terminationDate": "2026-11-15T00:00:00Z",
+    "suspentionDate": "2026-11-22T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6ac6334e987ecdd90065c465",
+    "organizationName": "XLBYTE PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-22T10:37:12.086Z",
+    "terminationDate": "2026-11-22T00:00:00Z",
+    "suspentionDate": "2026-11-29T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69dc8a96263f281ea559778a",
+    "organizationName": "Anushri Systech Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-22T11:41:44.661Z",
+    "terminationDate": "2026-11-21T00:00:00Z",
+    "suspentionDate": "2026-11-28T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6878d06682720b5d73d6452b",
+    "organizationName": "SANTOSH A. KULKARANI & ASSOCIATES",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-23T05:35:47.367Z",
+    "terminationDate": "2026-11-23T00:00:00Z",
+    "suspentionDate": "2026-11-30T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6888c1d8e223bfcfc8c4d26f",
+    "organizationName": "Mediflix Remote Solutions",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-10-23T12:39:51.578Z",
+    "terminationDate": "2027-01-23T00:00:00Z",
+    "suspentionDate": "2027-01-30T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69faefd0e445681b13977fcc",
+    "organizationName": "WELLVORT FASHION PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-23T13:16:14.255Z",
+    "terminationDate": "2026-11-18T00:00:00Z",
+    "suspentionDate": "2026-11-25T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6901eeb4726ca59b874f9692",
+    "organizationName": "DONIV DIGITAL MARKETING PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-23T13:45:01.872Z",
+    "terminationDate": "2026-11-21T00:00:00Z",
+    "suspentionDate": "2026-11-28T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a9960a130209097a9052d70",
+    "organizationName": "ABRV SERVICES",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-10-23T14:16:11.959Z",
+    "terminationDate": "2026-12-21T00:00:00Z",
+    "suspentionDate": "2026-12-28T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69f1c767c207c80468dedf76",
+    "organizationName": "UNITED HEALTHCARE",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-23T23:37:55.485Z",
+    "terminationDate": "2026-11-22T00:00:00Z",
+    "suspentionDate": "2026-11-29T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6ac78f433272ff57c884fd4e",
+    "organizationName": "APNAGODAM.COM",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-24T08:40:56.861Z",
+    "terminationDate": "2026-11-24T00:00:00Z",
+    "suspentionDate": "2026-12-01T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a1e7fa93d18d4e1dfb9719b",
+    "organizationName": "Mistura Software Technologies Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-24T18:05:21.613Z",
+    "terminationDate": "2026-12-19T00:00:00Z",
+    "suspentionDate": "2026-12-26T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a1411abe14e38dd33e24962",
+    "organizationName": "Kazuu",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-25T22:28:34.835Z",
+    "terminationDate": "2026-11-23T00:00:00Z",
+    "suspentionDate": "2026-11-30T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69c289633552253247a0f898",
+    "organizationName": "CAXITA TECH SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-26T10:39:17.508Z",
+    "terminationDate": "2026-11-24T00:00:00Z",
+    "suspentionDate": "2026-12-01T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "673c63565f4050654c02c69f",
+    "organizationName": "Synergyconnect Data Innovations Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-10-26T14:20:47.99Z",
+    "terminationDate": "2027-01-21T00:00:00Z",
+    "suspentionDate": "2027-01-28T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a4f3d3d241265085e592a51",
+    "organizationName": "Ecreations Multimedia",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-26T22:08:41.154Z",
+    "terminationDate": "2026-11-27T00:00:00Z",
+    "suspentionDate": "2026-12-04T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "698ebca75071b45f415a5667",
+    "organizationName": "Clinic Dermatech Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-27T08:57:30.463Z",
+    "terminationDate": "2026-11-27T00:00:00Z",
+    "suspentionDate": "2026-12-04T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6aba36e6a36fd6864b8ae9f0",
+    "organizationName": "ESSEN VISION SOFTWARE PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-10-27T09:27:15.061Z",
+    "terminationDate": "2027-11-10T00:00:00Z",
+    "suspentionDate": "2027-11-17T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "66aa4f80261b00ed73c7560d",
+    "organizationName": "Ringenious Solutions LLP",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-27T20:57:33.832Z",
+    "terminationDate": "2026-11-27T00:00:00Z",
+    "suspentionDate": "2026-12-04T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6aba29c5a36fd6864b73dae3",
+    "organizationName": "TALLYUNNATI INFO SERVICES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-28T04:20:53.782Z",
+    "terminationDate": "2026-11-28T00:00:00Z",
+    "suspentionDate": "2026-12-05T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "682b028b4f2a661d70a32174",
+    "organizationName": "ST. ANDREWS INSTITUTE OF TECHNOLOGY & MANAGEMENT",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-10-28T06:20:56.671Z",
+    "terminationDate": "2027-04-28T00:00:00Z",
+    "suspentionDate": "2027-05-05T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a6d84676516d923262fafab",
+    "organizationName": "V & G CAPITAL",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-28T07:11:06.656Z",
+    "terminationDate": "2026-11-28T00:00:00Z",
+    "suspentionDate": "2026-12-05T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a0150bc3266effc4484b956",
+    "organizationName": "ACCSOURCE KNOWLEDGE PROCESS OUTSOURCING PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-28T07:11:38.051Z",
+    "terminationDate": "2026-11-27T00:00:00Z",
+    "suspentionDate": "2026-12-04T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6aa11a89f331f66d268530b7",
+    "organizationName": "GuiRes Healthcare Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-28T08:12:38.48Z",
+    "terminationDate": "2026-11-25T00:00:00Z",
+    "suspentionDate": "2026-12-02T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68c09027ac0796e7abcbb24e",
+    "organizationName": "Royal Signs and Awnings",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-28T13:48:45.175Z",
+    "terminationDate": "2026-11-23T00:00:00Z",
+    "suspentionDate": "2026-11-30T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "66d6010b9d11932949609245",
+    "organizationName": "INVESTATION TEAM PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-29T07:11:17.041Z",
+    "terminationDate": "2026-11-29T00:00:00Z",
+    "suspentionDate": "2026-12-06T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a609842a12d2775744ef461",
+    "organizationName": "BEACON TRUSTEESHIP LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-10-29T07:38:19.348Z",
+    "terminationDate": "2027-10-29T00:00:00Z",
+    "suspentionDate": "2027-11-05T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68bee631ab764e10a5939cf6",
+    "organizationName": "NET2ASPIRE",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-29T23:24:45.908Z",
+    "terminationDate": "2026-11-29T00:00:00Z",
+    "suspentionDate": "2026-12-06T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a953803d45dcf367e20ec46",
+    "organizationName": "Dubai Glass Industry",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-30T10:52:14.446Z",
+    "terminationDate": "2026-11-30T00:00:00Z",
+    "suspentionDate": "2026-12-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "68c15ac1ac0796e7ab1b7157",
+    "organizationName": "NRG FOODS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-10-30T11:29:04.466Z",
+    "terminationDate": "2027-10-31T00:00:00Z",
+    "suspentionDate": "2027-11-07T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6835aa93342ad7c3ea04e08b",
+    "organizationName": "One Six One",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-31T07:09:03.531Z",
+    "terminationDate": "2026-12-01T00:00:00Z",
+    "suspentionDate": "2026-12-08T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6634a4df4d3e943c5e52d1a2",
+    "organizationName": "Triseasuae",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-10-31T19:29:36.051Z",
+    "terminationDate": "2026-12-01T00:00:00Z",
+    "suspentionDate": "2026-12-08T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68b2c3219c79214bf8dd79cb",
+    "organizationName": "NIKHIL BHATIA",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-01T23:52:52.758Z",
+    "terminationDate": "2026-12-27T00:00:00Z",
+    "suspentionDate": "2027-01-03T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68d39ef3c7110b169ff990b8",
+    "organizationName": "VA World Outsourcing",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-11-02T00:54:29.028Z",
+    "terminationDate": "2027-02-02T00:00:00Z",
+    "suspentionDate": "2027-02-09T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "69e334d8341bc4889823c13a",
+    "organizationName": "ACCOUNTSBYTES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-02T01:12:31.411Z",
+    "terminationDate": "2026-12-02T00:00:00Z",
+    "suspentionDate": "2026-12-09T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "67e3a7e3566e23517145b651",
+    "organizationName": "Proprly",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-02T01:39:06.614Z",
+    "terminationDate": "2026-12-01T00:00:00Z",
+    "suspentionDate": "2026-12-08T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a59cc0b7c2484cdf6d24467",
+    "organizationName": "RDS ENTERPRISES",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-02T03:53:13.543Z",
+    "terminationDate": "2026-12-01T00:00:00Z",
+    "suspentionDate": "2026-12-08T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6abe2ccd6c5e848d5af0f853",
+    "organizationName": "SREE RAMACHANDRA HEALTH SERVICES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-11-02T06:38:57.076Z",
+    "terminationDate": "2027-11-02T00:00:00Z",
+    "suspentionDate": "2027-11-09T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6ac4a759bf7c53425003b7dc",
+    "organizationName": "CANDELA INNOVATIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-02T06:50:53.274Z",
+    "terminationDate": "2026-12-02T00:00:00Z",
+    "suspentionDate": "2026-12-09T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a9a5d249e1c8bb9761ebfb9",
+    "organizationName": "THE CHOICE FASHIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-02T07:08:02.407Z",
+    "terminationDate": "2026-12-02T00:00:00Z",
+    "suspentionDate": "2026-12-09T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a0e98dc1547f67fd90b6681",
+    "organizationName": "PR KRISHNA & COMPANY",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-02T07:54:16.326Z",
+    "terminationDate": "2026-12-02T00:00:00Z",
+    "suspentionDate": "2026-12-09T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69d5e629a16a9063c3a0963a",
+    "organizationName": "HIBIZ CONSULTING PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-02T11:01:44.219Z",
+    "terminationDate": "2026-11-30T00:00:00Z",
+    "suspentionDate": "2026-12-07T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a9e9b440d173b8b5b0349fc",
+    "organizationName": "ELYSION SOFTWARES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-11-02T12:15:43.574Z",
+    "terminationDate": "2027-05-02T00:00:00Z",
+    "suspentionDate": "2027-05-09T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "680738d6ff13bbf65bf724ea",
+    "organizationName": "A2Z PLACEMENTS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-02T21:54:16.781Z",
+    "terminationDate": "2026-12-03T00:00:00Z",
+    "suspentionDate": "2026-12-10T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6948d8fdcd359ff97155d505",
+    "organizationName": "SCORESOFTLABS",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-03T07:08:45.327Z",
+    "terminationDate": "2026-12-03T00:00:00Z",
+    "suspentionDate": "2026-12-10T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a6b7e4cd3112f7b3f601131",
+    "organizationName": "SUPER SHELDON LLP",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-03T07:09:18.584Z",
+    "terminationDate": "2026-12-03T00:00:00Z",
+    "suspentionDate": "2026-12-10T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a0bfdc49c608846b1c2a822",
+    "organizationName": "VLYKIT SOLUTIONS PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-03T07:09:25.523Z",
+    "terminationDate": "2026-12-03T00:00:00Z",
+    "suspentionDate": "2026-12-10T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68a48d14316ae0c465a5087f",
+    "organizationName": "Surekha Infra Solutions",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-03T21:56:58.331Z",
+    "terminationDate": "2026-12-03T00:00:00Z",
+    "suspentionDate": "2026-12-10T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68ff6ecbd261dde9c175e21e",
+    "organizationName": "Globex Enterprises",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-03T21:59:19.803Z",
+    "terminationDate": "2026-12-04T00:00:00Z",
+    "suspentionDate": "2026-12-11T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69396950f248ba014e0b09ee",
+    "organizationName": "microinfoweb private limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-04T04:05:53.606Z",
+    "terminationDate": "2026-12-03T00:00:00Z",
+    "suspentionDate": "2026-12-10T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6904d6f5aa37171b34f32e8e",
+    "organizationName": "PALANIAPPA CONCRETE",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-04T06:56:18.706Z",
+    "terminationDate": "2026-12-04T00:00:00Z",
+    "suspentionDate": "2026-12-11T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "68ece2f57d5c5ed814faa70b",
+    "organizationName": "LB MICROTECHNOLOGIES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-04T07:09:45.502Z",
+    "terminationDate": "2026-12-04T00:00:00Z",
+    "suspentionDate": "2026-12-11T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6901efb2726ca59b87509a72",
+    "organizationName": "INTERNATIONAL SERVICES",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-11-04T09:28:49.079Z",
+    "terminationDate": "2027-11-04T00:00:00Z",
+    "suspentionDate": "2027-11-11T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6ac49657bf7c534250e2f7f8",
+    "organizationName": "HBG KNOWLEDGE SERVICES PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Quarterly",
+    "lastPaymentDate": "2026-11-04T10:26:53.736Z",
+    "terminationDate": "2027-02-04T00:00:00Z",
+    "suspentionDate": "2027-02-11T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "6a9018a291287ee729895742",
+    "organizationName": "BLUECHIP INFOCORP PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Annually",
+    "lastPaymentDate": "2026-11-04T10:45:11.778Z",
+    "terminationDate": "2027-11-04T00:00:00Z",
+    "suspentionDate": "2027-11-11T00:00:00Z",
+    "isSubscriptionPayment": false
+  },
+  {
+    "organizationId": "692934462575eb9be1f3efe2",
+    "organizationName": "Beez KPO Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-05T04:54:19.754Z",
+    "terminationDate": "2026-11-29T00:00:00Z",
+    "suspentionDate": "2026-12-06T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a7ac3fadf18d05878156f95",
+    "organizationName": "Retentia Technology Private Limited",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-05T07:09:14.677Z",
+    "terminationDate": "2026-12-29T00:00:00Z",
+    "suspentionDate": "2027-01-05T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "6a326bfa52018080655b5b1b",
+    "organizationName": "TECHNIANS SOFTECH PRIVATE LIMITED",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-05T07:09:59.926Z",
+    "terminationDate": "2026-12-02T00:00:00Z",
+    "suspentionDate": "2026-12-09T00:00:00Z",
+    "isSubscriptionPayment": true
+  },
+  {
+    "organizationId": "69aa60a31c190fc99c82d649",
+    "organizationName": "LEADROAD",
+    "organizationStatus": "Paid",
+    "billingPlanType": "Monthly",
+    "lastPaymentDate": "2026-11-05T07:26:10.753Z",
+    "terminationDate": "2027-01-04T00:00:00Z",
+    "suspentionDate": "2027-01-11T00:00:00Z",
+    "isSubscriptionPayment": true
+  }
+]
